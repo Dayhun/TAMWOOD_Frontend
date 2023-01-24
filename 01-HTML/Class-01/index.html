@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- css -->
+        <style>
+            /* 
+        #1 tag selector
+        #2 class selector
+        #3 id selector 
+        */
+            /* tag selector - weakest selector, easy to replace*/
+            ul {
+                background-color: bisque;
+            }
+            li {
+                color: blue;
+            }
+            a {
+                color: orange;
+            }
+            /* class selector - tag selector will be changed, overwrite*/
+            .class01 {
+                background-color: aqua;
+                border-width: 3px;
+                border-color: black;
+                border-style: solid;
+            }
+            /* id selector - the most strongest selector, not changeable */
+            #id01 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Heading -->
+        <h1>Vancouver</h1>
+        <h2>Vancouver</h2>
+        <h3>Vancouver</h3>
+        <h4>Vancouver</h4>
+        <h5>Vancouver</h5>
+        <h6>Vancouver</h6>
+        <!-- ul -->
+        <ul class="class01">
+            <li>Tea</li>
+            <li id="id01">
+                Pop
+                <ul>
+                    <li>Canada Dry</li>
+                    <li>Root Beer</li>
+                    <li>
+                        Lime
+                        <ul>
+                            <li>Sprite</li>
+                            <li>7-up</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Coffee</li>
+            <li>Wine</li>
+            <li>Beer</li>
+            <li>Water</li>
+        </ul>
+        <!-- ol -->
+        <ol type="A">
+            <li>Cake</li>
+            <ol type="a">
+                <li>Cheese Cake</li>
+                <li>Chocolate Cake</li>
+            </ol>
+            <li>Pudding</li>
+            <li>Ice Cream</li>
+            <li>Donuts</li>
+        </ol>
+        <!-- link
+        a : ancher tag
+        href : hyper reference 
+        target : how to open. new tab or same tab-->
+        <a href="https://www.google.ca" target="_blank">Google</a>
+        <a href="https://www.google.ca">Google</a>
+        <!-- li*4 -->
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- li*4>a -->
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <!-- css -->
+        <ul style="background-color: red">
+            <li>a</li>
+            <li>b</li>
+        </ul>
+    </body>
+</html>
