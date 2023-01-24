@@ -5,101 +5,159 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <!-- css -->
-        <style>
-            /* 
-        #1 tag selector
-        #2 class selector
-        #3 id selector 
-        */
-            /* tag selector - weakest selector, easy to replace*/
-            ul {
-                background-color: bisque;
-            }
-            li {
-                color: blue;
-            }
-            a {
-                color: orange;
-            }
-            /* class selector - tag selector will be changed, overwrite*/
-            .class01 {
-                background-color: aqua;
-                border-width: 3px;
-                border-color: black;
-                border-style: solid;
-            }
-            /* id selector - the most strongest selector, not changeable */
-            #id01 {
-                color: red;
-            }
-        </style>
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
-        <!-- Heading -->
-        <h1>Vancouver</h1>
-        <h2>Vancouver</h2>
-        <h3>Vancouver</h3>
-        <h4>Vancouver</h4>
-        <h5>Vancouver</h5>
-        <h6>Vancouver</h6>
-        <!-- ul -->
-        <ul class="class01">
-            <li>Tea</li>
-            <li id="id01">
-                Pop
+        <main>
+            <header>
+                <h1>bloggersgreen</h1>
+                <h3>your news blog</h3>
+            </header>
+            <nav>
                 <ul>
-                    <li>Canada Dry</li>
-                    <li>Root Beer</li>
-                    <li>
-                        Lime
-                        <ul>
-                            <li>Sprite</li>
-                            <li>7-up</li>
-                        </ul>
-                    </li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">products</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">contact us</a></li>
                 </ul>
-            </li>
-            <li>Coffee</li>
-            <li>Wine</li>
-            <li>Beer</li>
-            <li>Water</li>
-        </ul>
-        <!-- ol -->
-        <ol type="A">
-            <li>Cake</li>
-            <ol type="a">
-                <li>Cheese Cake</li>
-                <li>Chocolate Cake</li>
-            </ol>
-            <li>Pudding</li>
-            <li>Ice Cream</li>
-            <li>Donuts</li>
-        </ol>
-        <!-- link
-        a : ancher tag
-        href : hyper reference 
-        target : how to open. new tab or same tab-->
-        <a href="https://www.google.ca" target="_blank">Google</a>
-        <a href="https://www.google.ca">Google</a>
-        <!-- li*4 -->
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <!-- li*4>a -->
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Service</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <!-- css -->
-        <ul style="background-color: red">
-            <li>a</li>
-            <li>b</li>
-        </ul>
+            </nav>
+            <section class="main-content">
+                <!-- left side content -->
+                <section class="left-side">
+                    <h4>welcome to green blog!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                        Ipsam architecto dicta dolorum. Fugit, temporibus nisi
+                        aperiam, totam odio nemo, architecto similique ipsa
+                        animi dolores laboriosam veniam nulla officiis sed error
+                        deserunt sequi cupiditate beatae dolorem reiciendis
+                        dicta. Alias, voluptatem distinctio!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque cupiditate iure iusto voluptas dicta velit
+                        soluta exercitationem necessitatibus voluptate adipisci
+                        atque quis dolor, consectetur quia voluptatibus, esse
+                        unde sequi? Aperiam, fugiat sit aliquid quam sunt hic
+                        qui id distinctio quisquam, perferendis maiores
+                        quibusdam commodi cum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        At quia autem consequuntur, non a ipsa! Velit animi
+                        cupiditate possimus harum culpa a. Accusamus repudiandae
+                        aliquid odit, suscipit, rerum ab perspiciatis quos
+                        culpa, ipsum eaque optio! Impedit fugiat ipsum officia
+                        optio!
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#"
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li>
+                            <a href="#"
+                                >Lorem ipsum dolor sit, amet consectetur
+                                adipisicing.</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Necessitatibus?</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit.</a
+                            >
+                        </li>
+                    </ul>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Veritatis inventore, at recusandae ratione modi
+                        harum magnam dolores ad atque fugit id, non, aperiam
+                        laudantium pariatur quam rem maiores perspiciatis
+                        numquam ipsam. Velit, unde non mollitia laudantium saepe
+                        aspernatur qui accusantium?
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati cumque ad, quasi debitis neque laborum
+                        voluptates numquam reiciendis cupiditate quidem id
+                        quibusdam at nihil. Numquam nobis ipsum iusto assumenda
+                        distinctio!
+                    </p>
+                </section>
+                <!-- left side content end -->
+                <!-- right side content -->
+                <section class="right-side">
+                    <article>
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Recusandae at saepe consequuntur ipsum quasi
+                            fuga laborum architecto amet accusantium? Dolores?
+                            <a href="#">More..</a>
+                        </p>
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li>
+                                <a href="#"
+                                    >Lorem ipsum dolor sit amet consectetur.</a
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h4>recent updates</h4>
+                        <p>
+                            <strong>[06/09/2006]</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Facilis, omnis! Alias ad cumque voluptatum
+                            corporis quis, nemo at iusto dolores.
+                            <a href="#">More..</a>
+                        </p>
+                        <p>
+                            <strong>[06/06/2006]</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Facilis, omnis! Alias ad cumque voluptatum
+                            corporis quis, nemo at iusto dolores. Lorem ipsum
+                            dolor sit.
+                            <a href="#">More..</a>
+                        </p>
+                        <p>
+                            <strong>[06/03/2006]</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            Lorem, ipsum dolor sit amet consectetur adipisicing.
+                            elit. Facilis, omnis! Alias ad cumque voluptatum
+                            corporis quis, nemo at iusto dolores.
+                            <a href="#">More..</a>
+                        </p>
+                    </article>
+                </section>
+                <!-- right side content end -->
+            </section>
+            <footer>
+                <p>
+                    Copyright &copy; 2026 company.com. Designed by
+                    <a href="#">Green Blogger</a>
+                </p>
+            </footer>
+        </main>
+        <!-- <section class="top-page"></section>
+        <article class="left-side"></article>
+        <main></main>
+        <header></header>
+        <nav></nav>
+        <footer></footer> -->
     </body>
 </html>
