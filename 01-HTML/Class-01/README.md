@@ -27,6 +27,28 @@ body tag will be a father tag.
 
 : bottom of the page
 
+### 7. figure
+
+: wrap the img tag
+
+```html
+<figure>
+    <img src="/img/rec.png" alt="Circle" />
+    <figcaption></figcaption>
+</figure>
+```
+
+### 8. figcaption
+
+: has to be inside the figure tag
+
+```html
+<figure>
+    <img src="/img/rec.png" alt="Circle" />
+    <figcaption></figcaption>
+</figure>
+```
+
 # +
 
 -   p : paragraph
@@ -46,6 +68,9 @@ body tag will be a father tag.
 -   normally open tag + close tag
 -   self closing tag : no closing tag (link tag)
 -   nav > ul = nav ul
+-   vh : view height (To be flexible. Dont use px.)
+-   vw: view width (To be flexible. Dont use px.)
+-   check your code at the W3C (to know recommendation)
 
 # CSS
 
@@ -73,7 +98,7 @@ all elements has margin and padding in default
 put `display: flex` to the father! not child!
 Then children will be moved.
 
-If you put it in ul, every li will replace in a single row.
+If you put it in ul or text, every li will replace in a single row.
 
 If you put it in li, dots will be removed.
 
@@ -85,6 +110,67 @@ body {
 
 -   justify-content : take the child and place to the center
 
+```css
+header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+/* 
+display: flex - two text will be in the same row
+flex-direction: column - can make it in column 
+row-gap: 3vh - make the gap between*/
+```
+
+### 4. root
+
+```css
+/* setting */
+:root {
+    --defaultColor: #5e5945;
+    --defaultFontSize: 10px;
+}
+/* Camel Case :
+first letter CapitalLetter*/
+
+/* use */
+h1 {
+    color: var(--defaultColor);
+}
+```
+
+### 5. How to make space between text
+
+way1. give the padding for each letter (avoid margin- not recommended)
+
+```css
+h1 {
+    padding-bottom: 1%;
+}
+```
+
+way2. use the gap
+give `display: flex` to use the gap
+but texts will placed in a row so we need flex-direction: column
+
+```css
+header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+/* the texts are in the column, so if we wanna make a gap between, we have to use the row-gap. */
+```
+
+### 6.img
+
+```html
+<figure>
+    <img src="/img/rec.png" alt="Circle" />
+    <figcaption></figcaption>
+</figure>
+```
+
 # text
 
 -   text-decoration: none;remove the underline
@@ -94,6 +180,7 @@ body {
     bolder font
 -   transition: .4s;
     changing time
+-   text-align: center; make the text to the center (inline tags)
 
 # hover
 

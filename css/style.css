@@ -4,6 +4,11 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --defaultColor: #5e5945;
+    --defaultFontSize: 18px;
+}
+
 body {
     background-color: darkseagreen;
     display: flex;
@@ -12,11 +17,29 @@ body {
 
 main {
     background-color: beige;
-    width: 90%;
+    width: 80%;
+    padding: 5%;
+}
+
+header {
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+header > h1 {
+    font-size: 36px;
+    color: var(--defaultColor);
+    /* padding-bottom: 1%; */
+}
+
+header > h3 {
+    color: var(--defaultColor);
 }
 
 nav {
-    background-color: darkolivegreen;
+    background-color: var(--defaultColor);
 }
 
 nav > ul {
@@ -41,4 +64,101 @@ nav a {
 nav a:hover {
     background-color: beige;
     color: darkgreen;
+}
+
+main > section {
+    /* to make sections in two rows */
+    display: flex;
+    column-gap: 2vw;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+article {
+    border: 1px dashed var(--defaultColor);
+    padding: 5%;
+}
+
+article > ul {
+    padding-left: 15%;
+    list-style-type: square;
+}
+
+article p {
+    text-align: justify;
+}
+
+article a {
+    color: teal;
+}
+
+strong {
+    color: var(--defaultColor);
+}
+.left-side {
+    display: flex;
+    flex-direction: column;
+    /* direction is column so we need align-items (y to x). */
+    align-items: center;
+    /* if direction is row, we need justify-content (x to y).
+    justify-content: center; */
+    row-gap: 1vh;
+}
+
+.left-side > p {
+    text-align: justify;
+}
+
+.left-side > h4 {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    color: var(--defaultColor);
+    font-size: 18px;
+    /* to make it placed front */
+    width: 100%;
+}
+
+.left-side a {
+    color: teal;
+}
+
+.left-side > ul {
+    list-style-type: square;
+    color: var(--defaultColor);
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.right-side h4 {
+    color: var(--defaultColor);
+}
+
+/* 
+to check
+
+figure {
+    border: 1px solid red;
+} */
+
+img {
+    width: 10%;
+}
+
+footer {
+    background-color: var(--defaultColor);
+    text-align: center;
+    padding: 1%;
+}
+
+footer > p {
+    color: whitesmoke;
+}
+
+footer a {
+    text-decoration: none;
+    color: teal;
 }
