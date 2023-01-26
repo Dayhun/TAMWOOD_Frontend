@@ -1,6 +1,7 @@
 # Semantic HTML
 
 create the block for content
+focus on the structure of the document, not the visual
 
 ### 1. section
 
@@ -49,6 +50,26 @@ body tag will be a father tag.
 </figure>
 ```
 
+### 9. aside
+
+### 10. details and summary
+
+```html
+<summary>
+    <details></details>
+</summary>
+```
+
+### 11. Media
+
+```
+<video>
+<picture>
+<img>
+<audio>
+<source>
+```
+
 # +
 
 -   p : paragraph
@@ -64,6 +85,7 @@ body tag will be a father tag.
 -   class name has to represent what it means
 -   loremN : lorem40 (40 words)
 -   option Z : make paragraph separated
+-   option click where to change : can change many parts at once
 -   bold sentence > strong tag(in HTML5 before was b tag)
 -   normally open tag + close tag
 -   self closing tag : no closing tag (link tag)
@@ -71,6 +93,7 @@ body tag will be a father tag.
 -   vh : view height (To be flexible. Dont use px.)
 -   vw: view width (To be flexible. Dont use px.)
 -   check your code at the W3C (to know recommendation)
+-   `<hr>` make the line
 
 # CSS
 
@@ -181,7 +204,35 @@ header {
 -   transition: .4s;
     changing time
 -   text-align: center; make the text to the center (inline tags)
+-   text-transform : capitalize; make first letter Upeprcase
 
 # hover
 
 actions of the pointer
+
+# JavaScript
+
+place script tag before the closing body tag
+
+# inline Text Elements
+
+They do not disrupt the flow
+`<a>
+<abbr>
+<br>
+<cite>
+<code>
+<em>
+<mark>
+<small>
+<span>
+<strong>
+<time>`
+
+# Character Entities
+
+`&nbsp;` Nonbreakable space
+`&lt;` <
+`&gt;` >
+`&copy;` &copy;
+`&trade;` &trade;
