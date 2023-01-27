@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: forestgreen;
+    height: 25vh;
+    background-image: url("./img/bg-grass.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+header > article {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
