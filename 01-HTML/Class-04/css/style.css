@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+nav,
+main,
+footer {
+    width: 90%;
+}
+p {
+    line-height: 1.5;
+}
+header {
+    background-image: url("../img/bg-grass.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2vh;
+}
+
+header > h1,
+header > h4 {
+    padding-left: 5%;
+}
+
+nav {
+    /* background-image: linear-gradient(when to where, first color space%, second color space%)  */
+    background-image: linear-gradient(
+        to bottom,
+        rgb(80, 80, 80) 50%,
+        black 50%
+    );
+    border-top: 1px solid whitesmoke;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+}
+
+nav li {
+    /* a padding */
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    border-right: 1px solid whitesmoke;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 5%;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+}
+
+/* pseudo selector = fake selector : stronger than class selector*/
+nav a:hover {
+    background-image: linear-gradient(to top, crimson 50%, red 50%);
+}
+main {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+.left {
+    padding: 1%;
+    background-color: white;
+}
+.left > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    text-align: justify;
+    padding-bottom: 5%;
+}
+.left > section h3 {
+    padding-bottom: 2%;
+}
+.left > article {
+    background-color: darkgray;
+    color: whitesmoke;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+}
+
+.left > article p {
+    text-align: justify;
+}
+.left > article a {
+    color: yellow;
+}
+.right {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    background-color: gainsboro;
+}
+.right > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+.right > article {
+    background-color: darkred;
+    padding: 2%;
+    color: whitesmoke;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.right > article h3 {
+    color: whitesmoke;
+    padding-bottom: 3%;
+}
+.right li {
+    list-style-type: none;
+}
+.right > article a {
+    color: yellow;
+}
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 1% 0;
+}
+
+footer > p {
+    color: whitesmoke;
+}

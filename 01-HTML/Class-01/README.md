@@ -194,6 +194,44 @@ header {
 </figure>
 ```
 
+### 7. background-image
+
+1. gradients
+   https://www.w3schools.com/css/css3_gradients.asp
+
+`nav {
+    background-image: linear-gradient(
+        when to where,
+        first color space%,
+        second color space%
+    );
+}`
+
+```css
+nav {
+    background-image: linear-gradient(
+        to bottom,
+        rgb(80, 80, 80) 50%,
+        black 50%
+    );
+    border-top: 1px solid whitesmoke;
+}
+nav a:hover {
+    background-image: linear-gradient(to top, crimson 50%, red 50%);
+}
+```
+
+2. background image
+
+```css
+header {
+    background-image: url("../img/bg-grass.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+```
+
 # text
 
 -   text-decoration: none;remove the underline
@@ -236,3 +274,25 @@ They do not disrupt the flow
 `&gt;` >
 `&copy;` &copy;
 `&trade;` &trade;
+
+# CSS selector
+
+1. tag selector
+   tag selector - weakest selector, easy to replace
+2. class selector
+   class selector - tag selector will be changed, overwrite
+3. id selector
+   id selector - the most strongest selector, not changeable
+4. pseudo selector
+   pseudo selector = fake selector : stronger than class selector
+
+````
+
+```
+
+```
+````
+
+```
+
+```
