@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+header {
+    color: white;
+    background-image: url(/01-HTML/Class-04/img/strawberry.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header > aside h1 {
+    font-style: italic;
+}
+
+nav {
+    border-top: 1px solid white;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(255, 102, 0) 50%,
+        rgb(220, 20, 20) 50%
+    );
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+nav > ul {
+    display: flex;
+    width: 70%;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    width: 100%;
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-image: linear-gradient(to bottom, lightgreen 50%, green 50%);
+}
+
+.main-content {
+    display: flex;
+}
+
+.left {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    text-align: justify;
+    padding: 1%;
+    width: 40%;
+}
+
+.left > article {
+    background-color: olive;
+    color: white;
+    padding: 3%;
+}
+
+.left > article h4 {
+    padding-bottom: 1%;
+}
+
+.left > section {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.left ul {
+    list-style-type: none;
+}
+
+.left a {
+    text-decoration: none;
+}
+
+.right {
+    background-color: white;
+    padding: 1%;
+}
+
+footer {
+    background-color: black;
+}
+
+footer > p {
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
