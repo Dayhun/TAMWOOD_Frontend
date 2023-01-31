@@ -285,14 +285,3 @@ They do not disrupt the flow
    id selector - the most strongest selector, not changeable
 4. pseudo selector
    pseudo selector = fake selector : stronger than class selector
-
-````
-
-```
-
-```
-````
-
-```
-
-```
