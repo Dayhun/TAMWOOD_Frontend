@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --defaultColor: #90aa5e;
+}
+
+body {
+    background-color: #6dbfda;
+    display: flex;
+    justify-content: center;
+    padding: 3vh 0;
+    line-height: 1.5;
+}
+
+main {
+    width: 90%;
+    background-color: #fcf5e5;
+    border-radius: 15px;
+}
+
+header {
+    padding: 1%;
+}
+
+header > h1 {
+    color: var(--defaultColor);
+    text-transform: capitalize;
+}
+
+header > h4 {
+    color: gray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--defaultColor);
+    height: 6vh;
+    padding: 0 1%;
+}
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+nav li {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background-color: #6dbfda;
+}
+
+form {
+    display: flex;
+    column-gap: 0.3vw;
+    height: 70%;
+}
+
+form > input {
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+}
+
+[type="search"] {
+    width: 20vw;
+}
+
+[type="submit"] {
+    width: 3vw;
+}
+
+::placeholder {
+    padding-left: 5%;
+    color: lightgray;
+}
+
+main > section {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+    padding: 2%;
+}
+
+.left {
+    width: 25%;
+}
+
+.left h3 {
+    text-transform: capitalize;
+    padding: 5% 0;
+}
+
+.left ul {
+    list-style-type: none;
+}
+
+.left ul a {
+    text-decoration: none;
+    color: #6dbfda;
+}
+
+hr {
+    margin-top: 5%;
+    background: var(--defaultColor);
+    height: 1px;
+    border: 0;
+}
+.right img {
+    width: 15vw;
+    height: 13vh;
+}
