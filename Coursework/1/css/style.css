@@ -52,11 +52,19 @@ main {
     text-decoration: none;
     color: var(--orangeColor);
 }
-
+.left img {
+    width: 3%;
+    height: 3%;
+    padding: 0 0.5%;
+}
+.img-arrow {
+    transform: rotate(-90deg);
+}
 .left > section article {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     color: #b7b7b8;
 }
 
