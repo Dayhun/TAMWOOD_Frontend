@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 1%;
+}
+
+nav > figure {
+    display: flex;
+    column-gap: 2vw;
+    align-items: center;
+}
+
+nav h1 {
+    color: hotpink;
+}
+nav img {
+    width: 5%;
+}
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    column-gap: 3vw;
+    align-items: center;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.4s;
+    padding-bottom: 3%;
+    border-bottom: 5px solid transparent;
+}
+
+nav a:hover {
+    color: hotpink;
+    border-color: hotpink;
+}
+
+header > section {
+    background-image: url("../img/pic1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height %가 안먹히는 이유 : header(부모요소)에 사이즈 세팅 안했기 때문.*/
+    height: 20vh;
+}
+
+header aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 3%;
+    border: 0px none transparent;
+    /* color: hotpink; */
+}
+
+::placeholder {
+    color: hotpink;
+}
+/* how to use attribute to css */
+[type="search"] {
+    width: 35vw;
+}
+
+[type="submit"] {
+    background-color: pink;
+    width: 5vw;
+}
+
+main {
+    padding: 1%;
+}
+main > h3 {
+    text-transform: capitalize;
+    padding-bottom: 1%;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1vw;
+    row-gap: 3vh;
+    justify-content: space-around;
+}
+
+.gallery > figure {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.gallery figcaption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: 20vw;
+    height: 18vh;
+}

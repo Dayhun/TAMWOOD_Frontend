@@ -74,3 +74,28 @@ main {
     border: 1px solid #b7b7b8;
     padding: 1%;
 }
+
+.right > header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    color: var(--orangeColor);
+}
+
+.right ul {
+    list-style-type: square;
+    color: var(--orangeColor);
+}
+
+.right a {
+    text-decoration: none;
+    color: #7e8085;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.right img {
+    width: 20%;
+}

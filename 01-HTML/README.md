@@ -70,6 +70,43 @@ body tag will be a father tag.
 <source>
 ```
 
+### 12. form
+
+-   form's action attribute can send or get data.
+    -   action="input"
+    -   action="hello.html"
+-   form's method has GET and POST
+    -   method="get" will replace url
+    -   method="post" will be hidden
+    -   do not set the method = get
+
+```html
+<form action="input" method="">
+    <!-- type="search" = type="text" -->
+    <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Search"
+        value=""
+    />
+    <!-- if you wanna send it, you need to put sumbit type https://www.w3schools.com/charsets/ref_utf_symbols.asp -->
+    <input type="submit" value="&#128270;" />
+</form>
+```
+
+```css
+/* placeholder color */
+::placeholder {
+    color: hotpink;
+}
+
+/* when you type in the input, text color */
+input {
+    color: hotpink;
+}
+```
+
 # +
 
 -   p : paragraph
@@ -145,6 +182,9 @@ flex-direction: column - can make it in column
 row-gap: 3vh - make the gap between*/
 ```
 
+-   flex-wrap: wrap
+    we can use column-gap and row-gap both.
+
 ### 4. root
 
 ```css
@@ -194,6 +234,8 @@ header {
 </figure>
 ```
 
+figcaption has to placed in the figure tag.
+
 ### 7. background-image
 
 1. gradients
@@ -221,6 +263,16 @@ nav a:hover {
 }
 ```
 
+```css
+nav a {
+    border-bottom: 5px solid transparent;
+}
+
+nav a:hover {
+    border-color: hotpink;
+}
+```
+
 2. background image
 
 ```css
@@ -243,6 +295,11 @@ header {
     changing time
 -   text-align: center; make the text to the center (inline tags)
 -   text-transform : capitalize; make first letter Upeprcase
+-   small tag : inline tag, not allowed to put inside the block tag
+
+```css
+<small>Hi</small>
+```
 
 # hover
 
@@ -277,11 +334,30 @@ They do not disrupt the flow
 
 # CSS selector
 
+weak - strong
+(weakest) tag - class - attribute- pseudo - id (strongest)
+
 1. tag selector
-   tag selector - weakest selector, easy to replace
+   tag selector - name of the tag, lowest priority (weakest selector), easy to replace
 2. class selector
-   class selector - tag selector will be changed, overwrite
+   class selector - dot sign before class name (.classname), 2nd lowest priority, tag selector will be changed, overwrite
 3. id selector
-   id selector - the most strongest selector, not changeable
+   id selector - hashtag sign before id name (#idname), highest priority (the most strongest selector), not changeable
 4. pseudo selector
-   pseudo selector = fake selector : stronger than class selector
+   pseudo selector = fake selector - :sign, stronger than class selector, 2nd highest priority
+5. attribute selector
+   stronger than class selector
+   we can create our own attribute selector
+
+```html
+<input type="submit" value="&#128270;" data-id="gallery-vancouver" />
+```
+
+```css
+/* how to use attribute to css */
+[type="submit"] {
+}
+
+[data-id="gallery-vancouver"] {
+}
+```
