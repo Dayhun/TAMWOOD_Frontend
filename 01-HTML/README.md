@@ -305,6 +305,8 @@ header {
 
 actions of the pointer
 
+-   cursor: pointer;
+
 # JavaScript
 
 place script tag before the closing body tag
@@ -359,5 +361,171 @@ weak - strong
 }
 
 [data-id="gallery-vancouver"] {
+}
+```
+
+# Table
+
+-   table : father tag
+    -   tr : rows (should placed inside table tag)
+        -   td : columns (should placed inside tr tag)
+        -   th : represent header (should placed inside tr tag, bolder font)
+
+```html
+<table>
+    <tr>
+        <td>#ID</td>
+        <td>Product Name</td>
+        <td>Price</td>
+        <td>Discount</td>
+        <td>Qty</td>
+    </tr>
+</table>
+
+<!-- bolder -->
+<table>
+    <tr>
+        <th>#ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Qty</th>
+    </tr>
+</table>
+```
+
+### table form
+
+-   basic formn
+
+```html
+<table>
+    <!-- optional caption -->
+    <caption>
+        Dessert Menu
+    </caption>
+    <!-- basic form -->
+    <thead></thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+</table>
+```
+
+-   colspan : combined columns
+
+```html
+<tr>
+    <td>Total</td>
+    <!-- colspan means dont make any space table -->
+    <!-- 4columns, but only 2 columns used. last column will be 3 added -->
+    <td colspan="3">4</td>
+</tr>
+```
+
+-   rowspan : combined rows
+
+```html
+<tr>
+    <td>#3</td>
+    <td>Pudim</td>
+    <td>$8</td>
+    <td rowspan="2">10%</td>
+</tr>
+<tr>
+    <td>#4</td>
+    <td>Crepe</td>
+    <td>$20</td>
+    <!-- <td>5%</td> -->
+</tr>
+```
+
+-   colgroup tag + col tag
+
+```html
+<!-- example -->
+<table>
+    <caption>
+        Dessert Menu
+    </caption>
+    <colgroup>
+        <!-- col : self closing tag -->
+        <col class="one" />
+        <col class="two" />
+        <col class="three" span="2" />
+        <!-- span="2"means combined third column and forth column -->
+        <!-- <col class="four" /> -->
+    </colgroup>
+    <thead></thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+</table>
+```
+
+```css
+.one {
+    background-color: red;
+}
+.two {
+    background-color: orange;
+}
+.three {
+    background-color: pink;
+}
+```
+
+### table css
+
+```css
+/* making border */
+/* 1. table */
+table {
+    font-size: 30px;
+    border: 1px solid black;
+    /* to remove the space */
+    border-collapse: collapse;
+}
+
+/* nothing happened */
+thead,
+tbody,
+tfoot {
+    border: 1px solid black;
+}
+
+/* 2. */
+/* if you wanna make borders, td and th is the only tags can get border.*/
+td,
+th {
+    border: 1px solid black;
+}
+/* but it has space between . so we have to add this.
+table {
+    border-collapse : collapse
+}
+*/
+
+/* color */
+thead > tr {
+    background-color: aquamarine;
+    color: blue;
+}
+
+/* pseudo selector - second strong selector */
+tbody > tr:nth-child(odd) {
+    background-color: beige;
+}
+
+tbody > tr:nth-child(2) {
+    background-color: yellow;
+}
+
+tbody > tr:first-child {
+    background-color: blueviolet;
+    color: white;
+}
+
+tbody > tr:last-child {
+    background-color: red;
+    color: white;
 }
 ```

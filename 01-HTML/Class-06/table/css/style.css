@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+/* body > table:last-child {
+    display: none;
+} */
+
+/* making border */
+/* 1. table */
+table {
+    font-size: 30px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* nothing happened */
+thead,
+tbody,
+tfoot {
+    border: 1px solid black;
+}
+
+/* 2. */
+/* if you wanna make borders, td and th is the only tags can get border.*/
+td,
+th {
+    border: 1px solid black;
+}
+/* but it has space between . so we have to add this.
+table {
+    border-collapse : collapse
+}
+*/
+
+caption {
+    background-color: burlywood;
+}
+/* color */
+thead > tr {
+    background-color: aquamarine;
+    color: blue;
+}
+/* tbody > tr {
+    background-color: beige;
+} */
+/* tbody > tr:nth-child(odd) {
+    background-color: beige;
+}
+
+tbody > tr:first-child {
+    background-color: blueviolet;
+    color: white;
+}
+
+tbody > tr:last-child {
+    background-color: red;
+    color: white;
+}
+
+tbody > tr:nth-child(2) {
+    background-color: yellow;
+} */
+
+tbody > tr:hover {
+    background-color: chartreuse;
+    cursor: pointer;
+}
+
+.one {
+    background-color: red;
+}
+.two {
+    background-color: orange;
+}
+.three {
+    background-color: pink;
+}
