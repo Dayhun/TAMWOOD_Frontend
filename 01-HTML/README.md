@@ -145,6 +145,9 @@ all elements has margin and padding in default
 }
 ```
 
+-   display: none; : hide everything
+-   visibility: hidden; : hide visual, it has space
+
 ### 1. margin
 
 : space from the border of the element to outside
@@ -296,6 +299,9 @@ header {
 -   text-align: center; make the text to the center (inline tags)
 -   text-transform : capitalize; make first letter Upeprcase
 -   small tag : inline tag, not allowed to put inside the block tag
+-   word-spacing: 1vw; make the space between words
+-   letter-spacing: 4px; make space between letters
+-   font-style: italic;
 
 ```css
 <small>Hi</small>

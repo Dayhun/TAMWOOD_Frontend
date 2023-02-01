@@ -1,4 +1,270 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2vh;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    column-gap: 5vw;
+}
+
+/* img will be crushed */
+img {
+    /* remove the result page */
+    display: none;
+    /* it has space, just unvisibility */
+    /* visibility: hidden; */
+    width: 70vw;
+    height: 30vh;
+}
+
+/* so we will try with background-img */
+header > section {
+    width: 60%;
+    background-image: url("../img/orange.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 70vw;
+    height: 30vh;
+    display: flex;
+    justify-content: right;
+    border: 10px solid white;
+}
+
+figure {
+    width: 20%;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+}
+
+figure h2 {
+    color: dodgerblue;
+    word-spacing: 1vw;
+    letter-spacing: 4px;
+    padding-bottom: 5%;
+}
+
+figure span,
+strong {
+    color: orange;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+aside > p {
+    font-weight: 600;
+}
+
+nav {
+    background-color: orange;
+    margin: 2% 0;
+}
+nav > ul {
+    display: flex;
+    width: 50%;
+    height: 5vh;
+    list-style-type: none;
+}
+
+nav li {
+    display: flex;
+    border-right: 1px solid whitesmoke;
+    width: 100%;
+    height: 100%;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.4s;
+    height: 100%;
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    column-gap: 3vw;
+}
+
+main h3 {
+    color: dodgerblue;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.left,
+.right {
+    width: 20%;
+    padding: 2%;
+}
+
+.middle {
+    width: 50%;
+    padding: 2%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.left > h3 {
+    padding-left: 5%;
+}
+
+/* Teacher way */
+.left > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.left li {
+    display: flex;
+    border-bottom: 2px solid whitesmoke;
+    background-color: orange;
+}
+
+.left a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4%;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.left a:hover {
+    background-color: dodgerblue;
+}
+
+/* my way */
+/* .left li {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    border-bottom: 1px solid whitesmoke;
+    height: 5vh;
+}
+
+.left a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    height: 100%;
+    padding-left: 3%;
+    transition: 0.4s;
+}
+
+.left a:hover {
+    background-color: dodgerblue;
+} */
+
+.left > p {
+    padding-left: 3%;
+}
+
+.middle {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.middle span {
+    color: orange;
+}
+
+.middle blockquote {
+    padding: 2% 10% 5%;
+    color: brown;
+    font-style: italic;
+}
+
+.middle blockquote a {
+    color: orange;
+    text-decoration: none;
+}
+
+.top > p {
+    text-align: justify;
+}
+
+.bottom a {
+    color: orange;
+    text-decoration: none;
+}
+
+.bottom > p {
+    padding-top: 2%;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.right ul {
+    padding-left: 20%;
+}
+
+.right a {
+    color: orange;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+footer > p {
+    color: gray;
+}
+
+footer a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
