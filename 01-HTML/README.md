@@ -535,3 +535,300 @@ tbody > tr:last-child {
     color: white;
 }
 ```
+
+# Forms
+
+input type submit needed
+
+```html
+<form></form>
+```
+
+### form tag attributes
+
+-   action = 'hi.html'
+-   method = 'post' : default is 'get'
+-   enctype = 'multipart/form-data' : if you wanna make the file included, you have to put in the form tag
+
+### type = "text"
+
+```html
+<form action="thankyou.html">
+    <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+        value="write your first name"
+    />
+</form>
+```
+
+-   result
+
+<form action="thankyou.html">
+    <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+        value="write your first name"
+    />
+</form>
+not recommended to use value.
+
+#### 'label' tag
+
+label's attribute `for` has to get the same value with input's `id` value
+
+```html
+<form action="thankyou.html">
+    <label for="firstName"> First Name: </label>
+    <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+        value="winter"
+    />
+</form>
+```
+
+#### 'name' attribute meaning
+
+```html
+<!-- same name value -->
+<form>
+    <h4>can choose both</h4>
+    <aside>
+        <label for="winter">winter</label>
+        <input type="checkbox" value="winter" name="winter" id="winter" />
+        <label for="summer">Summer</label>
+        <input type="checkbox" value="summer" name="summer" id="summer" />
+    </aside>
+    <aside>
+        <h4>can choose only one</h4>
+        <label for="timezone-east">East</label>
+        <input
+            type="radio"
+            value="timezone-east"
+            name="timezone"
+            id="timezone-east"
+        />
+        <label for="timezone-west">West</label>
+        <input
+            type="radio"
+            value="timezone-west"
+            name="timezone"
+            id="timezone-west"
+        />
+    </aside>
+</form>
+```
+
+-   result
+
+<form>
+<h4>can choose both</h4>
+            <aside>
+                <label for="winter">winter</label>
+                <input
+                    type="checkbox"
+                    value="winter"
+                    name="winter"
+                    id="winter"
+                />
+                <label for="summer">Summer</label>
+                <input
+                    type="checkbox"
+                    value="summer"
+                    name="summer"
+                    id="summer"
+                />
+            </aside>
+            <aside>
+            <h4>can choose only one</h4>
+    <label for="timezone-east">East</label>
+    <input
+        type="radio"
+        value="timezone-east"
+        name="timezone"
+        id="timezone-east"
+    />
+    <label for="timezone-west">West</label>
+    <input
+        type="radio"
+        value="timezone-west"
+        name="timezone"
+        id="timezone-west"
+    />
+    </aside>
+</form>
+
+-   if the name attribute has same value, it means users can choose only one for select
+
+### type = "file"
+
+```html
+<form>
+    <!-- file upload  -->
+    <aside>
+        <label for="file">Submit your work :</label>
+        <input type="file" value="Send File" name="file" id="file" />
+    </aside>
+</form>
+```
+
+-   result
+<form>
+    <!-- file upload  -->
+    <aside>
+        <label for="file">Submit your work :</label>
+        <input type="file" value="Send File" name="file" id="file" />
+    </aside>
+</form>
+
+### textarea tag
+
+```html
+<form>
+    <aside>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </aside>
+</form>
+```
+
+-   result
+<form>
+    <aside>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </aside>
+</form>
+
+### Select tag
+
+```html
+<form>
+    <!-- select box -->
+    <aside>
+        <!-- option must be placed inside the select tag -->
+        <label for="beverage">Beverages</label>
+        <select name="beverage" id="beverage">
+            <!-- users will see 'Coke', but in the data we will get 'coke' from the value -->
+            <!-- optgroup : group the options -->
+            <optgroup label="Cold Beverage">
+                <option value="coke">Coke</option>
+                <option value="beer">Beer</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="tea">Tea</option>
+                <option value="orange-juice">Orange Juice</option>
+            </optgroup>
+            <optgroup label="Hot Beverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="hot-chocolate">Hot Chocolate</option>
+                <option value="french-vanilla">French Vanilla</option>
+            </optgroup>
+        </select>
+    </aside>
+</form>
+```
+
+-   result
+<form>
+    <!-- select box -->
+    <aside>
+        <!-- option must be placed inside the select tag -->
+        <label for="beverage">Beverages</label>
+        <select name="beverage" id="beverage">
+            <!-- users will see 'Coke', but in the data we will get 'coke' from the value -->
+            <!-- optgroup : group the options -->
+            <optgroup label="Cold Beverage">
+                <option value="coke">Coke</option>
+                <option value="beer">Beer</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="tea">Tea</option>
+                <option value="orange-juice">Orange Juice</option>
+            </optgroup>
+            <optgroup label="Hot Beverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="hot-chocolate">Hot Chocolate</option>
+                <option value="french-vanilla">French Vanilla</option>
+            </optgroup>
+        </select>
+    </aside>
+</form>
+
+To make the select box nonselected in placeholder
+
+-   make `<option value="-" disabled selected>Select<option>`
+
+```html
+<form>
+    <aside>
+        <label for="beverage">Beverages</label>
+        <select name="beverage" id="beverage">
+            <option value="-" disabled selected>Select</option>
+            <optgroup label="Cold Beverage">
+                <option value="coke">Coke</option>
+                <option value="beer">Beer</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="tea">Tea</option>
+                <option value="orange-juice">Orange Juice</option>
+            </optgroup>
+            <optgroup label="Hot Beverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="hot-chocolate">Hot Chocolate</option>
+                <option value="french-vanilla">French Vanilla</option>
+            </optgroup>
+        </select>
+    </aside>
+</form>
+```
+
+<form>
+    <aside>
+        <!-- option must be placed inside the select tag -->
+        <label for="beverage">Beverages</label>
+        <select name="beverage" id="beverage">
+        <option value="-" disabled selected>Select</option>
+            <optgroup label="Cold Beverage">
+                <option value="coke">Coke</option>
+                <option value="beer">Beer</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="tea">Tea</option>
+                <option value="orange-juice">Orange Juice</option>
+            </optgroup>
+            <optgroup label="Hot Beverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="hot-chocolate">Hot Chocolate</option>
+                <option value="french-vanilla">French Vanilla</option>
+            </optgroup>
+        </select>
+    </aside>
+</form>
+
+### type="submit" & type="reset"
+
+```html
+<form>
+    <aside>
+        <!-- submit the form -->
+        <input type="submit" value="Send" />
+        <!-- cleanup your form -->
+        <input type="reset" value="Send" />
+    </aside>
+</form>
+```
+
+<form>
+    <aside>
+        <!-- submit the form -->
+        <input type="submit" value="Send" />
+        <!-- cleanup your form -->
+        <input type="reset" value="Reset" />
+    </aside>
+</form>

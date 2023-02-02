@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Forms</title>
+    </head>
+    <body>
+        <form
+            action="thankyou.html"
+            enctype="multipart/form-data"
+            method="post"
+        >
+            <!-- First Name -->
+            <label for="firstName">First Name :</label>
+            <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="First Name"
+                value="winter"
+            />
+            <!-- Search -->
+            <label for="search">Search :</label>
+            <input type="text" name="search" id="search" placeholder="Search" />
+            <!-- Date of Birth -->
+            <label for="birth">Date of Birth :</label>
+            <input type="date" id="birth" name="birth" />
+            <!-- check both -->
+            <aside>
+                <label for="winter">winter</label>
+                <input
+                    type="checkbox"
+                    value="winter"
+                    name="winter"
+                    id="winter"
+                />
+                <label for="summer">Summer</label>
+                <input
+                    type="checkbox"
+                    value="summer"
+                    name="summer"
+                    id="sumemr"
+                />
+            </aside>
+            <!-- check only one -->
+            <aside>
+                <label for="timezone-east">East</label>
+                <input
+                    type="radio"
+                    value="timezone-east"
+                    name="timezone"
+                    id="timezone-east"
+                />
+                <label for="timezone-west">West</label>
+                <input
+                    type="radio"
+                    value="timezone-west"
+                    name="timezone"
+                    id="timezone-west"
+                />
+            </aside>
+            <!-- file upload  -->
+            <aside>
+                <label for="file">Submit your work :</label>
+                <input type="file" value="Send File" name="file" id="file" />
+            </aside>
+            <!-- textarea -->
+            <aside>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </aside>
+            <!-- select box -->
+            <aside>
+                <!-- option must be placed inside the select tag -->
+                <label for="beverage">Beverages</label>
+                <select name="beverage" id="beverage">
+                    <!-- users will see 'Coke', but in the data we will get 'coke' from the value -->
+                    <option value="-" disabled selected>Select</option>
+                    <!-- optgroup : group the options -->
+                    <optgroup label="Cold Beverage">
+                        <option value="coke">Coke</option>
+                        <option value="beer">Beer</option>
+                        <option value="pepsi">Pepsi</option>
+                        <option value="tea">Tea</option>
+                        <option value="orange-juice">Orange Juice</option>
+                    </optgroup>
+                    <optgroup label="Hot Beverage">
+                        <option value="coffee">Coffee</option>
+                        <option value="tea">Tea</option>
+                        <option value="hot-chocolate">Hot Chocolate</option>
+                        <option value="french-vanilla">French Vanilla</option>
+                    </optgroup>
+                </select>
+            </aside>
+            <aside>
+                <!-- submit the form -->
+                <input type="submit" value="Send" />
+                <!-- cleanup your form -->
+                <input type="reset" value="Reset" />
+            </aside>
+        </form>
+    </body>
+</html>
