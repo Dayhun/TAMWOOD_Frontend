@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+body > section {
+    background-color: royalblue;
+    width: 20%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8vh;
+}
+
+body > main {
+    width: 50%;
+}
+
+section > header {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+header > h2 {
+    font-size: 18px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    display: flex;
+    border: 1px solid lightblue;
+}
+
+nav a {
+    padding: 5%;
+    width: 100%;
+    color: lightblue;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background-color: lightblue;
+    color: whitesmoke;
+}
+
+body > section > article {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    text-align: justify;
+}
+
+body > section a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+footer > p {
+    color: dodgerblue;
+}
+
+main > header {
+    background-image: url("/01-HTML/Class-07/img/building.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vh;
+}
+
+.content {
+    background-color: azure;
+    padding: 5%;
+}
+
+.content > h2 {
+    padding-bottom: 5%;
+}
+
+form > fieldset {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    column-gap: 2vw;
+}
+
+form > fieldset:nth-child(3) {
+    flex-direction: column;
+}
+
+fieldset > fieldset {
+    width: 40%;
+}
+
+.content fieldset {
+    padding: 5%;
+    border: 1px solid gray;
+}
+
+.first-field aside,
+.second-field aside {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+}
+
+.second-field fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.third-field aside {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    border: 1px solid dimgray;
+    border-collapse: collapse;
+}
+
+fieldset > fieldset td {
+    padding: 5%;
+}
+
+td {
+    border: 1px solid dimgray;
+}
