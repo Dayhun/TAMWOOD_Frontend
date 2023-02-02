@@ -131,6 +131,7 @@ input {
 -   vw: view width (To be flexible. Dont use px.)
 -   check your code at the W3C (to know recommendation)
 -   `<hr>` make the line
+-   makeshift : a temporary expedient or substitute, sth to fix it temporary to be better = work around (해결책)
 
 # CSS
 
@@ -370,6 +371,22 @@ weak - strong
 }
 ```
 
+### Fieldset
+
+```html
+<fieldset>
+    <!-- title -->
+    <legend>Information</legend>
+</fieldset>
+```
+
+-   result
+
+<fieldset>
+    <!-- title -->
+    <legend>Information</legend>
+</fieldset>
+
 # Table
 
 -   table : father tag
@@ -539,6 +556,7 @@ tbody > tr:last-child {
 # Forms
 
 input type submit needed
+! Dont forget to put value! (To get Data) !
 
 ```html
 <form></form>
@@ -546,7 +564,7 @@ input type submit needed
 
 ### form tag attributes
 
--   action = 'hi.html'
+-   action = 'hi.html' : form data를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시
 -   method = 'post' : default is 'get'
 -   enctype = 'multipart/form-data' : if you wanna make the file included, you have to put in the form tag
 
@@ -595,6 +613,9 @@ label's attribute `for` has to get the same value with input's `id` value
 ```
 
 #### 'name' attribute meaning
+
+we can make the only one choice in radio type. NOT IN THE CHECKBOX
+for that, we can use the same name value to choose only one choice.
 
 ```html
 <!-- same name value -->

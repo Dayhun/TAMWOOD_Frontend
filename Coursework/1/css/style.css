@@ -18,11 +18,19 @@ main {
     margin: 5%;
     padding: 1%;
     border-radius: 1%;
+    box-shadow: 0 0 15px 5px #3d3e42;
     display: flex;
     flex-direction: row;
     column-gap: 2vw;
 }
 
+hr {
+    background: #b7b7b8;
+    height: 1px;
+    border: 0;
+}
+
+/* LEFT SECTION */
 .left {
     background-color: #3d3e42;
     border-radius: 1%;
@@ -30,12 +38,8 @@ main {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
-    row-gap: 2vh;
+    row-gap: 8vh;
     width: 75%;
-}
-
-.right {
-    width: 15%;
 }
 
 .left h3 {
@@ -47,23 +51,21 @@ main {
     padding: 1% 0;
 }
 
-.left hr {
-    background: #b7b7b8;
-    height: 1px;
-    border: 0;
-}
 .left a {
     text-decoration: none;
     color: var(--orangeColor);
 }
+
 .left img {
     width: 3%;
     height: 3%;
     padding: 0 0.5%;
 }
+
 .img-arrow {
     transform: rotate(-90deg);
 }
+
 .left > section article {
     display: flex;
     flex-direction: row;
@@ -79,6 +81,14 @@ main {
     padding: 1%;
 }
 
+/* RIGHT SECTION */
+.right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
 .right > header {
     display: flex;
     flex-direction: row;
@@ -92,6 +102,7 @@ main {
 .right > section h3 {
     text-transform: capitalize;
     color: var(--orangeColor);
+    padding-bottom: 5%;
 }
 
 .right ul {
@@ -102,15 +113,60 @@ main {
     list-style-type: square;
 }
 
+.right li::marker {
+    color: var(--orangeColor);
+}
+
 .right-first li {
     border-bottom: 1px solid var(--orangeColor);
 }
+
 .right a {
     text-decoration: none;
     color: #7e8085;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 14px;
+    padding-left: 5%;
 }
+
 .right img {
     width: 20%;
+}
+
+.right hr {
+    margin: 10% 0;
+}
+
+.right-first,
+.right-second,
+.right-third {
+    color: gray;
+}
+
+.right-second {
+    padding-top: 5%;
+}
+
+.right-second ul {
+    padding-top: 5%;
+}
+
+.right-third > article {
+    display: flex;
+    column-gap: 0.5vw;
+    padding-bottom: 10%;
+}
+
+.right-third p {
+    font-weight: 600;
+}
+
+input {
+    border: 1px solid var(--orangeColor);
+}
+
+footer {
+    text-align: right;
+    color: #b7b7b8;
 }
