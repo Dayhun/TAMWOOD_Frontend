@@ -8,7 +8,456 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <section></section>
-        <main></main>
+        <section>
+            <header>
+                <h1>blue compnay</h1>
+                <h2>YOUR BLUE COMPANY</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <article>
+                <aside>
+                    <strong>June 09, 2006</strong>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eum fugit ab nisi nam recusandae a facilis
+                        laboriosam reprehenderit. Dignissimos voluptates
+                        blanditiis eos exercitationem nam delectus beatae autem
+                        eum quas voluptatum. <a href="#">Learn More...</a>
+                    </p>
+                </aside>
+                <aside>
+                    <strong>June 05, 2006</strong>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eum fugit ab nisi nam recusandae a facilis
+                        laboriosam reprehenderit. Dignissimos voluptates
+                        blanditiis eos exercitationem nam delectus beatae autem
+                        eum quas voluptatum. <a href="#">Learn More...</a>
+                    </p>
+                </aside>
+                <aside>
+                    <strong>June 01, 2006</strong>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eum fugit ab nisi nam recusandae a facilis
+                        laboriosam reprehenderit. Dignissimos voluptates
+                        blanditiis eos exercitationem nam delectus beatae autem
+                        eum quas voluptatum. <a href="#">Learn More...</a>
+                    </p>
+                </aside>
+            </article>
+            <footer>
+                <p>
+                    Copyright &copy; 2036 company.com Designed by
+                    <a href="#">Julia Smith</a>
+                </p>
+            </footer>
+        </section>
+        <main>
+            <header></header>
+            <section class="content">
+                <h2>WELCOME TO OUR WEBSITE!</h2>
+                <article>
+                    <form action="thankyou.html" method="post">
+                        <!-- PERSONAL FIELDSET -->
+                        <fieldset class="first-field">
+                            <legend>Personal Info</legend>
+                            <!-- CUSTOMER INFO -->
+                            <fieldset>
+                                <legend>Customer</legend>
+                                <aside>
+                                    <label for="fName">First Name : </label>
+                                    <input
+                                        type="text"
+                                        name="fName"
+                                        id="fName"
+                                        placeholder="First Name"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="lName">Last Name : </label>
+                                    <input
+                                        type="text"
+                                        name="lName"
+                                        id="lName"
+                                        placeholder="Last Name"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="age">Age</label>
+                                    <select name="age" id="age">
+                                        <option value="none" disabled selected>
+                                            Select your age
+                                        </option>
+                                        <optgroup label="Young Age">
+                                            <option value="18-22">18-22</option>
+                                            <option value="23-27">23-27</option>
+                                            <option value="28-31">28-31</option>
+                                            <option value="32-35">32-35</option>
+                                        </optgroup>
+                                        <optgroup label="Adult">
+                                            <option value="36-40">36-40</option>
+                                            <option value="41-44">41-44</option>
+                                            <option value="45-47">45-47</option>
+                                            <option value="48-50">48-50</option>
+                                        </optgroup>
+                                        <optgroup label="Senior">
+                                            <option value="51-55">51-55</option>
+                                            <option value="56-59">56-59</option>
+                                            <option value="60-69">60-69</option>
+                                            <option value="elderly">
+                                                elderly
+                                            </option>
+                                        </optgroup>
+                                    </select>
+                                </aside>
+                            </fieldset>
+                            <!-- CONTACT INFO -->
+                            <fieldset>
+                                <legend>Contact Info</legend>
+                                <aside>
+                                    <label for="email">Email:</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Email"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="phone"
+                                        >Phone (XXX) XXX-XXXX :</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="phone-2">Phone-2:</label>
+                                    <input
+                                        type="text"
+                                        name="phone-2"
+                                        id="phone-2"
+                                        placeholder="Phone 2"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="contact-time"
+                                        >Contact Time:</label
+                                    >
+                                    <select
+                                        name="contact-time"
+                                        id="contact-time"
+                                    >
+                                        <option value="9-12">
+                                            9:00am - 12:00pm
+                                        </option>
+                                        <option value="13-17">
+                                            1:00pm - 5:00pm
+                                        </option>
+                                        <option value="18-20">
+                                            6:00pm - 8:00pm
+                                        </option>
+                                    </select>
+                                </aside>
+                            </fieldset>
+                        </fieldset>
+                        <!-- LOCATION FIELDSET -->
+                        <fieldset class="second-field">
+                            <legend>Location</legend>
+                            <!-- CUSTOMER ADDRESS INFO -->
+                            <fieldset>
+                                <legend>Customer Address</legend>
+                                <aside>
+                                    <label for="street">Street:</label>
+                                    <input
+                                        type="text"
+                                        name="street"
+                                        id="street"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="complement">Complement:</label>
+                                    <input
+                                        type="text"
+                                        name="complement"
+                                        id="complement"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="province">Province:</label>
+                                    <input
+                                        type="text"
+                                        name="province"
+                                        id="province"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="postal-code"
+                                        >Postal Code:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="postal-code"
+                                        id="postal-code"
+                                    />
+                                </aside>
+                            </fieldset>
+                            <!-- TRIP DESTINATION INFO -->
+                            <fieldset>
+                                <legend>Trip Destination</legend>
+                                <aside>
+                                    <label for="destination"
+                                        >Destination:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="destination"
+                                        id="destination"
+                                    />
+                                </aside>
+                                <aside>
+                                    <label for="trip-departure-date"
+                                        >Trip Departure Date</label
+                                    >
+                                    <input
+                                        type="date"
+                                        id="trip-departure-date"
+                                        name="trip-departure-date"
+                                    />
+                                </aside>
+                                <table>
+                                    <caption>
+                                        Favorite Season
+                                    </caption>
+                                    <tr>
+                                        <td>
+                                            <input
+                                                type="checkbox"
+                                                name="winter"
+                                                id="winter"
+                                                value="winter"
+                                            />
+                                            <label for="winter">Winter</label>
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="checkbox"
+                                                name="fall"
+                                                id="fall"
+                                                value="fall"
+                                            />
+                                            <label for="fall">Fall</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input
+                                                type="checkbox"
+                                                name="spring"
+                                                id="spring"
+                                                value="spring"
+                                            />
+                                            <label for="spring">Spring</label>
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="checkbox"
+                                                name="summer"
+                                                id="summer"
+                                                value="summer"
+                                            />
+                                            <label for="summer">Summer</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </fieldset>
+                        <!-- SERVICES FEEDBACK INFO -->
+                        <fieldset class="third-field">
+                            <legend>Services Feedback</legend>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Feedback Description</td>
+                                        <td>Very Satisfied</td>
+                                        <td>Satisfied</td>
+                                        <td>Somewhat Satisfied</td>
+                                        <td>Not Satisfied</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Accomodation</td>
+                                        <td>
+                                            <!-- dont forget value to get the data -->
+                                            <input
+                                                type="radio"
+                                                name="accomodation"
+                                                id="accomodation"
+                                                value="4"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="accomodation"
+                                                id="accomodation"
+                                                value="3"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="accomodation"
+                                                id="accomodation"
+                                                value="2"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="accomodation"
+                                                id="accomodation"
+                                                value="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transport</td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="transport"
+                                                id="transport"
+                                                value="4"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="transport"
+                                                id="transport"
+                                                value="3"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="transport"
+                                                id="transport"
+                                                value="2"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="transport"
+                                                id="transport"
+                                                value="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Safety</td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="safety"
+                                                id="safety"
+                                                value="4"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="safety"
+                                                id="safety"
+                                                value="3"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="safety"
+                                                id="safety"
+                                                value="2"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="safety"
+                                                id="safety"
+                                                value="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cost</td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="cost"
+                                                id="cost"
+                                                value="4"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="cost"
+                                                id="cost"
+                                                value="3"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="cost"
+                                                id="cost"
+                                                value="2"
+                                            />
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="radio"
+                                                name="cost"
+                                                id="cost"
+                                                value="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <aside>
+                                <label for="message">Message :</label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    placeholder="Message"
+                                ></textarea>
+                            </aside>
+                        </fieldset>
+                        <!-- BUTTONS -->
+                        <section>
+                            <input type="submit" value="Send" />
+                            <input type="reset" value="Clear Form" />
+                        </section>
+                    </form>
+                </article>
+            </section>
+        </main>
     </body>
 </html>
