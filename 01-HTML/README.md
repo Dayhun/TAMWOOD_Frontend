@@ -267,6 +267,8 @@ nav a:hover {
 }
 ```
 
+hover transparent
+
 ```css
 nav a {
     border-bottom: 5px solid transparent;
@@ -274,6 +276,18 @@ nav a {
 
 nav a:hover {
     border-color: hotpink;
+}
+```
+
+```css
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    border-bottom: 1px none transparent;
+}
+
+nav a:hover {
+    border-bottom: 1px dashed whitesmoke;
 }
 ```
 
