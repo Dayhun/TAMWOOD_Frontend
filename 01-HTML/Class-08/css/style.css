@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --orange: #f17327;
+    --brown: #885835;
+    --bgColor: #fffff0;
+    --olive: #b29b35;
+    --blue: #006699;
+    --submit: #ff9933;
+}
+
+header {
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    border-bottom: 5px solid var(--brown);
+}
+
+/* new knowledge */
+header > section {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/tomato.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    /* new knowledge */
+    background-color: rgba(241, 115, 39, 0.4);
+}
+
+nav {
+    background-color: var(--brown);
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid var(--orange);
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    width: 60%;
+    height: 4vh;
+    background-color: var(--brown);
+    padding: 3px 0;
+}
+
+nav li {
+    padding-left: 3px;
+    display: flex;
+    width: 100%;
+    border-right: 1px solid whitesmoke;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    width: 100%;
+    font-weight: 600;
+    transition: 0.4s;
+    /* my way */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* teacher way */
+    padding: 5%;
+    text-align: center;
+}
+
+nav a:hover {
+    color: black;
+    background-color: var(--orange);
+}
+
+figure {
+    padding: 1%;
+}
+
+img {
+    width: 15vw;
+    height: 15vh;
+}
+
+blockquote {
+    padding-left: 10%;
+    padding-bottom: 5%;
+    line-height: 1.5;
+    color: var(--olive);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.middle h2 {
+    padding-bottom: 5vh;
+}
+
+blockquote a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+h2 {
+    color: var(--brown);
+}
+
+h2 > span {
+    color: var(--orange);
+}
+
+.article-top figure {
+    width: fit-content;
+    float: right;
+    border: 1px solid black;
+}
+
+.article-top a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.article-bottom img {
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.article-bottom > figure {
+    display: flex;
+    column-gap: 2vw;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--bgColor);
+    column-gap: 5vh;
+    padding-top: 4px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    padding: 2% 5% 0%;
+}
+
+.left > ul {
+    list-style-type: square;
+    color: var(--brown);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    padding-left: 7%;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--brown);
+    font-size: 14px;
+}
+
+.left p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.left,
+.right {
+    width: 15%;
+    padding: 2% 3% 0;
+}
+
+.bottom {
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    padding: 2% 0;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    width: 40%;
+    padding: 2% 3% 0;
+    border-left: 1px dashed var(--brown);
+    border-right: 1px dashed var(--brown);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.right ul {
+    padding-left: 20%;
+}
+
+.right li {
+    line-height: 1.5;
+}
+
+.right a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+footer {
+    background-color: var(--orange);
+    border-top: 5px solid var(--brown);
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 12px;
+    color: dimgray;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+
+fieldset {
+    padding: 2%;
+    width: 40%;
+}

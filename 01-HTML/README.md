@@ -555,7 +555,7 @@ tbody > tr:last-child {
 
 # Forms
 
-input type submit needed
+input type `submit` must be needed! (ALWAYS)
 ! Dont forget to put value! (To get Data) !
 
 ```html
