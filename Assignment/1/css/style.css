@@ -10,6 +10,7 @@
     --blue: #86b3ee;
 }
 
+/* HEADER  */
 header {
     display: flex;
     justify-content: center;
@@ -23,6 +24,7 @@ header {
     background-size: cover;
 }
 
+/* NAV */
 nav {
     display: flex;
     align-items: center;
@@ -46,7 +48,7 @@ nav li {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 nav a {
@@ -59,10 +61,12 @@ nav a {
 
 nav a:hover {
     color: black;
+    scale: 1.1;
 }
 
+/* MAIN */
 main {
-    padding: 3%;
+    padding: 3% 5%;
     line-height: 1.5;
 }
 
@@ -73,6 +77,7 @@ main h2 {
     border-bottom: 2px solid var(--blue);
 }
 
+/* SECTION 1 */
 .education {
     display: flex;
     flex-direction: column;
@@ -86,10 +91,11 @@ main h2 {
     padding-left: 1%;
 }
 
-img {
+.education img {
     width: 150px;
     height: 100px;
-    border: 3px solid gray;
+    border: 3px solid var(--lightblue);
+    border-radius: 10px;
 }
 
 .professionalSummary > h2,
@@ -99,10 +105,12 @@ img {
     margin: 40px 0 10px;
 }
 
+/* SECTION 2 */
 .professionalSummary > p {
     padding-left: 1%;
 }
 
+/* SECTION 3 */
 .groupSection {
     display: flex;
     justify-content: space-around;
@@ -118,6 +126,7 @@ img {
     padding-left: 3%;
 }
 
+/* SECTION 4 */
 .workHistory > section {
     display: flex;
     flex-direction: column;
@@ -138,19 +147,31 @@ img {
     width: 70%;
 }
 
+hr {
+    background: var(--lightblue);
+    height: 1px;
+    border: 0;
+}
+
+/* FOOTER */
 footer {
     display: flex;
     justify-content: center;
-    column-gap: 1vw;
+    column-gap: 0.5vw;
     background-color: lightgray;
     padding: 2% 0;
 }
 
-footer > a {
-    color: gray;
-    text-decoration: none;
+footer img {
+    width: 18px;
+    padding-right: 6px;
 }
 
-footer > a:hover {
-    scale: 1.1;
+footer > figure {
+    display: flex;
+}
+
+footer a {
+    color: gray;
+    text-decoration: none;
 }
