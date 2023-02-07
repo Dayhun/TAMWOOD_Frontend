@@ -867,3 +867,5 @@ To make the select box nonselected in placeholder
         <input type="reset" value="Reset" />
     </aside>
 </form>
+
+# responsive web site
