@@ -133,17 +133,20 @@ main h2 {
     row-gap: 3vh;
 }
 
-.workHistory > section article {
+.workHistory article {
     display: flex;
     align-items: center;
     padding-left: 1%;
 }
 
-.workHistory > section article aside:first-child {
+.workHistory strong {
+    font-size: 18px;
+}
+.workHistory aside:first-child {
     width: 30%;
 }
 
-.workHistory > section article aside:last-child {
+.workHistory aside:last-child {
     width: 70%;
 }
 
@@ -174,4 +177,9 @@ footer > figure {
 footer a {
     color: gray;
     text-decoration: none;
+    transition: 0.4s;
+}
+
+footer a:hover {
+    color: black;
 }
