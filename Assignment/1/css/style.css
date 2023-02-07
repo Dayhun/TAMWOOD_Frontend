@@ -105,6 +105,10 @@ main h2 {
     margin: 40px 0 10px;
 }
 
+.education > figure p:first-child {
+    font-style: italic;
+}
+
 /* SECTION 2 */
 .professionalSummary > p {
     padding-left: 1%;
@@ -113,7 +117,6 @@ main h2 {
 /* SECTION 3 */
 .groupSection {
     display: flex;
-    justify-content: space-around;
     column-gap: 2vw;
 }
 
@@ -142,6 +145,11 @@ main h2 {
 .workHistory strong {
     font-size: 18px;
 }
+
+.workHistory aside > p:first-child {
+    font-style: italic;
+}
+
 .workHistory aside:first-child {
     width: 30%;
 }
