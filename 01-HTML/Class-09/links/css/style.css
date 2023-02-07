@@ -123,6 +123,7 @@ a:hover {
 .testimonials > figure:nth-child(even) img {
     float: right;
 }
+
 .testimonials img {
     width: 10vw;
     height: 10vh;

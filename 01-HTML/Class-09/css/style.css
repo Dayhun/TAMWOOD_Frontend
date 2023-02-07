@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    border-right: 50px solid orangered;
+    border-left: 50px solid orangered;
+}
+
+main {
+    width: 80%;
+    background-color: whitesmoke;
+}
+
+header {
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+}
+
+header > h1 {
+    /* to the child */
+    align-self: flex-end;
+    background-color: orange;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 5px;
+    padding: 1%;
+}
+
+header > nav {
+    background-color: orange;
+    height: 5vh;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav > ul {
+    display: flex;
+    column-gap: 3vw;
+    list-style-type: none;
+    padding-left: 1%;
+}
+
+nav a {
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.content {
+    display: flex;
+    column-gap: 2vw;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    padding: 2% 1%;
+    background-color: lightgray;
+}
+
+.left h3 {
+    color: gray;
+}
+
+.left > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.left ul {
+    list-style-type: square;
+    color: orange;
+    padding: 3% 10%;
+}
+
+.left a {
+    text-decoration: none;
+    color: black;
+}
+
+fieldset {
+    color: gray;
+}
+
+fieldset > aside {
+    padding: 4%;
+}
+
+.left p {
+    color: gray;
+}
+
+.right {
+    padding: 2% 1%;
+}
+
+.right > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.right h2 {
+    color: orangered;
+    padding: 2% 0;
+}
+
+.right h2 > span {
+    color: orange;
+}
+
+.right blockquote {
+    font-style: italic;
+    padding-left: 5%;
+    color: orange;
+}
+
+.right blockquote a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.right figure {
+    display: block;
+    height: fit-content;
+}
+
+.right img {
+    width: 5vw;
+    float: left;
+}
+
+.right figcaption > span {
+    color: orange;
+}
+
+.right figcaption > p {
+    color: gray;
+}
+
+.right aside {
+    padding: 1%;
+    border: 1px dashed gray;
+    display: flex;
+    align-items: center;
+    column-gap: 2vw;
+    margin-top: 3%;
+}
+
+.right aside a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.right aside span {
+    color: gray;
+}
+
+footer {
+    background-color: lightgray;
+    padding: 2% 1%;
+    color: gray;
+}
+
+footer a {
+    text-decoration: none;
+    color: orangered;
+}
