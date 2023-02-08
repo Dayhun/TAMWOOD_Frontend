@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* we put the align-items center in the body tag, but we dont want header, nav, footer to have padding. so we have to put width 100% to them. without main */
+header,
+nav,
+footer {
+    width: 100%;
+}
+
+header {
+    background-image: linear-gradient(to top, gainsboro, whitesmoke);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+header > section {
+    width: 60%;
+    background-color: darkgray;
+    height: 25vh;
+    border-radius: 5px;
+    border: 2px solid dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background-image: radial-gradient(circle, gainsboro, darkgray);
+    row-gap: 1vh;
+}
+
+header h1 {
+    font-size: 48px;
+    color: deepskyblue;
+}
+
+header h4 {
+    color: dimgray;
+    font-style: italic;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, gainsboro, whitesmoke);
+    border-bottom: 2px solid white;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    padding: 2px 0;
+}
+
+nav li {
+    display: flex;
+    width: 20%;
+}
+
+nav a {
+    text-decoration: none;
+    color: dimgray;
+    width: 100%;
+    /* giving padding is better than giving the height */
+    padding: 7% 0;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background-color: dimgray;
+    color: whitesmoke;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 5vw;
+    padding: 3vh 0;
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.left > article:nth-child(odd) > h3,
+.right > article:nth-child(even) > h3 {
+    background-color: mediumvioletred;
+    padding: 2% 4%;
+    color: whitesmoke;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.left > article:nth-child(even) > h3,
+.right > article:nth-child(odd) > h3 {
+    background-color: goldenrod;
+    border-bottom: 3px solid whitesmoke;
+    padding: 2% 4%;
+    color: whitesmoke;
+}
+article {
+    border: 3px solid whitesmoke;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.right > article p {
+    padding: 5%;
+    text-align: justify;
+    background-image: linear-gradient(
+        to top,
+        gainsboro,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        gainsboro
+    );
+    height: 20vh;
+}
+
+.left figure {
+    background-image: linear-gradient(
+        to bottom,
+        gainsboro,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke
+    );
+}
+
+.left ul {
+    background-image: linear-gradient(to bottom, whitesmoke, gainsboro);
+}
+
+.right section,
+.right ul {
+    background-image: linear-gradient(
+        to bottom,
+        gainsboro,
+        whitesmoke,
+        whitesmoke,
+        whitesmoke,
+        gainsboro
+    );
+}
+
+.right section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vh;
+    padding: 5%;
+}
+
+.right aside {
+    border: 1px solid gray;
+    background-color: lightgray;
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+.right ul {
+    padding: 5% 15%;
+}
+
+/* display block, float */
+.left figure {
+    display: block;
+    padding: 2%;
+    line-height: 1.5;
+}
+
+img {
+    width: 10vw;
+    float: left;
+    padding-right: 2%;
+}

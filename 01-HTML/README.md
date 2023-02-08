@@ -267,6 +267,12 @@ nav a:hover {
 }
 ```
 
+```css
+header {
+    background-image: radial-gradient(circle, white, dimgray);
+}
+```
+
 hover transparent
 
 ```css
