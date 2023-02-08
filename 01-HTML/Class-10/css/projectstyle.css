@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+header {
+    width: 100%;
+    padding-bottom: 1vh;
+    background-image: linear-gradient(to bottom, goldenrod, gold);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+    border-top: 4vh solid white;
+}
+
+.header-top > section:first-child > h1,
+.header-top > section:last-child > h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.header-top > section:first-child {
+    letter-spacing: 5px;
+}
+
+.header-top > section:last-child {
+    background-color: black;
+    color: white;
+    height: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% 0 2%;
+}
+
+nav {
+    background-image: linear-gradient(
+        to top,
+        rgb(229, 72, 72),
+        rgb(235, 147, 147),
+        rgb(229, 72, 72)
+    );
+    display: flex;
+    justify-content: center;
+    border-top: 10px solid orangered;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    width: 70%;
+}
+
+nav li {
+    width: 100%;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10%;
+}
+
+nav a:hover {
+    background-image: linear-gradient(
+        to bottom,
+        orangered,
+        orangered,
+        darkorange
+    );
+    border-radius: 0 0 10px 10px;
+    scale: 1.1;
+}
+
+main {
+    width: 70%;
+    display: flex;
+    column-gap: 2vw;
+    padding: 4% 0 3%;
+}
+
+img {
+    width: 97%;
+    height: 15vh;
+    border: 5px solid black;
+}
+
+.left h3 {
+    color: orangered;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 2%;
+}
+
+.right h3 {
+    color: whitesmoke;
+    background-color: black;
+    padding: 3% 5%;
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    text-align: justify;
+}
+
+.left > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    padding-bottom: 3%;
+}
+
+.left > section {
+    display: flex;
+    column-gap: 4vw;
+}
+
+.specific-company {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.specific-company span {
+    font-weight: 600;
+}
+
+.specific-company p {
+    color: brown;
+}
+
+blockquote > p {
+    color: brown;
+}
+
+ol {
+    padding-left: 15%;
+}
+
+a {
+    text-decoration: none;
+    color: orangered;
+    font-weight: 600;
+}
+
+.right > article {
+    background-color: lightgrey;
+}
+
+.right section {
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.right aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+}
+.right aside span {
+    color: orangered;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.right > article > aside {
+    padding: 8%;
+}
+
+footer {
+    width: 100%;
+    border-top: 5px solid gray;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
