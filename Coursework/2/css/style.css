@@ -131,6 +131,10 @@ nav a:hover {
     font-size: 30px;
 }
 
+.top > p {
+    padding-bottom: 1%;
+}
+
 .top > p a {
     text-decoration: none;
     color: black;
