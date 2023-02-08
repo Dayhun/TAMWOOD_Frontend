@@ -168,11 +168,31 @@ If you put it in li, dots will be removed.
 
 ```css
 body {
-    display: felx;
+    display: flex;
 }
 ```
 
--   justify-content : take the child and place to the center
+#### !!!!! if the flex-direction is in a row,
+
+justify-content will be x-line.
+align-items will be y-line.
+
+#### !!!!! if the flex-direction is in a column,
+
+justify-content will be y-line.
+align-items will be x-line.
+
+-   justify-content : center; take the child and place to the center
+-   justify-content: space-between; place the first and last child at the start and end point.
+-   justify-content: space-evenly; same space! make the space start from the bottom to the child, the space are all same.
+-   justify-content: space-around; the space form bottom to the fist, last child is half of the space between children.
+
+#### instead of justify-content and align-items, we can use row-gap or column-gap
+
+    we can use column-gap and row-gap both.
+
+-   gap: 2vh;
+    The gap property in CSS is a shorthand for row-gap and column-gap
 
 ```css
 header {
@@ -187,7 +207,8 @@ row-gap: 3vh - make the gap between*/
 ```
 
 -   flex-wrap: wrap
-    we can use column-gap and row-gap both.
+    if there is not enough space, other children will be palced in the next row/column.
+    push!
 
 ### 4. root
 

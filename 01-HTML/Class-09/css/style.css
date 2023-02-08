@@ -142,7 +142,7 @@ fieldset > aside {
 }
 
 .right figure {
-    display: block;
+    /* display: block; > ??*/
     height: fit-content;
 }
 

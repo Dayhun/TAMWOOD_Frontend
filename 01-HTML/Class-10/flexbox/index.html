@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>flexbox</title>
+        <style>
+            body {
+                background-color: dimgray;
+                display: flex;
+                padding-top: 5%;
+                justify-content: center;
+            }
+            section {
+                width: 80vw;
+                height: 60vh;
+                background-color: green;
+                border: 3px solid red;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                /* justify-content: space-evenly; */
+                /* justify-content: space-between; */
+                /* justify-content: space-around; */
+                /* column-gap: 2%; */
+            }
+            aside {
+                width: 5vh;
+                height: 5vh;
+                background-color: beige;
+                border: 3px solid yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <aside>1</aside>
+            <aside>2</aside>
+            <aside>3</aside>
+            <aside>4</aside>
+            <aside>5</aside>
+            <aside>6</aside>
+            <aside>7</aside>
+            <aside>8</aside>
+            <aside>9</aside>
+            <aside>10</aside>
+        </section>
+    </body>
+</html>
