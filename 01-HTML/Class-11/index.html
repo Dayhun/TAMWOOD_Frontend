@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header>
+            <aside>
+                <h1>Company Name</h1>
+                <h4>Slogan here</h4>
+            </aside>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <aside>
+                <form action="thankyou.html" method="post">
+                    <!-- input:search -->
+                    <input
+                        type="search"
+                        name="search"
+                        id="search"
+                        placeholder="Enter keyword here..."
+                    />
+                    <input type="submit" value="Search" />
+                </form>
+            </aside>
+        </nav>
+        <main>
+            <section class="feedback">
+                <form action="thankyou.html" method="post">
+                    <fieldset>
+                        <legend>Bank Customer Feedback Form</legend>
+                        <aside>
+                            <label for="feedback-type"
+                                >Type of Feedback<span>*</span></label
+                            >
+                            <select name="feedback-type" id="feedback-type">
+                                <option value="null" disabled selected></option>
+                                <option value="information">Information</option>
+                                <option value="complain">Complain</option>
+                                <option value="compliment">Compliment</option>
+                                <option value="delay">Delay</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </aside>
+                        <aside>
+                            <label for="fName">Name<span>*</span></label>
+                            <input
+                                type="text"
+                                name="fName"
+                                id="fName"
+                                placeholder="First"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="mName"
+                                id="mName"
+                                placeholder="Middle"
+                            />
+                            <input
+                                type="text"
+                                name="lName"
+                                id="lName"
+                                placeholder="Last"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="email"
+                                >Email Address<span>*</span></label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="phone"
+                                >Contact Number<span>*</span></label
+                            >
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="message">Feedback/Enquiry</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                cols="30"
+                                rows="10"
+                            ></textarea>
+                        </aside>
+                        <aside>
+                            <input type="submit" value="Send Feedback" />
+                            <input type="reset" value="Clean" />
+                        </aside>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="widget">
+                <section>
+                    <h4>News & Events</h4>
+                    <article>
+                        <span>OCT 28</span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Placeat, nihil.
+                        </p>
+                    </article>
+                    <article>
+                        <span>OCT 28</span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Placeat, nihil.
+                        </p>
+                    </article>
+                    <article>
+                        <span>OCT 28</span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Placeat, nihil.
+                        </p>
+                    </article>
+                    <hr />
+                </section>
+                <section>
+                    <h4>Contact</h4>
+                    <article>
+                        <strong>Tel:</strong>
+                        <p>010-100-1010. 050-500-5050</p>
+                    </article>
+                    <article>
+                        <strong>Mobile:</strong>
+                        <p>010-100-1010. Fax 050-500-5050</p>
+                    </article>
+                    <article>
+                        <strong>Email:</strong>
+                        <p>info@company.com</p>
+                    </article>
+                    <article>
+                        <strong>Website:</strong>
+                        <a href="#">company.com</a>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <aside>
+                <a href="#">Home</a> | <a href="#">About Us</a> |
+                <a href="#">Projects</a> | <a href="#">Gallery</a> |
+                <a href="#">Contact Us</a>
+            </aside>
+            <p>Copyright &copy; 2024 <a href="#">Your Company Name</a></p>
+        </footer>
+    </body>
+</html>

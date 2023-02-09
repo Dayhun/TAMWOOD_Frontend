@@ -72,13 +72,17 @@ body tag will be a father tag.
 
 ### 12. form
 
+what is different between get and post? study
+
 -   form's action attribute can send or get data.
     -   action="input"
     -   action="hello.html"
 -   form's method has GET and POST
-    -   method="get" will replace url
+    -   method="get" will show url
     -   method="post" will be hidden
     -   do not set the method = get
+    -   `url/thankyou.html?search=hihhih`
+    -   url/action?name= inputValue
 
 ```html
 <form action="input" method="">
@@ -410,9 +414,17 @@ weak - strong
 
 [data-id="gallery-vancouver"] {
 }
+
+nav [type="submit"] {
+    border: none;
+    background-color: transparent;
+}
 ```
 
 ### Fieldset
+
+no fieldset without legend
+no legend without fieldset
 
 ```html
 <fieldset>
@@ -598,6 +610,14 @@ tbody > tr:last-child {
 
 input type `submit` must be needed! (ALWAYS)
 ! Dont forget to put value! (To get Data) !
+if we put `required` we must fill the blank.
+
+```html
+<aside>
+    <label for="phone">Contact Number<span>*</span></label>
+    <input type="text" name="phone" id="phone" required />
+</aside>
+```
 
 ```html
 <form></form>
@@ -608,6 +628,7 @@ input type `submit` must be needed! (ALWAYS)
 -   action = 'hi.html' : form data를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시
 -   method = 'post' : default is 'get'
 -   enctype = 'multipart/form-data' : if you wanna make the file included, you have to put in the form tag
+    -   we can upload the file
 
 ### type = "text"
 
@@ -825,6 +846,10 @@ for that, we can use the same name value to choose only one choice.
 To make the select box nonselected in placeholder
 
 -   make `<option value="-" disabled selected>Select<option>`
+
+```html
+<option value="null" disabled selected></option>
+```
 
 ```html
 <form>

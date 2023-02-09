@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+nav,
+main,
+footer {
+    width: 75%;
+}
+
+header {
+    background-image: url("../img/building.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+}
+
+header > aside {
+    padding-left: 15%;
+    color: dodgerblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1vh;
+    /* using opacity */
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+header h4 {
+    color: brown;
+    text-transform: uppercase;
+    padding-left: 170px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, khaki, white);
+    border-top: 3px solid darkkhaki;
+}
+
+nav > ul {
+    width: 60%;
+    display: flex;
+}
+
+nav li {
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+nav a:hover {
+    background-image: linear-gradient(to bottom, firebrick, darkred);
+    background-color: firebrick;
+    color: white;
+}
+
+nav > aside {
+    width: 30%;
+}
+
+nav input {
+    padding: 2%;
+}
+
+nav [type="submit"] {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+nav [type="submit"]:hover {
+    cursor: pointer;
+    text-decoration: 2px underline black;
+}
+
+nav [name="search"] {
+    background-image: linear-gradient(to top, firebrick, darkred);
+    border: none;
+    color: white;
+}
+
+nav [id="search"]::placeholder {
+    color: whitesmoke;
+}
+
+nav form {
+    display: flex;
+    /* column-gap: 2vw; */
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    column-gap: 4vw;
+    padding-top: 5vh;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    border: none;
+}
+
+.feedback {
+    width: 60%;
+    background-color: white;
+    padding: 2%;
+    color: gray;
+}
+
+.feedback input,
+textarea,
+select {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    /* padding: 1%; */
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 25vh;
+}
+
+fieldset > aside {
+    width: 100%;
+}
+
+fieldset > aside:last-child {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw;
+}
+
+fieldset [type="submit"],
+fieldset [type="reset"] {
+    background-color: dodgerblue;
+    border: none;
+    color: whitesmoke;
+    padding: 2%;
+    width: 15vw;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+fieldset [type="submit"]:hover,
+fieldset [type="reset"]:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: dodgerblue;
+}
+
+.feedback legend {
+    font-size: 25px;
+    color: gray;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+span {
+    color: red;
+}
+
+.widget {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+}
+
+.widget > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.widget article {
+    display: flex;
+    column-gap: 2vw;
+}
+
+.widget span {
+    color: gray;
+    font-weight: 600;
+}
+
+strong {
+    color: red;
+}
+
+.widget a {
+    color: brown;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, whitesmoke, whitesmoke, khaki);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    align-items: center;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+footer > aside {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+
+footer > aside a:first-child {
+    color: brown;
+}
+footer a {
+    color: black;
+}
+
+footer > p a {
+    color: brown;
+}
