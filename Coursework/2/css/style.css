@@ -180,6 +180,13 @@ nav a:hover {
 }
 
 .middle-top figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: center;
+}
+
+.middle-top h4 {
     color: #5381ba;
     font-weight: 600;
     font-size: 20px;
