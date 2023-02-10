@@ -136,6 +136,12 @@ input {
 -   check your code at the W3C (to know recommendation)
 -   `<hr>` make the line
 -   makeshift : a temporary expedient or substitute, sth to fix it temporary to be better = work around (해결책)
+-   a tag :
+    ```html
+    <a href="tel:+0101000100">Tel : 010-100-0100</a>
+    <a href="tel:+0202000200">Fax : 020-200-0200</a>
+    <a href="mailto:info@yourcompany.com">Email : info@yourcompany.com</a>
+    ```
 
 # CSS
 
@@ -333,24 +339,43 @@ header {
 }
 ```
 
+### 8. position
+
+-   position: static : basic
+-   position: relative : placed by their place (static + location)
+-   position: absolute : placed by father tag is placed
+
+### 9. video
+
+```html
+<video autoplay muted loop>
+    <source src="./video/rainy.mp4" />
+</video>
+```
+
+-   autoplay : automatically played
+-   muted : no sound (default is false = not muted)
+-   loop: again and again, replay
+
 # text
 
 -   text-decoration: none;remove the underline
--   text-transform: uppercase;
-    make all letters to Uppercase
--   font-weight: 600;
-    bolder font
--   transition: .4s;
-    changing time
--   text-align: center; make the text to the center (inline tags)
+-   text-transform: uppercase; make all letters to Uppercase
+-   font-weight: 600; bolder font
+-   transition: .4s; changing time
+-   text-align: center; make the text to the center
+    (inline tags)
 -   text-transform : capitalize; make first letter Upeprcase
--   small tag : inline tag, not allowed to put inside the block tag
--   word-spacing: 1vw; make the space between words
+-   small
+    tag : inline tag, not allowed to put inside the block tag
+-   word-spacing: 1vw;
+    make the space between words
 -   letter-spacing: 4px; make space between letters
 -   font-style: italic;
 
 ```css
 <small>Hi</small>
+
 ```
 
 # hover
@@ -921,3 +946,7 @@ To make the select box nonselected in placeholder
 </form>
 
 # responsive web site
+
+```
+
+```
