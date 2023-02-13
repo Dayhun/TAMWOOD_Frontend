@@ -122,6 +122,15 @@ footer span {
     z-index: -1;
 }
 
+/* HOMEPAGE NAV */
+.hp-nav li:nth-child(1) > a {
+    color: #ee7e31;
+}
+
+.hp-nav li:nth-child(1) > a:hover {
+    color: white;
+}
+
 /* HOMEPAGE MAIN */
 .hp h2 {
     text-transform: uppercase;
@@ -266,4 +275,147 @@ footer span {
 
 .hp-bottom h4 {
     text-transform: capitalize;
+}
+
+/* ABOUT PAGE CSS*/
+/* ABOUT PAGE HEADER */
+.ab-header {
+    display: flex;
+    height: 25vh;
+    background-image: url("../img/about-header.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+}
+
+.ab-header > section {
+    width: 50%;
+    height: 100%;
+    background-image: url("../img/logo-black.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-color: var(--logoColor);
+}
+
+.ab-header h1 {
+    display: none;
+}
+
+/* ABOUT PAGE NAV */
+.ab-nav li:nth-child(4) > a {
+    color: #ee7e31;
+}
+
+.ab-nav li:nth-child(4) > a:hover {
+    color: white;
+}
+
+/* ABOUT PAGE MAIN */
+.ab {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vh;
+}
+
+.ab-top {
+    display: flex;
+    column-gap: 2vw;
+}
+
+.ab-top-left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vh;
+    border-right: 2px dashed var(--logoColor);
+    padding-right: 2vw;
+    padding-top: 2%;
+}
+
+.ab-top-left h3 {
+    color: var(--logoColor);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.ab-top-left > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    text-align: justify;
+}
+
+.ab-top-left aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.ab-top-left figure {
+    display: flex;
+    column-gap: 1vw;
+    align-items: center;
+}
+
+.ab-top-left img,
+.ab-top-right img {
+    width: 25px;
+}
+
+.ab-top-left a {
+    text-decoration: none;
+    color: black;
+}
+
+.ab-top-left a:hover {
+    color: var(--orangeColor);
+    font-weight: 700;
+}
+
+.ab-top-right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vh;
+    padding: 2% 0;
+}
+
+.ab-top-right > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.ab-top-right h2,
+.ab-bottom h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 3px;
+    border-bottom: 4px double var(--logoColor);
+}
+
+.ab-top-right figure {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 1vw;
+}
+
+.ab-bottom img {
+    width: 260px;
+    height: 290px;
+}
+
+.ab-bottom > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.ab-bottom figure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2vh;
 }
