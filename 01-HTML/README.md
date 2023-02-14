@@ -111,6 +111,21 @@ input {
 }
 ```
 
+### 13. details
+
+```html
+<details>
+    <!-- font awesome classname copied -->
+    <summary class="fa-solid fa-bars">Menu</summary>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</details>
+```
+
 # +
 
 -   p : paragraph
@@ -357,6 +372,15 @@ header {
 -   muted : no sound (default is false = not muted)
 -   loop: again and again, replay
 
+### 10. fontawesome
+
+Icons are built by vectors.
+To use the free icon, we need css doc from fontawesome cdn.
+https://cdnjs.com/libraries/font-awesome
+https://fontawesome.com/
+Put link tag with fontawesome cdn.
+Choose the icon, and copy html code.
+
 # text
 
 -   text-decoration: none;remove the underline
@@ -420,6 +444,8 @@ weak - strong
    tag selector - name of the tag, lowest priority (weakest selector), easy to replace
 2. class selector
    class selector - dot sign before class name (.classname), 2nd lowest priority, tag selector will be changed, overwrite
+   class name should not have space.
+   if there is space, it means it has another class name.(2 classes)
 3. id selector
    id selector - hashtag sign before id name (#idname), highest priority (the most strongest selector), not changeable
 4. pseudo selector
@@ -947,6 +973,27 @@ To make the select box nonselected in placeholder
 
 # responsive web site
 
-```
+## Mobile Version
 
+```css
+/* MOBILE VERSION */
+/* starting from 200px */
+/* if we set in mobile version, other version will be same also*/
+@media (min-width: 200px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2vh;
+        background-color: #2b2b2b;
+        padding: 1%;
+        text-align: center;
+        padding-top: 5vh;
+    }
+
+    footer > h2,
+    footer > p {
+        color: whitesmoke;
+    }
+}
 ```
