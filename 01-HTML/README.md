@@ -381,6 +381,15 @@ https://fontawesome.com/
 Put link tag with fontawesome cdn.
 Choose the icon, and copy html code.
 
+min : minify file = remove all the spaces. whole css in one sigle line
+
+```html
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+/>
+```
+
 # text
 
 -   text-decoration: none;remove the underline
