@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* if we click the nav, it will be moved smoothly. */
 html {
     scroll-behavior: smooth;
 }
