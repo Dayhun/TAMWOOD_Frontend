@@ -115,7 +115,8 @@ footer span {
 
 .hp-header h1,
 .ab-header h1,
-.cf-header h1 {
+.cf-header h1,
+.ck-header h1 {
     display: none;
 }
 
@@ -428,11 +429,14 @@ footer span {
 
 /* COFFEE PAGE CSS */
 /* COFFEE PAGE HEADER */
-.cf-header {
+/* COOKIE PAGE HEADER */
+.cf-header,
+.ck-header {
     background-color: var(--logoColor);
 }
 
-.cf-header > section {
+.cf-header > section,
+.ck-header > section {
     width: 100%;
     height: 100%;
     background-image: url("../img/logo-white.png");
@@ -451,58 +455,69 @@ footer span {
 }
 
 /* COFFEE PAGE MAIN */
-.cf {
+/* COOKIE PAGE MAIN */
+.cf,
+.ck {
     display: flex;
     flex-direction: column;
-    row-gap: 4vh;
     width: 90%;
 }
 
-.cf-top {
+.cf-top,
+.ck-top {
     display: flex;
     justify-content: center;
     column-gap: 1vw;
 }
 
-.cf-left {
+.cf-left,
+.ck-left {
     width: 15%;
 }
 
-.cf-left > article {
+.cf-left > article,
+.ck-left > article {
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
 }
 
-.cf-left h4 {
+.cf-left h4,
+.ck-left h4 {
     color: var(--logoColor);
     font-size: 20px;
     font-weight: 800;
 }
 
-.cf-left ul {
+.cf-left ul,
+.ck-left ul {
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
     padding-left: 10%;
 }
 
-.cf-right {
+.cf-right,
+.ck-right {
     display: flex;
     column-gap: 3vw;
 }
 
-.cf-right table {
+.cf-right table,
+.ck-right table {
     display: flex;
     flex-direction: column;
     row-gap: 4vh;
+    width: 30vw;
 }
 
-.cf-right thead {
+.cf-right thead,
+.ck-right thead {
     display: none;
 }
 
-.cf-right tbody {
+.cf-right tbody,
+.ck-right tbody {
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
@@ -514,26 +529,30 @@ footer span {
     font-weight: 600;
 }
 
-.cf-right caption {
+.cf-right caption,
+.ck-right caption {
     font-size: 30px;
     font-weight: 600;
     border-top: 2px solid var(--orangeColor);
     border-bottom: 2px solid var(--orangeColor);
 }
 
-.cf-right span {
+.cf-right span,
+.ck-right span {
     font-size: 13px;
     color: gray;
     text-transform: capitalize;
 }
 
-.cf-right > aside {
+.cf-right > aside,
+.ck-right > aside {
     display: flex;
     flex-direction: column;
     row-gap: 8vh;
 }
 
-.cf-right tr {
+.cf-right tr,
+.ck-right tr {
     display: flex;
     justify-content: space-between;
 }
@@ -547,4 +566,13 @@ footer span {
 
 .cf-right aside:nth-child(2) td:first-child {
     width: 50%;
+}
+
+/* COOKIE PAGE NAV */
+.ck-nav li:nth-child(3) > a {
+    color: #ee7e31;
+}
+
+.ck-nav li:nth-child(3) > a:hover {
+    color: white;
 }
