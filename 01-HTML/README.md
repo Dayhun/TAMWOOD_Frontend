@@ -1006,3 +1006,18 @@ To make the select box nonselected in placeholder
     }
 }
 ```
+
+# Google Font
+
+https://fonts.google.com/
+click import and copy
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito" sans-serif;
+}
+```
