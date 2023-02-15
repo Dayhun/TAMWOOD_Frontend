@@ -20,7 +20,8 @@ body {
 
 /* MOBILE VERSION */
 /* starting from 200px */
-/* if we set in mobile version, other version will be same also*/
+/* if we set in mobile version first, other version will be same also*/
+/* Easy to make responsive site */
 @media (min-width: 200px) {
     header > section,
     main,
@@ -61,6 +62,62 @@ body {
         color: whitesmoke;
     }
 
+    /* NAV */
+    nav {
+        width: 90%;
+        display: flex;
+        background-color: white;
+        border-radius: 50px;
+        justify-content: space-between;
+        min-height: 5vh;
+        align-items: center;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    nav > aside {
+        padding-left: 5%;
+        display: flex;
+        column-gap: 2vw;
+        color: var(--mainColor);
+        position: relative;
+    }
+
+    details {
+        position: absolute;
+        width: 70%;
+        text-align: right;
+        padding-left: 5%;
+    }
+
+    details > ul {
+        /* does not make the content wide */
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    details li {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid var(--mainColor);
+    }
+
+    details a {
+        padding: 5%;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--footerBg);
+        text-transform: uppercase;
+    }
+
+    summary {
+        color: var(--mainColor);
+    }
     /* HEADER */
     header {
         background-image: url("../img/pic3.jpg");
@@ -71,6 +128,7 @@ body {
         height: 60vh;
         border-bottom-left-radius: 15vh;
         border-bottom-right-radius: 15vh;
+        text-align: center;
     }
 
     header > section {
@@ -178,6 +236,7 @@ body {
         width: 30%;
         text-align: center;
         background-color: whitesmoke;
+        border: 2px solid whitesmoke;
         color: var(--footerBg);
         font-weight: 600;
         padding: 2vh;
@@ -187,6 +246,7 @@ body {
     header > section > a {
         color: var(--mainColor);
     }
+
     /* CONTACT */
     .about > article,
     .contact > article {
@@ -262,5 +322,214 @@ body {
         padding-top: 3vh;
         width: 90%;
         border-top: 1px solid whitesmoke;
+    }
+}
+
+/* TABLET VERSION */
+@media (min-width: 600px) {
+    /* HEADER */
+    header {
+        height: 45vh;
+    }
+
+    header h1 {
+        font-size: 50px;
+        width: 70%;
+    }
+
+    header > section > a {
+        width: 20%;
+        padding: 1%;
+        transition: 0.6s;
+        margin-top: 2%;
+    }
+
+    header > section > a:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+    /* NAV */
+    nav {
+        min-height: 7vh;
+    }
+
+    nav > aside {
+        font-size: 28px;
+    }
+
+    details {
+        display: none;
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--footerBg);
+        font-weight: 600;
+        transition: 0.6s;
+    }
+
+    nav a:hover {
+        color: var(--mainColor);
+    }
+
+    /* FOOTER */
+    footer > h3 {
+        font-size: 48px;
+    }
+
+    footer > h2 {
+        font-size: 54px;
+    }
+
+    footer > p {
+        font-size: 24px;
+    }
+
+    /* ABOUT */
+    .about > article > h2 {
+        font-size: 38px;
+        width: 35%;
+    }
+
+    .about > section > article {
+        flex-direction: row;
+        column-gap: 5vw;
+    }
+
+    .about figure {
+        width: 20vh;
+        height: 20vh;
+        border-width: 10px;
+    }
+
+    .about a {
+        border: 3px solid var(--footerBg);
+        width: 25%;
+        padding: 1vh;
+        transition: 0.6s;
+    }
+
+    .about a:hover {
+        background-color: transparent;
+        color: var(--footerBg);
+    }
+
+    /* CONTACT */
+    .contact form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 3vh;
+    }
+
+    .contact > article > h2 {
+        width: 60%;
+        font-size: 38px;
+    }
+    /* we have to use class selector to use. */
+    /* cuz we already did in the mobile version */
+    .contact input {
+        width: 35%;
+        padding: 2%;
+    }
+
+    .contact [type="submit"] {
+        width: 30%;
+    }
+    .contact [type="submit"]:hover {
+        background-color: transparent;
+        color: var(--footerBg);
+        cursor: pointer;
+    }
+    /* SERVICES */
+    .services > article > h2 {
+        font-size: 38px;
+        padding-bottom: 2%;
+    }
+
+    .services > section > article {
+        flex-direction: row;
+    }
+
+    .services img {
+        width: 10vh;
+        height: 10vh;
+        outline-width: 3px;
+    }
+
+    .services a {
+        width: 20%;
+        padding: 1vh;
+        transition: 0.6s;
+    }
+
+    .services a:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+    .services h3 {
+        font-size: 20px;
+    }
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 1000px) {
+    /* HEADER */
+    header {
+        min-height: 60vh;
+    }
+
+    /* ABOUT */
+    .about > section p {
+        font-size: 20px;
+        width: 70%;
+    }
+
+    .about figure {
+        width: 20vw;
+        height: 20vw;
+    }
+    /* SERVICES */
+    .services > section > article {
+        justify-content: center;
+        column-gap: 1vw;
+    }
+
+    .services figure {
+        width: 25%;
+    }
+
+    /* CONTACT */
+    .about > article > h2,
+    .contact > article > h2 {
+        font-size: 48px;
+        width: 30%;
+    }
+
+    .contact input {
+        font-size: 20px;
+    }
+
+    header a,
+    .about a,
+    .services a,
+    .contact [type="submit"] {
+        padding: 1%;
+        width: 20vw;
+        font-size: 20px;
+    }
+
+    /* FOOTER */
+    footer p {
+        font-size: 20px;
+        width: 70%;
     }
 }
