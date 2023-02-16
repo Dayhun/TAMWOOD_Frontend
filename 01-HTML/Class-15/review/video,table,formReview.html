@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Review video</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header>
+            <video src="./video/rainy.mp4" autoplay loop muted></video>
+            <section>
+                <h2>Testing video</h2>
+                <a href="#">Button Video</a>
+            </section>
+        </header>
+        <table>
+            <!-- first element of the table tag -->
+            <caption>
+                Table Products
+            </caption>
+            <colgroup>
+                <col class="yellowGreen" span="2" />
+                <col class="lime" />
+                <col class="pink" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Place</th>
+                    <th>Season</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Netherlands</td>
+                    <td>Spring</td>
+                    <td>$469</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Osaka</td>
+                    <td>Spring</td>
+                    <td>$700</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Iceland</td>
+                    <td>Winter</td>
+                    <td>$1240</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>New Zealand</td>
+                    <td>Summer</td>
+                    <td>$2870</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Places</td>
+                    <td>$1400</td>
+                    <td>4</td>
+                </tr>
+            </tfoot>
+        </table>
+        <form
+            action="thankyou.html"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <fieldset>
+                <legend>Contact Info</legend>
+                <input type="file" name="dataContent" id="dataContent" />
+                <label for="dataContent">Include your file</label>
+                <textarea name="" id="" cols="30" rows="10">
+Your Own Text</textarea
+                >
+                <input type="submit" value="submit button" />
+            </fieldset>
+        </form>
+    </body>
+</html>

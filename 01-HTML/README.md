@@ -111,7 +111,7 @@ input {
 }
 ```
 
-### 13. details
+### 13. details + summary tag
 
 ```html
 <details>

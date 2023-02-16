@@ -25,7 +25,6 @@
     .contact,
     .contact > section > form,
     .subscribe,
-    .subscribe > form,
     .features,
     .features > article,
     .features > section,
@@ -34,7 +33,8 @@
     .about aside,
     header article,
     header > section,
-    header {
+    header,
+    header aside {
         display: flex;
         flex-direction: column;
         row-gap: 2vh;
@@ -82,13 +82,61 @@
         width: 100%;
         text-align: right;
         color: white;
-        /* display: flex; */
-        /* justify-content: right; */
+        position: relative;
     }
 
     header summary {
         border: 2px solid white;
         padding: 2%;
+    }
+
+    header details > ul {
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    details li {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgb(118, 181, 244);
+    }
+
+    details a {
+        padding: 2%;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    header article p {
+        text-align: center;
+    }
+
+    header article a:first-child {
+        border: 3px solid white;
+        width: 18vw;
+        padding: 4%;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    header article a:last-child {
+        border: 3px solid rgb(118, 181, 244);
+        background-color: rgb(118, 181, 244);
+        width: 18vw;
+        padding: 4%;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     /* ABOUT */
@@ -172,9 +220,14 @@
 
     .subscribe > form {
         width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        row-gap: 2vh;
+        columns: 4vh;
     }
 
     .subscribe [type="email"] {
+        width: 100%;
         background-color: rgb(147, 193, 239);
         border: none;
         padding: 5%;
