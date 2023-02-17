@@ -407,6 +407,12 @@ footer span {
     column-gap: 1vw;
 }
 
+.ab-top-right iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
 .ab-bottom img {
     width: 260px;
     height: 290px;
@@ -679,6 +685,16 @@ textarea {
     padding: 3%;
 }
 
+.personal-form input::placeholder,
+.personal-form input,
+textarea::placeholder,
+textarea,
+select,
+[type="date"],
+[type="time"] {
+    color: var(--logoColor);
+}
+
 .ct > form > fieldset > article {
     display: flex;
     column-gap: 1vw;
@@ -692,7 +708,7 @@ textarea {
     padding: 1%;
     width: 10vw;
     border-radius: 10px;
-    border: 4px solid gray;
+    border: 4px solid var(--logoColor);
 }
 
 [type="reset"] {
@@ -702,7 +718,7 @@ textarea {
     padding: 1%;
     width: 10vw;
     border-radius: 10px;
-    border: 4px solid gray;
+    border: 4px solid var(--orangeColor);
 }
 
 [type="submit"]:hover,
