@@ -23,7 +23,274 @@
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
-        <main class="ct">contact content</main>
+        <main class="ct">
+            <form action="thankyou.html" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <fieldset class="personal-form">
+                        <legend>Personal Information</legend>
+                        <aside>
+                            <label for="name">Name : </label>
+                            <article>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="First Name"
+                                />
+                                <input
+                                    type="text"
+                                    name="lName"
+                                    id="lName"
+                                    placeholder="Last Name"
+                                />
+                            </article>
+                        </aside>
+                        <aside>
+                            <label for="age">Age :</label>
+                            <select name="age" id="age">
+                                <option value="none" disabled selected>
+                                    Select your age
+                                </option>
+                                <optgroup label="Under 18">
+                                    <option value="under 10">under 10</option>
+                                    <option value="11-15">11-15</option>
+                                    <option value="16-18">16-18</option>
+                                </optgroup>
+                                <optgroup label="Adult">
+                                    <option value="19-25">19-25</option>
+                                    <option value="26-30">26-30</option>
+                                    <option value="31-35">31-35</option>
+                                    <option value="36-40">36-40</option>
+                                    <option value="41-50">41-50</option>
+                                    <option value="51+">51 or older</option>
+                                </optgroup>
+                            </select>
+                        </aside>
+                        <aside>
+                            <label for="email">Email<span>*</span> :</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="phone"
+                                >Phone<span>*</span> (010-XXX-XXXX) :</label
+                            >
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                placeholder="Phone Number"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="visited-date"
+                                >Visited Date<span>*</span> :</label
+                            >
+                            <input
+                                type="date"
+                                id="visited-date"
+                                name="visited-date"
+                                required
+                            />
+                        </aside>
+                        <aside>
+                            <label for="visited-time"
+                                >Visited Time<span>*</span> :</label
+                            >
+                            <input
+                                type="time"
+                                name="visited-time"
+                                id="visited-time"
+                                required
+                            />
+                        </aside>
+                    </fieldset>
+                    <fieldset class="service-form">
+                        <legend>Service Feedback</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feedback</th>
+                                    <th>Very Satisfied</th>
+                                    <th>Satisfied</th>
+                                    <th>Dissatisfied</th>
+                                    <th>Very Dissatisfied</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Taste</td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="taste"
+                                            id="taste"
+                                            value="4"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="taste"
+                                            id="taste"
+                                            value="3"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="taste"
+                                            id="taste"
+                                            value="2"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="taste"
+                                            id="taste"
+                                            value="1"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cleanliness</td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="
+                                            cleanliness"
+                                            id="
+                                            cleanliness"
+                                            value="4"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="
+                                            cleanliness"
+                                            id="
+                                            cleanliness"
+                                            value="3"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="
+                                            cleanliness"
+                                            id="
+                                            cleanliness"
+                                            value="2"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="
+                                            cleanliness"
+                                            id="
+                                            cleanliness"
+                                            value="1"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kindness</td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="kindness"
+                                            id="kindness"
+                                            value="4"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="kindness"
+                                            id="kindness"
+                                            value="3"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="kindness"
+                                            id="kindness"
+                                            value="2"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="kindness"
+                                            id="kindness"
+                                            value="1"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="cost"
+                                            id="cost"
+                                            value="4"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="cost"
+                                            id="cost"
+                                            value="3"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="cost"
+                                            id="cost"
+                                            value="2"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="radio"
+                                            name="cost"
+                                            id="cost"
+                                            value="1"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <aside>
+                            <label for="message">Message :</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                placeholder="Message"
+                            ></textarea>
+                        </aside>
+                    </fieldset>
+                    <article>
+                        <input type="submit" value="Submit" />
+                        <input type="reset" value="Clear" />
+                    </article>
+                </fieldset>
+            </form>
+        </main>
         <footer>
             <p>
                 LIM DONG HYUN | <a href="tel:+050714591016">0507-1459-1016</a> |

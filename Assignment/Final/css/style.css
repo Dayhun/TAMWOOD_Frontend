@@ -8,9 +8,6 @@
     --orangeColor: #ee7e31;
 }
 
-/* lightblue #E9F8F9 */
-/* lightpink #FFD4D4 */
-
 body {
     display: flex;
     flex-direction: column;
@@ -32,6 +29,10 @@ header {
 main {
     width: 80%;
     margin: 5% 0;
+}
+
+header h1 {
+    display: none;
 }
 
 /* COMMON CSS*/
@@ -113,13 +114,6 @@ footer span {
     background-size: 40%;
 }
 
-.hp-header h1,
-.ab-header h1,
-.cf-header h1,
-.ck-header h1 {
-    display: none;
-}
-
 .hp-header video {
     width: 100%;
     height: 100%;
@@ -182,6 +176,10 @@ footer span {
 
 .hp-top img {
     width: 30%;
+}
+
+.hp-top time {
+    color: var(--orangeColor);
 }
 
 .hp-middle article > h3,
@@ -342,8 +340,8 @@ footer span {
 }
 
 .ab-top-left span {
-    font-style: italic;
     font-weight: 700;
+    color: var(--orangeColor);
 }
 
 .ab-top-left > article {
@@ -427,9 +425,8 @@ footer span {
     row-gap: 2vh;
 }
 
-/* COFFEE PAGE CSS */
-/* COFFEE PAGE HEADER */
-/* COOKIE PAGE HEADER */
+/* COFFEE, COOKIE PAGE CSS */
+/* HEADER */
 .cf-header,
 .ck-header {
     background-color: var(--logoColor);
@@ -454,8 +451,7 @@ footer span {
     color: white;
 }
 
-/* COFFEE PAGE MAIN */
-/* COOKIE PAGE MAIN */
+/* MAIN */
 .cf,
 .ck {
     display: flex;
@@ -575,4 +571,143 @@ footer span {
 
 .ck-nav li:nth-child(3) > a:hover {
     color: white;
+}
+
+/* CONTACT PAGE CSS */
+/* CONTACT PAGE HEADER */
+.ct-header {
+    background-color: white;
+}
+
+.ct-header > section {
+    width: 100%;
+    height: 90%;
+    background-image: url("../img/logo-black.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    border-top: 10px solid var(--orangeColor);
+    border-bottom: 10px solid var(--orangeColor);
+}
+
+/* CONTACT PAGE NAV */
+.ct-nav li:nth-child(5) > a {
+    color: #ee7e31;
+}
+
+.ct-nav li:nth-child(5) > a:hover {
+    color: white;
+}
+
+/* CONTACT PAGE MAIN */
+.ct > form > fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    border: 2px solid var(--logoColor);
+    padding: 3%;
+}
+
+.ct > form > fieldset > legend {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 5%;
+    color: var(--logoColor);
+}
+
+.personal-form,
+.service-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    padding: 5%;
+    border: 2px solid var(--orangeColor);
+    font-size: 18px;
+}
+
+.personal-form > legend,
+.service-form > legend {
+    color: var(--orangeColor);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 3%;
+}
+
+.ct aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.ct span {
+    color: var(--orangeColor);
+}
+
+.personal-form input,
+select {
+    padding: 1%;
+}
+
+[id="name"],
+[id="lName"] {
+    width: 47%;
+}
+
+.service-form > table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.service-form td,
+.service-form th {
+    border: 1px solid gray;
+    padding: 2%;
+    text-align: center;
+    width: 20%;
+}
+
+.service-form thead {
+    background-color: rgba(238, 126, 49, 0.3);
+}
+
+textarea {
+    width: 94%;
+    height: 15vh;
+    resize: none;
+    padding: 3%;
+}
+
+.ct > form > fieldset > article {
+    display: flex;
+    column-gap: 1vw;
+    justify-content: center;
+}
+
+[type="submit"] {
+    background-color: var(--logoColor);
+    color: white;
+    font-size: 18px;
+    padding: 1%;
+    width: 10vw;
+    border-radius: 10px;
+    border: 4px solid gray;
+}
+
+[type="reset"] {
+    background-color: var(--orangeColor);
+    color: white;
+    font-size: 18px;
+    padding: 1%;
+    width: 10vw;
+    border-radius: 10px;
+    border: 4px solid gray;
+}
+
+[type="submit"]:hover,
+[type="reset"]:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
 }
