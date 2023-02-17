@@ -457,7 +457,7 @@ weak - strong
    if there is space, it means it has another class name.(2 classes)
 3. id selector
    id selector - hashtag sign before id name (#idname), highest priority (the most strongest selector), not changeable
-4. a selector
+4. pseudo selector
    pseudo selector = fake selector - :sign, stronger than class selector, 2nd highest priority
 5. attribute selector
    stronger than class selector
