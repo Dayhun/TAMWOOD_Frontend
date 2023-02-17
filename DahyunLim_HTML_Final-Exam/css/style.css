@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    line-height: 1.5;
+}
+
+body > nav,
+body > article {
+    width: 20%;
+}
+
+body > section {
+    width: 60%;
+}
+/* HOMEPAGE */
+nav {
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+nav > figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2vh;
+    padding-top: 15vh;
+}
+
+nav img {
+    width: 5vw;
+}
+
+nav figcaption {
+    color: white;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+nav li {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    transition: 0.4s;
+    padding: 5%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: skyblue;
+    color: black;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 50vh;
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header > aside {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+header figure,
+header article {
+    padding: 5%;
+}
+
+header img {
+    width: 10vw;
+    float: right;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+body > article {
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+}
+
+body > article > aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2vh;
+    text-align: center;
+    padding: 15vh 5% 25vh;
+    line-height: 2;
+}
+
+body > article > aside > h3 {
+    font-size: 30px;
+}
+
+body > article > video {
+    width: 15vw;
+}
+
+main {
+    background-color: whitesmoke;
+}
+
+main img {
+    width: 10vw;
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    padding: 8%;
+}
+
+main h2 {
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 5px solid darkblue;
+    border-right: 5px solid darkblue;
+}
+
+main > section > aside {
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+}
+
+main > section > aside:nth-child(even) {
+    flex-direction: row-reverse;
+    padding-left: 10%;
+}
+
+main > section > aside:nth-child(odd) {
+    padding-right: 10%;
+}
+
+footer {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    font-size: 13px;
+}
+
+footer > span {
+    font-weight: 600;
+}
+
+/* CONTACT PAGE */
+table > caption {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+table {
+    border: 1px solid dodgerblue;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td {
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: antiquewhite;
+}
+
+tfoot td:last-child {
+    text-align: right;
+}
+
+.contact-page > article {
+    padding: 2% 8%;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    row-gap: 3vh;
+    border: 1px solid gray;
+}
+
+form > fieldset > fieldset {
+    row-gap: 5vh;
+}
+
+form > fieldset > legend {
+    font-size: 35px;
+    color: darkolivegreen;
+    border-bottom: 2px solid darkolivegreen;
+}
+
+form aside {
+    display: flex;
+    column-gap: 1vh;
+}
+label {
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 25%;
+    padding: 1%;
+}
+
+select {
+    background-color: lightgray;
+    border-radius: 2px;
+}
+
+[type="submit"],
+[type="reset"] {
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 2px;
+}

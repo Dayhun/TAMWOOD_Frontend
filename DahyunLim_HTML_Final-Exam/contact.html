@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DahyunLim_HTML_Final-Exam ContactPage</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <nav>
+            <figure>
+                <img src="./img/logo.png" alt="logo-img" />
+                <figcaption>Final Exam</figcaption>
+            </figure>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <header>
+                <aside>
+                    <figure>
+                        <img src="./img/profile.png" alt="profile-img" />
+                    </figure>
+                    <article>
+                        <h1>Final Exam</h1>
+                        <p>Introduction to HTML</p>
+                    </article>
+                </aside>
+            </header>
+            <main class="contact-page">
+                <section>
+                    <table>
+                        <caption>
+                            USER LIST
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>#User ID</th>
+                                <th>First</th>
+                                <th>Last</th>
+                                <th>Tag</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Total:</td>
+                                <td colspan="2">3</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+                <article>
+                    <form action="thankyou.html" method="post">
+                        <fieldset>
+                            <legend>CONTACT FORM</legend>
+                            <fieldset>
+                                <legend>Personal Data</legend>
+                                <article>
+                                    <label for="personal"
+                                        >Title, First, and Last name:</label
+                                    >
+                                    <aside>
+                                        <select name="personal" id="personal">
+                                            <option value="-" disabled selected>
+                                                Title
+                                            </option>
+                                            <option value="ms">Ms</option>
+                                            <option value="miss">Miss</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Mr">Mr</option>
+                                        </select>
+                                        <input
+                                            type="text"
+                                            id="fName"
+                                            name="fName"
+                                            placeholder="First"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="lName"
+                                            name="lName"
+                                            placeholder="Last"
+                                        />
+                                    </aside>
+                                </article>
+                                <article>
+                                    <label for="age">Age*:</label>
+                                    <aside>
+                                        <select name="age" id="age">
+                                            <option value="-" disabled selected>
+                                                Please Select
+                                            </option>
+                                            <optgroup label="Under 18">
+                                                <option value="under13">
+                                                    Under 13
+                                                </option>
+                                                <option value="13-17">
+                                                    13-17
+                                                </option>
+                                                <option value="18-24">
+                                                    18-24
+                                                </option>
+                                            </optgroup>
+                                            <optgroup label="18+">
+                                                <option value="25-34">
+                                                    25-34
+                                                </option>
+                                                <option value="35-44">
+                                                    35-44
+                                                </option>
+                                                <option value="45-54">
+                                                    45-54
+                                                </option>
+                                                <option value="55-older">
+                                                    55 or older
+                                                </option>
+                                            </optgroup>
+                                        </select>
+                                    </aside>
+                                </article>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Address</legend>
+                                <article>
+                                    <label
+                                        >Street, City, and Postal Code:</label
+                                    >
+                                    <aside>
+                                        <input
+                                            type="text"
+                                            id="street"
+                                            name="street"
+                                            placeholder="Street"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="city"
+                                            name="city"
+                                            placeholder="City"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="postalCode"
+                                            name="postalCode"
+                                            placeholder="Postal Code"
+                                        />
+                                    </aside>
+                                </article>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Contact</legend>
+                                <article>
+                                    <label>Email, Phone, and Fax:</label>
+                                    <aside>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="Email"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="phone"
+                                            name="phone"
+                                            placeholder="Phone"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="fax"
+                                            name="fax"
+                                            placeholder="Fax"
+                                        />
+                                    </aside>
+                                </article>
+                            </fieldset>
+                            <aside>
+                                <input type="submit" value="Send" />
+                                <input type="reset" value="Clear" />
+                            </aside>
+                        </fieldset>
+                    </form>
+                </article>
+            </main>
+            <footer>
+                <p>
+                    Copyright 2023 Tamwood College - Gustavo Freitas - HTML
+                    Final Exam
+                </p>
+                <span>The distribution of this content is not authorized</span>
+            </footer>
+        </section>
+        <article>
+            <aside>
+                <h3>About</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusamus similique accusantium vel, doloribus alias
+                    corrupti iusto iste ipsum recusandae cupiditate. Nam dolorem
+                    accusantium debitis quia.
+                </p>
+            </aside>
+        </article>
+    </body>
+</html>
