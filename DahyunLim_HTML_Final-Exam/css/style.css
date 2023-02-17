@@ -8,14 +8,15 @@ body {
     line-height: 1.5;
 }
 
-body > nav,
+nav,
 body > article {
     width: 20%;
 }
 
-body > section {
+main {
     width: 60%;
 }
+
 /* HOMEPAGE */
 nav {
     background-color: dodgerblue;
@@ -64,11 +65,6 @@ nav a {
 nav a:hover {
     background-color: skyblue;
     color: black;
-}
-
-body > section {
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -194,8 +190,10 @@ table {
     border-collapse: collapse;
 }
 
+th,
 td {
     font-weight: 600;
+    padding: 1%;
 }
 
 tr:hover {
@@ -232,6 +230,7 @@ form aside {
     display: flex;
     column-gap: 1vh;
 }
+
 label {
     font-weight: 600;
 }
@@ -252,4 +251,9 @@ select {
     background-color: lightgray;
     border: 1px solid gray;
     border-radius: 2px;
+}
+
+[type="submit"]:hover,
+[type="reset"]:hover {
+    cursor: pointer;
 }
