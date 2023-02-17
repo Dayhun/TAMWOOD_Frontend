@@ -180,6 +180,7 @@ footer span {
 
 .hp-top time {
     color: var(--orangeColor);
+    font-weight: 600;
 }
 
 .hp-middle article > h3,
