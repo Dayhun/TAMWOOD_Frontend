@@ -85,3 +85,4 @@ In main branch, we should not fix sth there.
 -   command + shift + . : show the hidden files
 -   after commit message, the hash has meaning of everything of these files.
 -   .gitignore : sth written there, git wont tracked it anymore.
+-   hash number : after commit message, every data will be placed there. (such as username, useremail, project name, file size, date, time of commit, github repository, code, file type...)
