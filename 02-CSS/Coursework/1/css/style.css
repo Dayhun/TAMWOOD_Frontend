@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* MOBILE */
+@media (min-width: 300px) {
+}
+
+/* TABLET */
+@media (min-width: 700px) {
+}
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+}
+
+/* HIGHER VERSION */
+@media (min-width: 1200px) {
+}
