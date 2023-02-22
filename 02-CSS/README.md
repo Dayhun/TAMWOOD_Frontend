@@ -52,7 +52,7 @@ $ git add <directory_name>
 
 $ git add .
 
-### - Commit your changes after adding and before pushing
+### - Commit your changes after adding and before pushing. Screenshot!
 
 $ git commit -m "Your message is mandatory"
 
