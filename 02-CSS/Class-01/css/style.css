@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --mainColor: #ab2f52;
+}
+
+/* tag selectors */
+a {
+    text-decoration: none;
+}
+
+h6 {
+    height: 3px;
+    background-color: lightgray;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+h6 > span {
+    background-color: var(--mainColor);
+    width: 30%;
+}
+
+main h2 {
+    color: var(--mainColor);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+body,
+main,
+main > section,
+main > section > article,
+.services aside,
+figcaption,
+form,
+.testimonials,
+.contact ul,
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url("../img/bg-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+header > article {
+    width: 98%;
+    height: 98%;
+    padding: 1%;
+}
+
+img {
+    width: 40%;
+}
+
+/* MOBILE */
+@media (min-width: 200px) {
+    main > section {
+        padding-bottom: 5vh;
+    }
+    /* class selectors */
+    .testimonials,
+    .services aside,
+    .contact ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > section > section {
+        display: flex;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 3%;
+        text-align: center;
+        background-color: black;
+        color: whitesmoke;
+        row-gap: 3vh;
+        align-items: center;
+    }
+
+    footer p {
+        width: 70%;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+        column-gap: 4vw;
+        list-style-type: none;
+    }
+
+    footer a {
+        color: whitesmoke;
+    }
+
+    /* CONTACT */
+    .contact {
+        align-items: center;
+    }
+
+    .contact > section {
+        flex-direction: column;
+        width: 90%;
+        row-gap: 5vh;
+    }
+
+    .contact ul {
+        row-gap: 3vh;
+    }
+
+    .contact li {
+        display: flex;
+        column-gap: 3vw;
+        align-items: flex-end;
+    }
+
+    /* caret sign ^ = attribute starts with
+    dollar sign $ = ends with
+    star sign * = contains */
+    .contact [class^="fa-"] {
+        color: var(--mainColor);
+        font-size: 18px;
+    }
+
+    .contact ul aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .contact a {
+        color: dimgray;
+    }
+
+    form {
+        width: 100%;
+    }
+}
