@@ -86,3 +86,14 @@ In main branch, we should not fix sth there.
 -   after commit message, the hash has meaning of everything of these files.
 -   .gitignore : sth written there, git wont tracked it anymore.
 -   hash number : after commit message, every data will be placed there. (such as username, useremail, project name, file size, date, time of commit, github repository, code, file type...)
+-   sign
+    -   caret ^ = attribute starts with
+    -   dollar sign $ = ends with
+    -   star sign \* = contains
+    -   ```css
+        /* example */
+        .contact [class^="fa-"] {
+            color: var(--mainColor);
+            font-size: 18px;
+        }
+        ```
