@@ -80,4 +80,8 @@ $ git clone -b <branch_name> <git_repository_url>
 
 In main branch, we should not fix sth there.
 
-command + shift + . : show the hidden files
+# +
+
+-   command + shift + . : show the hidden files
+-   after commit message, the hash has meaning of everything of these files.
+-   .gitignore : sth written there, git wont tracked it anymore.
