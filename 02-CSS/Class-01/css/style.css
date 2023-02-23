@@ -61,9 +61,8 @@ header {
 }
 
 header > article {
-    width: 98%;
-    height: 98%;
-    padding: 1%;
+    width: 100%;
+    padding: 10%;
 }
 
 img {
@@ -95,19 +94,49 @@ img {
         color: whitesmoke;
     }
 
+    header ul {
+        display: none;
+    }
+
     header > article {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 93, 182, 0.8),
+            rgba(255, 145, 0, 0.9)
+        );
         display: flex;
         flex-direction: column;
-        row-gap: 15vh;
+        row-gap: 10vh;
     }
 
     header h2 {
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 300;
     }
-    header ul {
-        display: none;
+
+    header h1 {
+        font-size: 25px;
     }
+
+    header section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    header section > a {
+        /* highest priority */
+        width: 50% !important;
+        background-color: #ab2f52;
+        color: white;
+        padding: 3%;
+        border: none;
+        border-radius: 30px;
+        margin-top: 5vh;
+    }
+
     /* ABOUT */
     .about {
         align-items: center;

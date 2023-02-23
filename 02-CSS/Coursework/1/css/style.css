@@ -17,17 +17,18 @@ body {
         var(--mainColor),
         var(--lightMainColor)
     );
-    padding: 20% 5%;
+    padding: 10% 5%;
     display: flex;
     flex-direction: column;
     row-gap: 4vh;
+    line-height: 1.5;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 2vh;
+    row-gap: 3vh;
     color: white;
     text-align: center;
 }
@@ -63,7 +64,7 @@ main {
 
 /* MOBILE */
 @media (min-width: 300px) {
-    header > h1 {
+    header h1 {
         font-size: 40px;
     }
 
@@ -99,6 +100,10 @@ main {
     .projects a {
         text-decoration: none;
         color: black;
+    }
+
+    .projects img {
+        border: 2px solid var(--lightMainColor);
     }
 
     .projects a:hover {
@@ -195,10 +200,98 @@ main {
 
 /* TABLET */
 @media (min-width: 700px) {
+    header h1 {
+        font-size: 60px;
+    }
+
+    header a,
+    footer a,
+    footer i {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .about p,
+    .work p,
+    .social a,
+    .language li {
+        font-size: 20px;
+    }
+
+    .projects h3,
+    .work h3,
+    .education h3 {
+        font-size: 20px;
+    }
+
+    .projects small,
+    .work small,
+    .education small,
+    .contact input,
+    .contact textarea {
+        font-size: 18px;
+    }
+
+    .social i {
+        font-size: 25px;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 2%;
+    }
+
+    [type="submit"] {
+        width: 30%;
+    }
 }
 
 /* DESKTOP */
 @media (min-width: 1000px) {
+    header h1 {
+        font-size: 70px;
+    }
+
+    header a,
+    footer a,
+    footer i {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    main > section {
+        padding: 5%;
+    }
+
+    .about > figure {
+        flex-direction: row;
+        column-gap: 2vw;
+    }
+
+    .about img {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .projects > article {
+        display: flex;
+        column-gap: 2vw;
+    }
+
+    .projects img {
+        width: 25vw;
+        height: 25vh;
+    }
+
+    .social i {
+        font-size: 30px;
+    }
 }
 
 /* HIGHER VERSION */
