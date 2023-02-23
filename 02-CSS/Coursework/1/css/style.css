@@ -125,6 +125,12 @@ main {
         color: dimgray;
     }
 
+    .education > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
     .language > ul,
     .social > ul {
         display: flex;
@@ -155,7 +161,7 @@ main {
     }
 
     .social i {
-        border: 1px solid dimgray;
+        border: 1px solid gray;
         border-radius: 50%;
         padding: 2%;
     }
@@ -272,6 +278,7 @@ main {
     .about > figure {
         flex-direction: row;
         column-gap: 2vw;
+        align-items: center;
     }
 
     .about img {
@@ -289,8 +296,34 @@ main {
         height: 25vh;
     }
 
+    .projects h3 {
+        text-align: justify;
+    }
+
+    .education > section,
+    .language > ul,
+    .social > ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .education article,
+    .language li,
+    .social li {
+        width: 30%;
+    }
+
     .social i {
         font-size: 30px;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 1%;
+    }
+
+    [type="submit"] {
+        width: 15%;
     }
 }
 
