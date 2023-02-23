@@ -473,3 +473,102 @@ img {
         padding-top: 5vh;
     }
 }
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+    section > article > h2 {
+        font-size: 30px;
+    }
+
+    section > article > p {
+        font-size: 20px;
+    }
+    /* HEADER */
+    header > article {
+        padding: 2%;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        list-style-type: none;
+    }
+
+    header ul a {
+        color: whitesmoke;
+        transition: 0.4s;
+    }
+
+    header ul a:hover {
+        color: orange;
+    }
+
+    header p {
+        width: 50%;
+    }
+
+    header section > a {
+        width: 12%;
+        padding: 1%;
+    }
+    /* ABOUT */
+    .about a {
+        width: 20%;
+    }
+
+    .about img {
+        width: 80%;
+    }
+
+    /* SERVICES */
+    .services aside {
+        width: 30%;
+    }
+
+    /* GALLERY */
+    .gallery img {
+        width: 33%;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials i {
+        font-size: 45px;
+    }
+
+    .testimonials p {
+        width: 60%;
+    }
+
+    .testimonials > article {
+        align-items: center;
+    }
+
+    /* CONTACT */
+    .contact aside {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact aside > input {
+        width: 46%;
+    }
+
+    .contact form {
+        width: 60%;
+    }
+
+    .contact #subject,
+    .contact textarea {
+        width: 99%;
+    }
+
+    .contact [type="submit"] {
+        width: 30%;
+    }
+}
