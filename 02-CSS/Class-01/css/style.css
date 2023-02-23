@@ -118,6 +118,10 @@ img {
         font-size: 25px;
     }
 
+    header p {
+        line-height: 1.5;
+    }
+
     header section {
         display: flex;
         flex-direction: column;
