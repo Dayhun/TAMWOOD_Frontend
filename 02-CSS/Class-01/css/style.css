@@ -115,12 +115,23 @@ img {
     /* CONTACT */
     .contact {
         align-items: center;
+        row-gap: 5vh;
     }
 
     .contact > section {
         flex-direction: column;
         width: 90%;
         row-gap: 5vh;
+    }
+
+    .contact > article {
+        align-items: center;
+        row-gap: 3vh;
+        text-align: center;
+    }
+
+    .contact p {
+        color: darkgray;
     }
 
     .contact ul {
@@ -152,6 +163,41 @@ img {
     }
 
     form {
-        width: 100%;
+        align-items: center;
+        row-gap: 3vh;
+        /* width: 90%; */
+    }
+
+    form > aside {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 3vh;
+    }
+
+    input {
+        padding: 4px;
+        width: 96%;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    textarea {
+        width: 96%;
+        padding: 4px;
+        height: 20vh;
+        resize: none;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    /* attribute selector */
+    [type="submit"] {
+        padding: 2vh;
+        background-color: var(--mainColor);
+        width: 75%;
+        color: whitesmoke;
+        border: none;
+        border-radius: 25px;
+        font-weight: 500;
     }
 }
