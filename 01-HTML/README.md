@@ -157,6 +157,7 @@ input {
     <a href="tel:+0202000200">Fax : 020-200-0200</a>
     <a href="mailto:info@yourcompany.com">Email : info@yourcompany.com</a>
     ```
+-   !important : attribute to make the highest priority
 
 # CSS
 

@@ -42,6 +42,10 @@ $ git checkout <branch_name>
 
 $ git switch <branch_name>
 
+### Delete the branch
+
+$ git branch -D <branch_name>
+
 ### - Add the file or directory to a Git screenshot. That way, Git will see the differences
 
 $ git add <file_name>
@@ -97,5 +101,9 @@ In main branch, we should not fix sth there.
             font-size: 18px;
         }
         ```
--   Git is a version management system that helps you record and manage your own code and history.
--   GitHub is a cloud-based hosting service that manages Git repositories.
+-   git vs github
+    -   Git is a version management system that helps you record and manage your own code and history.
+    -   GitHub is a cloud-based hosting service that manages Git repositories.
+-   pull vs clone
+    -   pull : we can get every update from the branch.
+    -   clone : make a full copy from the github. Kind of download.
