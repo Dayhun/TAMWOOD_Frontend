@@ -89,6 +89,17 @@ img {
         display: flex;
     }
 
+    /* GALLERY */
+    .gallery figure {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 50vh;
+    }
+
     /* TESTIMONIALS */
     .testimonials {
         background-image: url("../img/bg-header.jpg");
@@ -125,7 +136,10 @@ img {
     }
 
     /* CONTACT */
-    .contact {
+    .contact,
+    .gallery,
+    .services,
+    .about {
         align-items: center;
         row-gap: 5vh;
     }
@@ -136,7 +150,10 @@ img {
         row-gap: 5vh;
     }
 
-    .contact > article {
+    .contact > article,
+    .gallery > article,
+    .services > article,
+    .about > article {
         align-items: center;
         row-gap: 3vh;
         text-align: center;
