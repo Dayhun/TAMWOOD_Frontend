@@ -97,3 +97,5 @@ In main branch, we should not fix sth there.
             font-size: 18px;
         }
         ```
+-   Git is a version management system that helps you record and manage your own code and history.
+-   GitHub is a cloud-based hosting service that manages Git repositories.
