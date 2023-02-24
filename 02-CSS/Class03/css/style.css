@@ -79,6 +79,12 @@ body {
         background-size: cover;
     }
 
+    header aside {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
     /* MAIN */
     main {
         background-color: white;
