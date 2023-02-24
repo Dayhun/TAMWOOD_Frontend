@@ -1,0 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --mainColor: #ab2f52;
+}
+
+/* tag selectors */
+a {
+    text-decoration: none;
+}
+
+h6 {
+    height: 3px;
+    background-color: lightgray;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+h6 > span {
+    background-color: var(--mainColor);
+    width: 30%;
+}
+
+main h2 {
+    color: var(--mainColor);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+body,
+main,
+main > section,
+main > section > article,
+.services aside,
+figcaption,
+form,
+.testimonials,
+.contact ul,
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url("../img/bg-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+header > article {
+    width: 100%;
+    padding: 10%;
+}
+
+img {
+    width: 40%;
+}
+
+/* MOBILE */
+@media (min-width: 200px) {
+    main {
+        padding-bottom: 10vh;
+        row-gap: 5vh;
+    }
+
+    /* class selectors */
+    .testimonials,
+    .services aside,
+    .contact ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > section > section {
+        display: flex;
+    }
+
+    /* HEADER */
+    header {
+        height: 60vh;
+        color: whitesmoke;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header > article {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 93, 182, 0.8),
+            rgba(255, 145, 0, 0.9)
+        );
+        display: flex;
+        flex-direction: column;
+        row-gap: 10vh;
+    }
+
+    header h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        line-height: 1.5;
+    }
+
+    header section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    header section > a {
+        /* highest priority */
+        /* width: 50% !important; */
+        width: 50%;
+        background-color: #ab2f52;
+        color: white;
+        padding: 3%;
+        border: none;
+        border-radius: 30px;
+        margin-top: 5vh;
+    }
+
+    /* ABOUT */
+    .about {
+        align-items: center;
+        padding: 15% 0;
+        row-gap: 5vh;
+    }
+
+    .about > figure {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 5%;
+        row-gap: 4vh;
+    }
+
+    .about img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .about a {
+        background-color: orange;
+        width: 40%;
+        border: none;
+        border-radius: 5px;
+        padding: 2%;
+        color: white;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        column-gap: 1vw;
+        transition: 0.6s;
+    }
+
+    .about figcaption {
+        flex-direction: column;
+        row-gap: 3vh;
+        line-height: 1.5;
+        padding-bottom: 5%;
+    }
+
+    .about small {
+        color: orange;
+        font-weight: 500;
+    }
+
+    .about > article {
+        color: darkgray;
+    }
+    /* SERVICES */
+    .services {
+        background-color: ghostwhite;
+        padding: 15% 0;
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    .services > section {
+        flex-direction: column;
+        row-gap: 5vh;
+        align-items: center;
+    }
+
+    .services aside {
+        align-items: center;
+        row-gap: 2vh;
+        width: 90%;
+        min-height: 40vh;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .services p {
+        text-align: center;
+        line-height: 1.5;
+        width: 80%;
+        color: gray;
+    }
+
+    .services i {
+        color: orange;
+        font-size: 36px;
+    }
+
+    .services hr {
+        width: 30%;
+    }
+
+    .services h4 {
+        font-size: 20px;
+    }
+
+    /* GALLERY */
+    .gallery figure {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+        background-image: url("../img/bg-header.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        align-items: center;
+        row-gap: 4vh;
+        text-align: center;
+    }
+
+    .testimonials > article {
+        row-gap: 4vh;
+        padding: 10% 5%;
+        background-color: rgba(30, 30, 30, 0.8);
+    }
+
+    .testimonials i {
+        font-size: 20px;
+        color: var(--mainColor);
+    }
+
+    .testimonials h5 {
+        color: orange;
+    }
+
+    .testimonials span {
+        color: whitesmoke;
+        font-weight: 700;
+    }
+
+    .testimonials p {
+        color: whitesmoke;
+    }
+
+    /* CONTACT */
+    .contact,
+    .gallery,
+    .services,
+    .about {
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    .contact > section {
+        flex-direction: column;
+        width: 90%;
+        row-gap: 5vh;
+    }
+
+    .contact > article,
+    .gallery > article,
+    .services > article,
+    .about > article {
+        align-items: center;
+        row-gap: 3vh;
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .contact p {
+        color: darkgray;
+    }
+
+    .contact ul {
+        row-gap: 3vh;
+    }
+
+    .contact li {
+        display: flex;
+        column-gap: 3vw;
+        align-items: flex-end;
+    }
+
+    /* caret sign ^ = attribute starts with
+    dollar sign $ = ends with
+    star sign * = contains */
+    .contact [class^="fa-"] {
+        color: var(--mainColor);
+        font-size: 18px;
+    }
+
+    .contact ul aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .contact a {
+        color: dimgray;
+    }
+
+    form {
+        align-items: center;
+        row-gap: 3vh;
+        /* width: 90%; */
+    }
+
+    form > aside {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 3vh;
+        width: 100%;
+    }
+
+    input {
+        padding: 4px;
+        width: 96%;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    textarea {
+        width: 96%;
+        padding: 4px;
+        height: 20vh;
+        resize: none;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    /* attribute selector */
+    [type="submit"] {
+        padding: 2vh;
+        background-color: var(--mainColor);
+        width: 75%;
+        color: whitesmoke;
+        border: none;
+        border-radius: 25px;
+        font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 3%;
+        text-align: center;
+        background-color: black;
+        color: whitesmoke;
+        row-gap: 3vh;
+        align-items: center;
+    }
+
+    footer p {
+        width: 70%;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+        column-gap: 4vw;
+        list-style-type: none;
+    }
+
+    footer a {
+        color: whitesmoke;
+    }
+}
+
+/* TABLET */
+@media (min-width: 700px) {
+    /* HEADER */
+    header > article {
+        padding: 5%;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    header section > a {
+        width: 20%;
+        padding: 2%;
+        margin-top: 3vh;
+    }
+
+    header section > [href="#"]:hover {
+        background-color: white;
+        color: var(--mainColor);
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 10% 0;
+    }
+
+    .about > figure {
+        flex-direction: row-reverse;
+        column-gap: 2vw;
+        padding-top: 5vh;
+    }
+
+    .about h3 {
+        font-size: 25px;
+    }
+
+    .about small {
+        font-size: 17px;
+    }
+
+    .about img {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .about a {
+        width: 20vw;
+        transition: 0.6s;
+    }
+
+    .about a:hover {
+        column-gap: 6vw;
+    }
+
+    /* SERVICES */
+    .services {
+        row-gap: 5vh;
+    }
+
+    .services > section {
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 2vw;
+        row-gap: 2vh;
+        justify-content: center;
+    }
+
+    .services aside {
+        width: 40%;
+        min-height: 30vh;
+    }
+
+    /* GALLERY */
+    .gallery img {
+        width: 50%;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials i {
+        font-size: 40px;
+    }
+
+    /* CONTACT */
+    .contact > section {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 5vh;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+    section > article > h2 {
+        font-size: 30px;
+    }
+
+    section > article > p {
+        font-size: 20px;
+    }
+    /* HEADER */
+    header > article {
+        padding: 2%;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        list-style-type: none;
+    }
+
+    header ul a {
+        color: whitesmoke;
+        transition: 0.4s;
+    }
+
+    header ul a:hover {
+        color: orange;
+    }
+
+    header p {
+        width: 50%;
+    }
+
+    header section > a {
+        width: 12%;
+        padding: 1%;
+    }
+    /* ABOUT */
+    .about a {
+        width: 20%;
+    }
+
+    .about a:hover {
+        column-gap: 3vw;
+    }
+
+    .about img {
+        width: 80%;
+    }
+
+    /* SERVICES */
+    .services aside {
+        width: 30%;
+    }
+
+    /* GALLERY */
+    .gallery img {
+        width: 33%;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials i {
+        font-size: 45px;
+    }
+
+    .testimonials p {
+        width: 60%;
+    }
+
+    .testimonials > article {
+        align-items: center;
+    }
+
+    /* CONTACT */
+    .contact aside {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact aside > input {
+        width: 46%;
+    }
+
+    .contact form {
+        width: 60%;
+    }
+
+    .contact #subject,
+    .contact textarea {
+        width: 99%;
+    }
+
+    .contact [type="submit"] {
+        width: 30%;
+    }
+}
