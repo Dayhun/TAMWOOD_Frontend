@@ -80,6 +80,10 @@ $ git restore --staged <directory>/<file>
 
 $ git clone -b <branch_name> <git_repository_url>
 
+### Show all actions of terminal.
+
+$ git log
+
 # 2. branch
 
 In main branch, we should not fix sth there.
@@ -105,5 +109,9 @@ In main branch, we should not fix sth there.
     -   Git is a version management system that helps you record and manage your own code and history.
     -   GitHub is a cloud-based hosting service that manages Git repositories.
 -   pull vs clone
+
     -   pull : we can get every update from the branch.
     -   clone : make a full copy from the github. Kind of download.
+
+-   why do we need git commit message?
+    -   if we have some problems, we can check git log and find the comment that problem came.
