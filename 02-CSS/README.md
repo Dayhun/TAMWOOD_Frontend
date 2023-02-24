@@ -42,7 +42,9 @@ $ git checkout <branch_name>
 
 $ git switch <branch_name>
 
-### Delete the branch
+### - Delete the branch
+
+we have to leave the branch which is gonna be deleted.
 
 $ git branch -D <branch_name>
 
@@ -80,7 +82,7 @@ $ git restore --staged <directory>/<file>
 
 $ git clone -b <branch_name> <git_repository_url>
 
-### Show all actions of terminal.
+### - Show all actions of terminal.
 
 $ git log
 
