@@ -174,11 +174,23 @@ main > section:nth-child(odd) {
         text-align: center;
     }
 
+    header aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
     header a {
         background-color: var(--mainColor);
         color: white;
-        padding: 3% 5%;
+        padding: 2%;
         border: 2px solid var(--mainColor);
+        font-weight: 700;
+        width: 30%;
+    }
+
+    header h2 {
+        font-size: 20px;
     }
 
     /* FEATURES */
