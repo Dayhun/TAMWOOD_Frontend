@@ -114,6 +114,13 @@ main > section:nth-child(odd) {
         display: flex;
         align-items: center;
         padding: 3% 5%;
+        /* teacher way */
+        /* display: flex;
+        justify-content: space-between;
+        align-self: center;
+        align-items: center;
+        width:  85%;
+        height: 10vh; */
     }
 
     nav > h2 {
@@ -123,7 +130,7 @@ main > section:nth-child(odd) {
 
     summary {
         color: var(--mainColor);
-        font-size: 20px;
+        font-size: 26px;
     }
 
     details {
@@ -135,22 +142,22 @@ main > section:nth-child(odd) {
         left: 5%;
         width: 90%;
         position: absolute;
-        background-color: white;
         list-style-type: none;
+        /* to not hide h2 */
+        padding-top: 2vh;
+    }
+
+    details li {
+        background-color: white;
     }
 
     details a {
+        font-size: 20px;
         padding: 3%;
         display: flex;
         justify-content: center;
         color: black;
-        border-top: 5px solid white;
-        border-bottom: 5px solid white;
-    }
-
-    details a:hover {
-        border-top: 5px solid var(--mainColor);
-        border-bottom: 5px solid var(--mainColor);
+        border-bottom: 4px solid var(--mainColor);
     }
 
     /* HEADER */
