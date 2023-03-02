@@ -187,4 +187,37 @@ main > section:nth-child(odd) {
     .features h4 {
         font-size: 28px;
     }
+
+    /* FOOTER */
+    footer {
+        background-color: black;
+        border-top: 2px solid gray;
+        align-items: center;
+        padding: 10% 0;
+        row-gap: 3vh;
+    }
+
+    footer > ul {
+        display: flex;
+        list-style-type: none;
+        column-gap: 5vw;
+    }
+
+    /* why 'footer a' css is not working?
+    They cant overwrite with tag selector.
+    So we have to use more strong selector! */
+    footer [class*="fa-"] {
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        width: 5vh;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+    }
+
+    footer > p {
+        color: whitesmoke;
+    }
 }
