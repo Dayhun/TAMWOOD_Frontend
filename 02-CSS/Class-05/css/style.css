@@ -130,16 +130,18 @@ main > section:nth-child(odd) {
         list-style-type: none;
     }
 
-    details li {
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        padding: 3%;
-    }
-
     details a {
+        padding: 3%;
         display: flex;
         justify-content: center;
         color: black;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+
+    details a:hover {
+        border-top: 5px solid var(--mainColor);
+        border-bottom: 5px solid var(--mainColor);
     }
 
     /* FEATURES */
