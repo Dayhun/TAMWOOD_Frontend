@@ -42,11 +42,15 @@ $ git checkout <branch_name>
 
 $ git switch <branch_name>
 
-### - Delete the branch
+### - Delete the branch with history
 
 we have to leave the branch which is gonna be deleted.
 
 $ git branch -D <branch_name>
+
+### - Delete a branch with not history
+
+$ git branch -d <branch_name>
 
 ### - Add the file or directory to a Git screenshot. That way, Git will see the differences
 
@@ -82,9 +86,17 @@ $ git restore --staged <directory>/<file>
 
 $ git clone -b <branch_name> <git_repository_url>
 
-### - Show all actions of terminal.
+### - List all the Commits
 
 $ git log
+
+### - Go back to a specific commit
+
+$ git reset --soft <commit_hash>
+
+### - Make a copy of the repository from a specific branch
+
+$ git clone -b <branch_name> <git_repository_url>
 
 # 2. branch
 
