@@ -170,6 +170,8 @@ when the positon is absolute, we can use top, right, left, bottom to move.
     animation-iteration-count: infinite;
     /* reverse */
     /* animation-direction: reverse; */
+    /* move to the back */
+    animation-direction: alternate;
 }
 ```
 
@@ -203,3 +205,15 @@ when the positon is absolute, we can use top, right, left, bottom to move.
             }
         }
         ```
+
+# How to do teamwork with GitHub
+
+1. ‘Settings’ > ‘Collaborators’ > ‘Add people’ => invite teammate
+2. ‘Pull requests’ > ‘create new pull request’
+    1. ‘Create pull request’
+    2. Leave a comment in detail. What is this branch, what is it for..
+    3. Reviewers : choose the reviewers for review my code.
+    4. Assignees : who have power to merge.
+    5. ‘Create pull request’
+    6. Leave a comment that you reviewed.
+    7. ‘Merge pull request’ => it will change to purple icon(merged)
