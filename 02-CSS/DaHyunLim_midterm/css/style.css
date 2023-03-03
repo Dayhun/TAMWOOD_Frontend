@@ -1,0 +1,743 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 30%;
+}
+
+:root {
+    --mainColor: rgb(108, 170, 232);
+}
+
+/* MOBILE */
+@media (min-width: 300px) {
+    /* HEADER */
+    header {
+        background-image: url("../img/bg-header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 45vh;
+    }
+
+    header > section {
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    header article {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+    }
+
+    nav {
+        background-color: white;
+        padding: 3%;
+    }
+
+    nav > h3 {
+        color: var(--mainColor);
+        font-size: 30px;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    header h2 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    header h1 {
+        font-size: 35px;
+        font-weight: 200;
+    }
+
+    header article a {
+        text-align: center;
+        width: 30%;
+        padding: 2%;
+        text-decoration: none;
+        color: dodgerblue;
+        border: 1px solid gray;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* MAIN */
+    /* SERVICES */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+        align-items: center;
+        padding: 10vh 5% 5%;
+    }
+
+    main > section > article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2vh;
+        text-align: center;
+    }
+
+    main > section > article > h3 {
+        font-size: 30px;
+        font-weight: 400;
+        padding-bottom: 3%;
+        letter-spacing: 2px;
+        position: relative;
+    }
+
+    main > section > article > h3:before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        border-bottom: 3px solid var(--mainColor);
+    }
+
+    main > section > article > small {
+        color: gray;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .services {
+        padding-top: 10vh;
+    }
+
+    .services > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    .services aside {
+        display: flex;
+        column-gap: 5vw;
+        align-items: flex-start;
+    }
+
+    .services aside > article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        width: 80%;
+    }
+
+    .services i {
+        font-size: 60px;
+        color: var(--mainColor);
+        width: 20%;
+        text-align: center;
+    }
+
+    .services aside a {
+        text-decoration: none;
+        color: var(--mainColor);
+    }
+
+    .services h4 {
+        font-size: 20px;
+    }
+
+    main > section > a,
+    footer > a {
+        text-decoration: none;
+        color: var(--mainColor);
+        border: 3px solid var(--mainColor);
+        border-radius: 50%;
+        width: 5vw;
+        height: 5vw;
+        text-align: center;
+        left: 50%;
+    }
+
+    main > article {
+        background-image: url("../img/divider-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+    }
+
+    main > article > section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+    }
+
+    main > article aside {
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: center;
+    }
+
+    main > article h4 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    main > article p {
+        font-weight: 300;
+    }
+
+    main > article a {
+        border: 1px solid white;
+        color: white;
+        text-decoration: none;
+        width: 30%;
+        padding: 3%;
+        border-radius: 10px;
+    }
+
+    /* ABOUT */
+    .about {
+        background-color: rgb(243, 241, 241);
+        padding-top: 10vh;
+    }
+    .about-top {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    .about-top > section,
+    .about-top aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .about-top > article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .about-top h4 {
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .about-top p {
+        color: gray;
+    }
+
+    .about-top h5 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .about-top h6 {
+        background-color: var(--mainColor);
+        height: 2vh;
+    }
+
+    .about-top aside:nth-child(2) > h6 {
+        width: 90%;
+    }
+
+    .about-top aside:last-child > h6 {
+        width: 65%;
+    }
+
+    .about-bottom {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8vh;
+        padding-top: 5vh;
+    }
+
+    .about-bottom > figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        background-color: white;
+        padding: 7%;
+        border: 1px solid lightgray;
+        border-top: none;
+    }
+
+    .about-bottom img {
+        width: 100%;
+    }
+
+    .about-bottom figcaption {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .about-bottom h5 {
+        color: var(--mainColor);
+        font-size: 20px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        padding-bottom: 5vh;
+    }
+
+    .portfolio > figure {
+        padding-top: 5vh;
+        padding-bottom: 3vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    .portfolio img {
+        width: 100%;
+    }
+
+    /* CONTACT */
+    .contact {
+        border-top: 1px solid lightgray;
+        padding-bottom: 10vh;
+    }
+
+    .contact > section {
+        width: 100%;
+    }
+
+    .contact form,
+    .contact form > aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 3%;
+        border: 1px solid lightgray;
+    }
+
+    ::placeholder {
+        color: gray;
+    }
+
+    .contact textarea {
+        resize: none;
+        height: 10vh;
+    }
+
+    .contact [type="submit"] {
+        border: 1px solid var(--mainColor);
+        color: var(--mainColor);
+        background-color: transparent;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: black;
+        padding: 5% 0 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3vh;
+        color: white;
+    }
+
+    footer > article {
+        display: flex;
+        column-gap: 4vw;
+    }
+
+    footer > article > a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    footer span {
+        color: var(--mainColor);
+    }
+}
+
+/* TABLET */
+@media (min-width: 700px) {
+    /* NAV */
+    nav {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav > ul {
+        width: 60%;
+        display: flex;
+        list-style-type: none;
+        column-gap: 3vw;
+    }
+
+    nav li {
+        text-align: center;
+
+        width: 100%;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: var(--mainColor);
+        font-weight: 600;
+    }
+
+    /* HEADER */
+    header {
+        height: 50vh;
+    }
+
+    header h2 {
+        font-size: 45px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header article a {
+        width: 15%;
+        padding: 1%;
+        font-size: 18px;
+    }
+
+    header article a:hover {
+        background-color: var(--mainColor);
+        color: white;
+    }
+
+    main > section > article > h3 {
+        font-size: 35px;
+    }
+
+    main > section > article > small {
+        font-size: 25px;
+    }
+
+    main > section {
+        padding: 10vh 3% 5%;
+    }
+
+    /* MAIN */
+    /* SERVICES */
+    .services > section {
+        padding: 3vh 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .services aside {
+        width: 45%;
+    }
+
+    .services i {
+        font-size: 50px;
+    }
+
+    main > section > a,
+    footer > a {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    main > section > a:hover,
+    footer > a:hover {
+        background-color: var(--mainColor);
+        color: white;
+    }
+
+    main > article h4 {
+        font-size: 30px;
+    }
+
+    main > article p {
+        font-size: 20px;
+    }
+
+    main > article a {
+        width: 20%;
+        padding: 2%;
+    }
+
+    main > article a:hover {
+        background-color: var(--mainColor);
+    }
+
+    /* ABOUT */
+    .about-top,
+    .about-bottom {
+        flex-direction: row;
+        column-gap: 4vw;
+    }
+
+    .about-top {
+        padding-top: 3vh;
+    }
+
+    .about-bottom {
+        padding-bottom: 3vh;
+    }
+
+    .about-top > section {
+        width: 50%;
+    }
+
+    .about-top > article {
+        width: 50%;
+    }
+
+    .about-bottom > figure {
+        padding: 3%;
+    }
+
+    /* PORTFOLIO */
+    .portfolio > figure {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 4vw;
+        justify-content: space-around;
+    }
+
+    .portfolio img {
+        width: 47%;
+    }
+
+    /* CONTACT */
+    .contact form {
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact form > aside {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contact textarea {
+        width: 94%;
+    }
+
+    .contact form > aside > input {
+        width: 25%;
+    }
+
+    ::placeholder {
+        font-size: 20px;
+    }
+
+    .contact [type="submit"] {
+        font-size: 20px;
+        width: 70%;
+    }
+
+    .contact [type="submit"]:hover {
+        background-color: var(--mainColor);
+        color: white;
+        cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer > article > a {
+        font-size: 30px;
+    }
+
+    footer > article > a:hover {
+        color: var(--mainColor);
+    }
+    footer > p {
+        font-size: 20px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+    /* NAV */
+    nav {
+        padding: 2%;
+    }
+
+    nav > ul {
+        width: 50%;
+    }
+
+    /* HEADER */
+    header {
+        height: 43vh;
+    }
+
+    header article {
+        row-gap: 3vh;
+        justify-content: flex-start;
+    }
+
+    header h2 {
+        font-weight: 200;
+        font-size: 38px;
+    }
+
+    header h1 {
+        font-weight: 300;
+        font-size: 40px;
+    }
+
+    header article a {
+        font-size: 16px;
+        width: 10%;
+    }
+
+    main > section > article > h3 {
+        font-size: 43px;
+    }
+
+    main > section {
+        padding: 10vh 8% 5%;
+    }
+
+    .services > section {
+        justify-content: space-evenly;
+    }
+
+    .services i {
+        font-size: 60px;
+    }
+
+    .services aside {
+        column-gap: 3vw;
+        align-items: center;
+    }
+
+    main > section > a,
+    footer > a {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    main > article {
+        height: 40vh;
+    }
+
+    main > article a {
+        width: 13%;
+        padding: 1%;
+    }
+
+    main > article aside {
+        padding: 3%;
+    }
+
+    /* ABOUT */
+    .about {
+        padding-top: 7vh;
+    }
+
+    .about-top h4 {
+        font-size: 30px;
+    }
+
+    .about-top p {
+        font-size: 20px;
+    }
+
+    .about-top h5 {
+        font-size: 25px;
+    }
+
+    .about-bottom {
+        column-gap: 2vw;
+    }
+
+    .about-bottom > figure {
+        padding: 2%;
+    }
+
+    .about-bottom h5 {
+        font-size: 23px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio > figure {
+        column-gap: 1vw;
+        row-gap: 1vw;
+    }
+    .portfolio img {
+        width: 32%;
+    }
+
+    /* CONTACT */
+    .contact input,
+    .contact textarea {
+        padding: 2%;
+    }
+
+    .contact form > aside > input {
+        width: 28%;
+    }
+
+    .contact textarea {
+        width: 96%;
+    }
+
+    .contact [type="submit"] {
+        border: 3px solid var(--mainColor);
+        font-weight: 800;
+        width: 50%;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 3% 0 8%;
+    }
+
+    footer > article > a {
+        font-size: 35px;
+    }
+
+    footer > article {
+        column-gap: 3vw;
+    }
+
+    footer > p {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,16 @@
+body > div {
+    background-color: skyblue;
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div > div {
+    border: 1px solid black;
+    background-color: blue;
+    width: 9vw;
+    height: 9vw;
+}
