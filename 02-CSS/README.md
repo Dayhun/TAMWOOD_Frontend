@@ -217,3 +217,112 @@ when the positon is absolute, we can use top, right, left, bottom to move.
     5. ‘Create pull request’
     6. Leave a comment that you reviewed.
     7. ‘Merge pull request’ => it will change to purple icon(merged)
+
+# min file vs raw file
+
+min. file is the code which is placed in a single row.
+
+# SCSS
+
+has a sintags(?)
+inxdentation : an empty space at the beginning of a line to signal the start of a new paragraph
+
+when we click the `Watch Sass` button on the bottom of VScode, css folder will be built.
+
+-   style.scss
+
+```scss
+// style.scss File
+// First We have to import '_variables.scss' file
+// But scss file will understand it is scss file even we dont write .scss path and underbar_
+@import "variables";
+@import "normalize";
+```
+
+## \_variables.scss
+
+DO NOT FORGET UNDERBAR\_!
+start with $ sign (with Camel Case)
+The first thing we have to do is, this file has to placed first (top of the style.scss)
+
+-   \_variables.scss
+
+```scss
+// _variables.scss File
+$mobileScreen: 200px;
+$tabletScreen: 600px;
+$desktopScreen: 1000px;
+
+$mainColor: rgb(110, 20, 29);
+$secondColor: #75c0f1;
+```
+
+## \_normalize.scss
+
+-   \_normalize.scss
+
+```scss
+// _normalize.scss File
+// Normal tag selectors
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $defaultFontFamily;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+}
+
+section {
+    background-color: $mainColor;
+    border: 1px solid gainsboro;
+    width: 80%;
+    min-height: 100vh;
+}
+```
+
+main branch has normalize, variables scss file
+
+## \_mixins.scss
+
+You have to fill all.
+
+```scss
+// mixin file
+@mixin flexboxCenter($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+```
+
+```scss
+// normalize.scss file
+body {
+    // You have to fill all.
+    @include flexboxCenter("center", "center");
+}
+```
+
+-   Default value
+
+```scss
+// mixins file
+@mixin flexbox($direction: row, $align: flex-start, $justify: left) {
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+```
+
+```scss
+// normalize file
+body {
+    // You have to fill all.
+    // using the direction default value
+    @include flexbox($direction, "center", "center");
+}
+```
