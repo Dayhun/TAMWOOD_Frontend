@@ -1,16 +1,23 @@
-@mixin flexboxColumn {
+@mixin flexColumn($row-gap) {
     display: flex;
     flex-direction: column;
+    row-gap: $row-gap;
 }
 
-@mixin flexboxCenter($align, $justify) {
+@mixin flexCenter {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterAll {
     display: flex;
-    align-items: $align;
-    justify-content: $justify;
+    justify-content: center;
+    align-self: center;
 }
 
-@mixin flexbox($direction: row, $align: flex-start, $justify: left) {
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $justify;
+@mixin flexGlobal($rowGap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: $rowGap;
 }

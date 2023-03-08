@@ -1,0 +1,397 @@
+@media (min-width: $mobileScreen) {
+    // private class
+    %title {
+        @include flexColumn(2vh);
+        @include flexCenter;
+        > p {
+            text-align: center;
+        }
+    }
+
+    // HEADER
+    header {
+        height: 50vh;
+
+        > section {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(50, 50, 50, 0.7);
+            align-items: center;
+            row-gap: 4vh;
+
+            > ul {
+                display: none;
+            }
+
+            > article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: whitesmoke;
+                row-gap: 2vh;
+            }
+        }
+
+        article > a {
+            color: whitesmoke;
+            background-color: $defaultColor;
+            border-radius: 5px;
+            padding: 3%;
+            width: 50%;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        h2 {
+            border-bottom: 1px solid whitesmoke;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            text-transform: uppercase;
+        }
+    }
+
+    nav {
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: white;
+        width: 90%;
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        > article {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            column-gap: 4vw;
+            color: $defaultColor;
+
+            i {
+                background-color: $defaultColor;
+                color: white;
+                font-size: 50px;
+                padding: 10%;
+            }
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        > ul {
+            display: none;
+        }
+
+        details {
+            display: flex;
+
+            ul {
+                margin-top: 2.5vh;
+                position: absolute;
+                width: 85%;
+                left: 5%;
+                background-color: white;
+                @include flexColumn(2vh);
+                padding: 3%;
+                text-align: right;
+                list-style-type: none;
+            }
+
+            a {
+                color: black;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+
+            [class$="staggered"] {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        summary {
+            margin-top: 2vh;
+            background-color: $defaultColor;
+            color: white;
+            width: 8vw;
+            height: 8vw;
+            position: relative;
+        }
+    }
+
+    img {
+        width: 30%;
+    }
+
+    main {
+        row-gap: 10vh;
+        padding-top: 5vh;
+    }
+
+    %content {
+        @include flexColumn(3vh);
+        align-items: center;
+    }
+
+    .row {
+        align-items: center;
+        row-gap: 5vh;
+
+        > article,
+        .skills > article {
+            @extend %title;
+        }
+
+        > section,
+        .skills > section {
+            @include flexColumn(3vh);
+            align-items: center;
+        }
+    }
+
+    // SERVICES
+    .services {
+        aside:nth-child(1) {
+            background-color: $seaGreen;
+        }
+
+        aside:nth-child(2) {
+            background-color: $orange;
+        }
+
+        aside:nth-child(3) {
+            background-color: $blue;
+        }
+
+        aside:nth-child(4) {
+            background-color: $green;
+        }
+
+        aside {
+            color: whitesmoke;
+            min-height: 45vh;
+            width: 90%;
+            @include flexColumn(2vh);
+            @include flexCenter;
+
+            p {
+                color: whitesmoke;
+                width: 80%;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+
+        h4 {
+            border-bottom: 1px solid whitesmoke;
+            padding-bottom: 1vh;
+            font-size: 24px;
+        }
+
+        i {
+            display: none;
+        }
+    }
+
+    // PORTFOLIO
+    .portfolio {
+        > section {
+            width: 95%;
+
+            figcaption {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 45vh;
+        }
+    }
+
+    // TEAM
+    .team {
+        > section {
+            width: 95%;
+        }
+
+        article {
+            @include flexColumn(3vh);
+        }
+    }
+
+    .team-gallery {
+        width: 95%;
+        @include flexColumn(3vh);
+
+        > figure {
+            align-items: center;
+        }
+
+        img {
+            width: 40vh;
+            height: 40vh;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
+
+    // TEAM SKILLS
+    .skills {
+        @include flexColumn(5vh);
+        > article {
+            @extend %title;
+            row-gap: 0vh;
+            > p {
+                font-style: italic;
+                font-size: 14px;
+                color: lightgray;
+                width: 90%;
+            }
+        }
+
+        aside {
+            width: 90%;
+        }
+
+        > section,
+        aside {
+            @extend %content;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-style: italic;
+            color: gray;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        span {
+            color: red;
+        }
+
+        > section article {
+            width: 90%;
+        }
+
+        ul {
+            @include flexColumn(2vh);
+            width: 100%;
+            list-style-type: none;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            height: 5vh;
+            background-color: gainsboro;
+        }
+
+        h6 {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            height: 100%;
+            background-color: $defaultColor;
+            color: white;
+        }
+
+        small {
+            color: whitesmoke;
+            padding-left: 2vw;
+            text-transform: uppercase;
+        }
+
+        li:first-child > h6 {
+            width: 90%;
+        }
+
+        li:nth-child(3) > h6 {
+            width: 70%;
+        }
+    }
+
+    // CONTACT
+    .contact {
+        > section > article {
+            @include flexColumn(2vh);
+            width: 90%;
+        }
+
+        > section > section {
+            width: 90%;
+        }
+
+        iframe {
+            width: 90%;
+        }
+
+        ul {
+            @include flexColumn(1vh);
+            list-style-type: none;
+            color: dimgray;
+            a {
+                color: $defaultColor;
+            }
+        }
+
+        li {
+            display: flex;
+            column-gap: 1vh;
+        }
+    }
+
+    form {
+        width: 100%;
+        row-gap: 2vh;
+    }
+
+    input {
+        border: 1px solid dimgray;
+        height: 5vh;
+    }
+
+    ::placeholder {
+        padding: 2vw;
+        color: gray;
+    }
+
+    textarea {
+        resize: none;
+        height: 30vh;
+        border: 1px solid dimgray;
+    }
+
+    [type="submit"] {
+        background-color: $defaultColor;
+        border: 3px solid transparent;
+        color: whitesmoke;
+    }
+
+    // FOOTER
+    footer {
+        padding-top: 10vh;
+        @include flexColumn(2vh);
+        align-items: center;
+
+        p {
+            font-size: 14px;
+        }
+
+        a {
+            background-color: $defaultColor;
+            padding: 3%;
+            color: whitesmoke;
+            text-align: center;
+            width: 50%;
+        }
+    }
+}
