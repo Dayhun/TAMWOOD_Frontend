@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap&#39;");
+
+/* because of the BOOTSTRAP CSS, we have to sanitize ol,ul,dl */
+*,
+ol,
+ul,
+dl,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+figure {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+:root {
+    --mainColor: #ffa400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tag Selector + Common CSS */
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+    color: gray;
+}
+
+img {
+    width: 40%;
+}
+
+body,
+main,
+footer,
+figcaption,
+form,
+header > section,
+main > section,
+main > section > article,
+main ul {
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+main > section,
+main > section > section,
+main > section > article {
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-image: url("../img/bg-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header > section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+main article > h3 {
+    /* color: gray; */
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+main > section:nth-child(odd) {
+    background-color: ghostwhite;
+}
+
+/* MOBILE */
+@media (min-width: 200px) {
+    main > section {
+        padding: 10vh 0;
+    }
+
+    main > section > section,
+    main > section > article {
+        width: 80%;
+    }
+
+    .features > article,
+    .about > article,
+    .team > article,
+    .portfolio > article,
+    .contact > article {
+        text-align: center;
+    }
+
+    /* NAV */
+    nav > ul {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 3% 5%;
+        /* teacher way */
+        /* display: flex;
+        justify-content: space-between;
+        align-self: center;
+        align-items: center;
+        width:  85%;
+        height: 10vh; */
+    }
+
+    nav > h2 {
+        color: gray;
+        font-size: 35px;
+    }
+
+    summary {
+        color: var(--mainColor);
+        font-size: 26px;
+    }
+
+    details {
+        text-align: right;
+        width: 100%;
+    }
+
+    details > ul {
+        left: 5%;
+        width: 90%;
+        position: absolute;
+        list-style-type: none;
+        /* to not hide h2 */
+        padding-top: 2vh;
+    }
+
+    details li {
+        background-color: white;
+    }
+
+    details a {
+        font-size: 20px;
+        padding: 3%;
+        display: flex;
+        justify-content: center;
+        color: black;
+        border-bottom: 4px solid var(--mainColor);
+    }
+
+    /* HEADER */
+    header {
+        height: 45vh;
+    }
+
+    header > section {
+        justify-content: center;
+        align-items: center;
+        row-gap: 2vh;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    header aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    header a {
+        background-color: var(--mainColor);
+        color: white;
+        padding: 2%;
+        border: 2px solid var(--mainColor);
+        font-weight: 700;
+        width: 30%;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    /* FEATURES */
+    .features {
+        row-gap: 5vh;
+    }
+
+    .features > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .features aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2vh;
+    }
+
+    .features > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+    .features aside > p {
+        text-align: center;
+    }
+
+    .features i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15vh;
+        height: 15vh;
+        border-radius: 50%;
+        border: 3px solid var(--mainColor);
+        background-color: var(--mainColor);
+        font-size: 24px;
+        color: white;
+    }
+
+    .features h4 {
+        font-size: 28px;
+    }
+
+    /* ABOUT */
+    .about {
+        row-gap: 10vh;
+    }
+
+    .about > section aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    .about > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8vh;
+    }
+
+    .about > section > article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .about > section h3 {
+        font-size: 30px;
+    }
+
+    .about > section h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+        list-style-type: none;
+    }
+
+    .skills > li > aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skills > li {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .skills h6 {
+        display: flex;
+        background-color: gray;
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    .skills span {
+        display: flex;
+        background-color: var(--mainColor);
+        width: 100%;
+        height: 5px;
+        border-radius: 20px;
+    }
+
+    .skills > li:nth-child(3) span {
+        width: 80%;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .skills > li:last-child span {
+        width: 90%;
+        border-radius: 20px 0 0 20px;
+    }
+
+    /* TEAM */
+    .team {
+        row-gap: 10vh;
+    }
+
+    .team > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8vh;
+        width: 90%;
+    }
+
+    .team figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .team > section img {
+        width: 100%;
+    }
+
+    .team aside {
+        width: 100%;
+    }
+
+    .team figcaption {
+        align-items: center;
+        row-gap: 2vh;
+    }
+
+    .team ul {
+        display: none;
+    }
+
+    .team figcaption h4 {
+        text-align: center;
+        padding: 3%;
+        background-color: white;
+        color: var(--mainColor);
+        font-size: 25px;
+    }
+
+    .team small {
+        font-size: 16px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        row-gap: 10vh;
+    }
+
+    .portfolio > article {
+        width: 50%;
+    }
+
+    .portfolio h3 {
+        color: dimgray;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .portfolio p {
+        color: dimgray;
+    }
+
+    .portfolio figure {
+        width: 98%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1vh;
+    }
+
+    .portfolio img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* CONTACT */
+    .contact {
+        background-color: #303030;
+        color: whitesmoke;
+        row-gap: 10vh;
+    }
+
+    .contact h3 {
+        font-weight: 300;
+        font-weight: 400;
+        color: whitesmoke;
+    }
+
+    .contact p {
+        color: whitesmoke;
+    }
+
+    .contact h4 {
+        font-size: 30px;
+    }
+
+    .contact > article {
+        row-gap: 3vh;
+    }
+
+    .contact > section,
+    .contact > section > aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .contact ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        list-style-type: none;
+    }
+
+    .contact li {
+        display: flex;
+        column-gap: 4vw;
+        align-items: center;
+    }
+
+    .contact a,
+    .contact address {
+        color: whitesmoke;
+        font-weight: 200;
+    }
+
+    .contact i {
+        color: var(--mainColor);
+    }
+
+    .contact li:nth-child(2) > a,
+    .contact li:nth-child(3) > a {
+        color: var(--mainColor);
+    }
+
+    .contact > section article {
+        width: 100%;
+    }
+
+    .contact form,
+    .contact form > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+        width: 100%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+        padding: 5%;
+        background-color: transparent;
+        border: 1px solid gray;
+    }
+
+    .contact textarea {
+        resize: none;
+        height: 20vh;
+    }
+
+    ::placeholder {
+        color: gray;
+    }
+
+    .contact [type="submit"] {
+        width: 60%;
+        color: whitesmoke;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: black;
+        border-top: 2px solid gray;
+        align-items: center;
+        padding: 10% 0;
+        row-gap: 3vh;
+    }
+
+    footer > ul {
+        display: flex;
+        list-style-type: none;
+        column-gap: 5vw;
+    }
+
+    /* why 'footer a' css is not working?
+    They cant overwrite with tag selector.
+    So we have to use more strong selector! */
+    footer [class*="fa-"] {
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        width: 5vh;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+    }
+
+    footer > p {
+        color: whitesmoke;
+    }
+}
