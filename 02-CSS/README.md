@@ -326,3 +326,40 @@ body {
     @include flexbox($direction, "center", "center");
 }
 ```
+
+# Private Class
+
+Other members can't use cus Im gonna make my own code in my own file. (kind of mixins)
+
+start with `%name`
+use with `@extend %name`
+
+```scss
+// PRIVATE CLASS
+%title {
+    @include flexColumn(2vh);
+    @include flexCenter;
+    > p {
+        text-align: center;
+    }
+}
+
+.row {
+    align-items: center;
+    row-gap: 5vh;
+
+    > article {
+        // HOW TO USE PRIVATE CLASS
+        @extend %title;
+    }
+}
+```
+
+### & represents father
+
+if you have huge name and you dont wanna write all, you can use in that case
+
+```css
+& > a {
+}
+```
