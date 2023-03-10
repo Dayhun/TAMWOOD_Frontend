@@ -363,3 +363,27 @@ if you have huge name and you dont wanna write all, you can use in that case
 & > a {
 }
 ```
+
+# How to add font awesome to the input tag.
+
+-   html
+    copy the uni code at the font awesome
+    And paste to the value with `&#x`
+
+```html
+<input type="submit" value="&#xf002;" />
+```
+
+-   css
+    Add `font-family: "Font Awesome\ 5 Free";` to the CSS
+    Also font-weight. (minimum 600)
+    Last, add `content: "\f002";` put the uni code inside the content with `\`.
+
+```css
+[type="submit"] {
+    font-family: "Font Awesome\ 5 Free";
+    font-size: 20px;
+    font-weight: 900;
+    content: "\f002";
+}
+```
