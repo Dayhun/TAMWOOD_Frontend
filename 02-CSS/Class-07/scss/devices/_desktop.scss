@@ -1,0 +1,181 @@
+@media (min-width: $desktopScreen) {
+    // HEADER
+    header {
+        height: 70vh;
+
+        > section {
+            > ul {
+                padding-top: 5vh;
+                column-gap: 1vw;
+
+                li [class*="envelope"],
+                li [class*="brands"] {
+                    width: 5vh;
+                    height: 5vh;
+                }
+
+                h2 {
+                    font-size: 35px;
+                }
+                h5 {
+                    font-size: 23px;
+                }
+            }
+
+            > article {
+                padding-top: 15vh;
+            }
+        }
+    }
+
+    nav {
+        padding-right: 0;
+        > details {
+            display: none;
+        }
+        > ul {
+            display: flex;
+            width: 60%;
+            height: 100%;
+            > li {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            a {
+                border: 2px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 90%;
+                color: black;
+                transition: 0.6s;
+            }
+            a:hover {
+                color: $defaultColor;
+                border-top: 2px solid $defaultColor;
+            }
+        }
+    }
+
+    // SERVICES
+    .services {
+        > section {
+            column-gap: 2vw;
+
+            aside {
+                width: 20vw;
+                min-height: 35vh;
+
+                h4 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    // PORTFOLIO
+    .portfolio {
+        > section {
+            column-gap: 2vw;
+            row-gap: 2vw;
+            figure {
+                width: 20vw;
+                height: 20vw;
+            }
+        }
+    }
+
+    .row {
+        > article {
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* TEAM GALLERY */
+    .team .team-gallery {
+        figure:hover figcaption {
+            bottom: 0%;
+            height: 100%;
+        }
+
+        figcaption {
+            bottom: -20%;
+        }
+
+        column-gap: 2vw;
+        figure {
+            width: 35vh;
+            height: 35vh;
+        }
+    }
+
+    /* SKILLS */
+    .skills {
+        li {
+            height: 5vh;
+        }
+
+        > article > p {
+            width: 100%;
+        }
+        > section {
+            article {
+                width: 50%;
+            }
+        }
+    }
+
+    // CONTACT
+    .contact {
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        > article > p {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    input {
+        height: 5vh;
+    }
+
+    [type="submit"] {
+        font-size: 20px;
+    }
+
+    // FOOTER
+    footer {
+        padding: 5vh 5% 0;
+        p {
+            padding: 2%;
+        }
+        a {
+            width: 20%;
+            padding: 1%;
+            font-size: 15px;
+        }
+    }
+}
