@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Introduction</title>
+    </head>
+    <body>
+        <main>
+            <section id="exerc-01"></section>
+        </main>
+        <script src="./js/script.js" defer></script>
+        <script>
+            // let studentName = "Michael Smith";
+            // let courseWork1 = 40;
+            // let courseWork2 = 35;
+            // let participation = 6.5;
+            // let assignment = 128.5;
+            // let finalProject = 225.55;
+            // let finalExam = 182.3;
+            // let courseWorkTotal = (courseWork1 + courseWork2 + 100) / 10;
+            // let pass = false;
+
+            // console.log("Student: " + studentName);
+            // console.log("CourseWork:" + courseWorkTotal);
+            // console.log("Assignment: " + assignment / 10);
+            // console.log("Final: " + finalProject / 10);
+
+            // let total =
+            //     courseWorkTotal +
+            //     participation +
+            //     assignment / 10 +
+            //     finalExam / 10 +
+            //     finalProject / 10;
+
+            // if (total > 69) {
+            //     pass = true;
+            // } else if ((total < 70 && total > 40) || participation === 10.0) {
+            //     thirdExam = true;
+            // } else {
+            //     pass = false;
+            //     thirdExam = false;
+            // }
+            let studentList = ["Leticia", "Pedro", "Dylan", "Aya", "Day"];
+            console.log(studentList); //['Leticia', 'Pedro', 'Dylan', 'Aya', 'Day']
+            console.log(studentList[3]); //Aya
+
+            // INCREASED WAY
+            for (let i = 0; i < studentList.length; i++) {
+                console.log(i); //0 //1 //2 //3 //4
+                console.log(studentList[i]); //'Leticia' //'Pedro' //'Dylan' //'Aya' //'Day'
+            }
+
+            // DECREASED WAY
+            for (let i = studentList.length - 1; i >= 0; i--) {
+                console.log(i); //4 //3 //2 //1 //0
+                console.log(studentList[i]); //'Day' //'Aya' //'Dylan' //'Pedro' //'Leticia'
+            }
+        </script>
+    </body>
+</html>
