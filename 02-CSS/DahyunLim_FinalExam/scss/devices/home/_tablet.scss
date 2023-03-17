@@ -1,0 +1,204 @@
+@media (min-width: $tabletScreen) {
+    // NAV
+    .nav {
+        @include flexRow;
+        justify-content: center;
+        height: 5vh;
+        background-color: $colorGray;
+        position: sticky;
+        top: 0;
+        > ul {
+            @include flexRow;
+            width: 80%;
+            > li {
+                width: 100%;
+                @include flexRow;
+                @include flexCenter;
+            }
+        }
+        a {
+            color: white;
+            &:hover {
+                color: $colorYellow;
+            }
+        }
+    }
+
+    // HEADER
+    body > header {
+        height: 45vh;
+    }
+
+    // MAIN
+    main {
+        row-gap: 4vh;
+        > section > article {
+            > h2 {
+                font-size: 33px;
+            }
+            > span {
+                height: 7px;
+            }
+        }
+    }
+
+    // ABOUT
+    .about {
+        padding: 5% 3%;
+        > section {
+            flex-direction: row;
+            column-gap: 4vw;
+        }
+        figcaption {
+            min-height: 47vh;
+        }
+        a:hover {
+            background-color: transparent;
+            color: black;
+        }
+    }
+
+    // FEATURES
+    .features {
+        > article {
+            height: 35vh;
+            padding: 3%;
+            > h2 {
+                font-size: 33px;
+            }
+        }
+        > section {
+            flex-direction: row;
+            column-gap: 2vw;
+            figure {
+                width: 30%;
+                padding: 3%;
+            }
+        }
+        figure:nth-child(1) [href="#"],
+        figure:nth-child(2) [href="#"],
+        figure:nth-child(3) [href="#"] {
+            width: 60%;
+            &:hover {
+                background-color: transparent;
+                color: black;
+            }
+        }
+    }
+
+    // GALLERY
+    .gallery {
+        figure {
+            row-gap: 2vw;
+            img {
+                width: 32%;
+            }
+        }
+    }
+
+    // LISTS
+    .lists {
+        > section {
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: 4vw;
+            padding: 3%;
+        }
+        aside {
+            width: 40%;
+            > h3 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    // MEDIA
+    .media {
+        padding: 10% 3%;
+    }
+    .container {
+        img {
+            width: 15vw;
+            height: 15vw;
+        }
+        figure {
+            padding: 1%;
+        }
+        a:hover > figure {
+            background-color: $colorYellow;
+        }
+    }
+
+    // TABLE
+    .table {
+        padding: 3%;
+        @include flexColumn(2vh);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            caption {
+                text-align: left;
+                color: $colorPurple;
+                font-size: 20px;
+                padding-bottom: 1vh;
+            }
+            text-align: left;
+        }
+
+        thead > tr {
+            background-color: $colorTeal;
+            color: white;
+            &:hover {
+                background-color: $colorBrown;
+                cursor: pointer;
+            }
+        }
+        tbody > tr {
+            border-bottom: 1px solid lightgray;
+            &:hover {
+                background-color: $colorYellow;
+                cursor: pointer;
+            }
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: $colorBeige;
+            &:hover {
+                background-color: $colorYellow;
+                cursor: pointer;
+            }
+        }
+        th,
+        td {
+            padding: 2%;
+        }
+    }
+
+    // FOOTER
+    footer {
+        height: 15vh;
+        padding-top: 6vh;
+        align-items: center;
+        > nav {
+            width: 90%;
+            @include flexRow(4vw);
+            flex-direction: row-reverse;
+        }
+        > nav > ul {
+            @include flexRow;
+            justify-content: space-between;
+            width: 100%;
+            list-style-type: none;
+        }
+        img {
+            width: 3vw;
+            height: 3vw;
+        }
+        a {
+            color: white;
+            &:hover {
+                color: $colorYellow;
+            }
+        }
+    }
+}

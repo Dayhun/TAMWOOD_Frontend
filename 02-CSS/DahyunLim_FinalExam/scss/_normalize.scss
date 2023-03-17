@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+body,
+header > article main,
+main,
+main > section,
+main > section > article,
+figure,
+figcaption,
+footer,
+footer > nav > ul {
+    @include flexColumn;
+}
