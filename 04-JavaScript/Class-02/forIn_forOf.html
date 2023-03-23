@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input placeholder="type the name" />
+        <button onclick="nameSearch()">Search</button>
+    </body>
+    <script>
+        let names = ["Aya", "Day", "Pedro", "Miguel", "Monika", "Lucas"];
+
+        // FOR IN : Get index
+        for (let i in names) {
+            console.log(i); // 0 1 2 3 4 5
+            console.log(names[i]); // Aya Day Pedro Miguel Monika Lucas
+        }
+
+        // FOR OF : Get elements
+        for (let i of names) {
+            console.log(i); // Aya Day Pedro Miguel Monika Lucas
+        }
+    </script>
+</html>

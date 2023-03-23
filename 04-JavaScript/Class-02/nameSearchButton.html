@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input placeholder="type the name" />
+        <button onclick="nameSearch()">Search</button>
+        <hr />
+        <!-- number bar max 100 -->
+        <input placeholder="type the number" max="100" type="number" />
+        <button onclick="numberAdder()">Add</button>
+        <h1></h1>
+    </body>
+    <script>
+        let names = ["Aya", "Day", "Pedro", "Miguel", "Monika", "Lucas"];
+
+        function nameSearch() {
+            let key = document.getElementsByTagName("input")[0].value;
+            let idxKey = null; // ""써도 되는데 메모리 차지가 더 큼
+
+            for (let idx in names) {
+                // To Check every case of letter(make it lower case to compare)
+                if (key.toLowerCase() == names[idx].toLowerCase()) {
+                    idxKey = parseInt(idx) + 1;
+                    break;
+                }
+            }
+
+            idxKey != null
+                ? alert(`Index of this name is: ${idxKey}`)
+                : alert("Name doesn't exist.");
+        }
+
+        let numbers = [];
+        function numberAdder() {
+            let numInput = document.getElementsByTagName("input")[1];
+            numbers.push(parseInt(numInput.value));
+            numInput.value = "";
+            let sum = 0;
+            let max = 0;
+            let min = 10000;
+            for (let num of numbers) {
+                sum += num;
+                if (max < num) {
+                    max = num;
+                }
+                if (min > num) {
+                    min = num;
+                }
+            }
+            document.getElementsByTagName(
+                "h1"
+            )[0].innerText = `Sum : ${sum} Max : ${max} Min : ${min}`;
+        }
+    </script>
+</html>

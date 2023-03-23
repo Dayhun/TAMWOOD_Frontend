@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" placeholder="Name" />
+        <button onclick="addNameEnd()">Add to the End</button>
+        <button onclick="addNameBeginning()">Add to the Beginning</button>
+        <ul></ul>
+    </body>
+    <script>
+        // add an input box and a button. when user clicked on the add button, add the value inside the input box to the end of the array.
+        let names = [];
+
+        function addNameEnd() {
+            // first input box. So we have to add [0]
+            let name = document.getElementsByTagName("input")[0]; // reference number. Not value.
+            // better than getElementsById. It is the last choice.
+            if (name.value == "") {
+                alert("Write sth");
+            } else {
+                names.push(name.value);
+                console.log(names);
+                // document.getElementsByTagName(
+                //     "ul"
+                // )[0].innerHTML += `<li>${name.value}</li>`;
+                document.getElementsByTagName("ul")[0].innerHTML = "";
+                for (let i = 0; i < names.length; i++) {
+                    document.getElementsByTagName(
+                        "ul"
+                    )[0].innerHTML += `<li>${names[i]}</li>`;
+                }
+                name.value = ""; // clear the input box.
+            }
+        }
+
+        function addNameBeginning() {
+            let name = document.getElementsByTagName("input")[0];
+            if (name.value == "") {
+                alert("Write sth");
+            } else {
+                names.unshift(name.value);
+                console.log(names);
+                document.getElementsByTagName("ul")[0].innerHTML = "";
+                for (let i = 0; i < names.length; i++) {
+                    document.getElementsByTagName(
+                        "ul"
+                    )[0].innerHTML += `<li>${names[i]}</li>`;
+                }
+                name.value = "";
+            }
+        }
+    </script>
+</html>

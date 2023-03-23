@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        let grade = "A";
+        let output;
+        switch (grade) {
+            case "A+":
+            case "A": // if (grade=="A" || grade=="A+")
+                output = "very good";
+                break;
+            case "B": // else if (grade=="B")
+                output = "good";
+                break;
+            case "C":
+                output = "pass";
+                break;
+            case "F":
+                output = "Faild";
+                break;
+            default: // else
+                output = "NA";
+        }
+        console.log(output); // very good
+    </script>
+</html>

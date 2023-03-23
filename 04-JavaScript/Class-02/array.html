@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        let names = ["Aya", "Day", "Monika", "Pedro", "Lucas"];
+        console.log(names[1]); // Day
+        console.log(names[names.length - 1]); // Lucas > last item
+        console.log(names[parseInt(names.length / 2)]); // Monika > middle item
+        console.log(names[4]); // undefined
+
+        // overwrite index2
+        names[2] = "Tom";
+        console.log(names); // ['Aya', 'Day', 'Tom', 'Pedro', 'Lucas']
+
+        // put new items at the last
+        names[names.length] = "Last";
+        console.log(names); // ['Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last']
+
+        // push (add to the end)
+        let num = names.push("A", "B");
+        console.log(names, num); // ['Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A','B'] 8
+
+        // unshift (add to the beginning)
+        names.unshift("ken", "sara");
+        console.log(names); // ['ken, 'sara', 'Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A','B']
+
+        // pop (remove the last one element of the array)
+        names.pop(); // will delete one item from the end of the array
+        console.log(names); // ['ken, 'sara', 'Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A']
+
+        // shift (remove the beginning one element of the array)
+        let tmp = names.shift(); // will remove an item fron the beginning of the array
+        console.log(names, tmp);
+
+        // splice (delete or add elements at the index)
+        let tmp2 = names.splice(2,0,'hi'); // put hi in index2 and nothing delete.
+        console.log(names, tmp2);
+    </script>
+</html>
