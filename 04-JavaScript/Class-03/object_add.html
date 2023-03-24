@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul></ul>
+    </body>
+    <script>
+        function student(id, fname, lname, country) {
+            // this.propertyName = parameter
+            this.idNumber = id;
+            this.fName = fname;
+            this.lName = lname;
+            this.countryName = country;
+            this.displayDetails = function () {
+                return [
+                    this.idNumber,
+                    this.fName,
+                    this.lName,
+                    this.countryName,
+                ];
+            };
+        }
+        // Make new object with student form
+        let student1 = new student(1000, "Dahyun", "Lim", "Korea");
+        let student2 = new student(1001, "Pedro", "Garcia", "Brazil");
+        console.log(student1); // {idNumber:1000,fName:'Dahyun',lName:'Lim',countryName:'Korea'}
+
+        for (let details of student1.displayDetails()) {
+            document.getElementsByTagName(
+                "ul"
+            )[0].innerHTML += `<li>${details}</li>`;
+        }
+    </script>
+</html>

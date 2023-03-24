@@ -185,7 +185,9 @@ names[names.length] = "Last";
 console.log(names); // ['Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last']
 ```
 
-#### - push : new elements to add end of the array
+#### - push : + end
+
+new elements to add end of the array
 
 ```js
 // push (add to the end)
@@ -193,7 +195,9 @@ let num = names.push("A", "B");
 console.log(names, num); // ['Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A','B'] 8
 ```
 
-#### - unshift : new elements to add beginning of the array
+#### - unshift : + beginning
+
+new elements to add beginning of the array
 
 ```js
 // unshift (add to the beginning)
@@ -201,7 +205,9 @@ names.unshift("ken", "sara");
 console.log(names); // ['ken, 'sara', 'Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A','B']
 ```
 
-#### - pop : remove at the last `one` element of the array
+#### - pop : - 1 end
+
+remove at the last `one` element of the array
 
 ```js
 // pop (remove the last one element of the array)
@@ -209,7 +215,9 @@ names.pop(); // will delete one item from the end of the array
 console.log(names); // ['ken, 'sara', 'Aya', 'Day', 'Tom', 'Pedro', 'Lucas', 'Last','A']
 ```
 
-#### - shift : remove at the beginning `one` element of the array
+#### - shift : - 1 beginning
+
+remove at the beginning `one` element of the array
 
 ```js
 // shift (remove the beginning one element of the array)
@@ -290,5 +298,122 @@ for (let count = 0; count < 10; count++) {
     // variable is first. 0++ console.log is 0.
     // After console.log count = 1.
     // After post-loop operation count = 2.
+}
+```
+
+## 6. Object
+
+-   How to define
+
+```js
+let nameObject = {
+    propertyName1 : value1;
+    propertyName2 : value2;
+    propertyName3 : value3;
+}
+```
+
+-   How to access
+
+```js
+console.log(nameObject.propertyName1); // value1
+console.log(nameObject["propertyName1"]); // value1
+```
+
+Cant use for-of > Error `Object is not iterable.`
+Can use for-in > `Object property name` is returned.
+
+```js
+for (let i in nameObject) {
+    console.log(i); // propertyName1, propertyName2, propertyName3
+    console.log(nameObject[i]); // value1, value2, value3
+}
+```
+
+-   example
+
+```js
+let student = {
+    studentID: 1000,
+    fname: "Dahyun",
+    lname: "Lim",
+    country: "Korea",
+    grades: [89, 87, 95, 55, 87, 75],
+    courses: ["HTML", "CSS", "JS1", "JS2", "PHP", "CMS"],
+};
+
+console.log(student); // {studentID: 1000, fname:"Dahyun", lname:"Lim", country:"Korea"}
+console.log(student.fname); //Dahyun
+console.log(student["fname"]); //Dahyun
+```
+
+-   How to add
+
+## 7. Function
+
+call the function after define the function
+
+-   Example
+
+```js
+function addFunction(num1, num2) {
+    return num1 + num2;
+}
+
+addFunction(1, 2); //3
+```
+
+```js
+// 2 parameters > fname, lname
+function showName(fname, lname) {
+    alert(`My name is ${fname} ${lname}`);
+}
+
+showName("Dahyun"); // My name is Dahyun undefined
+// We have to put 2 parameters
+showName("Dahyun", "Lim"); // My name is Dahyun Lim
+```
+
+-   optional parameter Example
+
+```js
+// 2 parameters > fname, lname
+// lname is optional
+// Always put the optional parameter at the end!! Not the front!
+function showName(fname, lname = "") {
+    alert(`My name is ${fname} ${lname}`);
+}
+
+showName("Dahyun"); // My name is Dahyun
+showName("Dahyun", "Lim"); // My name is Dahyun Lim
+```
+
+-   Make object Form Example
+
+```js
+function student(id, fname, lname, country) {
+    // Define `this.propertyName = parameter`
+    this.idNumber = id;
+    this.fName = fname;
+    this.lName = lname;
+    this.countryName = country;
+    // we can put function to the property
+    this.displayDetails = function () {
+        return [this.idNumber, this.fName, this.lName, this.countryName];
+    };
+}
+
+function tablePoper() {
+    let tbody = document.getElementsByTagName("tbody")[0];
+    tbody.innerHTML = "";
+    for (let st of students) {
+        let tr = "<tr>";
+        // When we wanna use function property, we have to put `porpertyName()`
+        for (let detail of st.displayDetails()) {
+            tr += `<td>${detail}</td>`;
+        }
+        tr += "</tr>";
+        tbody.innerHTML += tr;
+    }
 }
 ```

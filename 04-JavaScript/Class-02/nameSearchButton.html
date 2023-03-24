@@ -38,23 +38,27 @@
         let numbers = [];
         function numberAdder() {
             let numInput = document.getElementsByTagName("input")[1];
-            numbers.push(parseInt(numInput.value));
-            numInput.value = "";
-            let sum = 0;
-            let max = 0;
-            let min = 10000;
-            for (let num of numbers) {
-                sum += num;
-                if (max < num) {
-                    max = num;
+            if (numInput.value == "") {
+                alert("Please put a number");
+            } else {
+                numbers.push(parseInt(numInput.value));
+                numInput.value = "";
+                let sum = 0;
+                let max = 0;
+                let min = 10000;
+                for (let num of numbers) {
+                    sum += num; // sum = sum + num
+                    if (max < num) {
+                        max = num;
+                    }
+                    if (min > num) {
+                        min = num;
+                    }
                 }
-                if (min > num) {
-                    min = num;
-                }
+                document.getElementsByTagName(
+                    "h1"
+                )[0].innerText = `Sum : ${sum} Max : ${max} Min : ${min}`;
             }
-            document.getElementsByTagName(
-                "h1"
-            )[0].innerText = `Sum : ${sum} Max : ${max} Min : ${min}`;
         }
     </script>
 </html>

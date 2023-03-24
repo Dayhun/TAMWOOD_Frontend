@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <ul></ul>
+    </body>
+    <script>
+        let student = {
+            studentID: 1000,
+            fname: "Dahyun",
+            lname: "Lim",
+            country: "Korea",
+            grades: [89, 87, 95, 55, 87, 75],
+            courses: ["HTML", "CSS", "JS1", "JS2", "PHP", "CMS"],
+        };
+
+        console.log(student); // {studentID: 1000, fname:"Dahyun", lname:"Lim", country:"Korea"}
+        console.log(student.fname); //Dahyun
+        console.log(student["fname"]); //Dahyun
+
+        let counter = 0;
+        let h1s = document.getElementsByTagName("h1"); // get all h1 tags.
+        for (let key in student) {
+            if (key != "grades" && key != "courses") {
+                // Way 1
+                // h1s[counter].innerText = `${key} : ${student[key]}`;
+                // counter++;
+                // Way 2
+                h1s[counter++].innerHTML = `${key} : <i>${student[key]}</i>`;
+            } else if (key == "grades") {
+                let sum = 0;
+                for (let grade of student[key]) {
+                    sum += grade;
+                }
+                h1s[counter++].innerHTML = `Average : <i>${
+                    sum / student[key].length
+                }</i>`;
+            } else {
+                // let num = 0; // we can use it also instead of counter.
+                counter = 0; // resetting the counter
+                for (let course of student[key]) {
+                    document.getElementsByTagName(
+                        "ul"
+                    )[0].innerHTML += `<li>${course} : <i>${
+                        student.grades[counter++]
+                    }</i></li>`;
+                }
+            }
+        }
+
+        // Way 2 (instead of else) use for-in
+        // for (let idx in student.courses) {
+        //     document.getElementsByTagName[
+        //         "ul"
+        //     ][0].innerHTML += `<li>${student.courses[idx]} : ${student.grades[idx]}</li>`;
+        // }
+
+        // Way 3 (instead of else) use for-of
+        // counter = 0;
+        // for (let course of student.courses){
+        //     document.getElementsByTagName[
+        //         "ul"
+        //     ][0].innerHTML += `<li>${course} : ${student.grades[counter++]}</li>`;
+        // }
+    </script>
+</html>

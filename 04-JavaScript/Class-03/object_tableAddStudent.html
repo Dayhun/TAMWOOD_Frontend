@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" placeholder="id" />
+        <input type="text" placeholder="first name" />
+        <input type="text" placeholder="last name" />
+        <input type="text" placeholder="country" />
+        <button onclick="studentAdder()">Add</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </body>
+    <script>
+        function student(id, fname, lname, country) {
+            this.idNumber = id;
+            this.fName = fname;
+            this.lName = lname;
+            this.countryName = country;
+            this.displayDetails = function () {
+                return [
+                    this.idNumber,
+                    this.fName,
+                    this.lName,
+                    this.countryName,
+                ];
+            };
+        }
+
+        let students = [];
+        function studentAdder() {
+            let inputBoxes = document.getElementsByTagName("input");
+            let tmpStudent = new student(
+                inputBoxes[0].value,
+                inputBoxes[1].value,
+                inputBoxes[2].value,
+                inputBoxes[3].value
+            );
+            students.push(tmpStudent);
+            tablePoper();
+        }
+
+        function tablePoper() {
+            let tbody = document.getElementsByTagName("tbody")[0];
+            tbody.innerHTML = "";
+            for (let st of students) {
+                let tr = "<tr>";
+                for (let detail of st.displayDetails()) {
+                    tr += `<td>${detail}</td>`;
+                }
+                tr += "</tr>";
+                // console.log(tr);
+                tbody.innerHTML += tr;
+            }
+        }
+    </script>
+</html>
