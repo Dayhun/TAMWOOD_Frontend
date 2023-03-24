@@ -349,6 +349,23 @@ console.log(student["fname"]); //Dahyun
 
 -   How to add
 
+```js
+function student(id, fname, lname, country) {
+    // this.propertyName = parameter
+    this.idNumber = id;
+    this.fName = fname;
+    this.lName = lname;
+    this.countryName = country;
+    this.displayDetails = function () {
+        return [this.idNumber, this.fName, this.lName, this.countryName];
+    };
+}
+// Make new object with student form
+let student1 = new student(1000, "Dahyun", "Lim", "Korea");
+let student2 = new student(1001, "Pedro", "Garcia", "Brazil");
+console.log(student1); // {idNumber:1000,fName:'Dahyun',lName:'Lim',countryName:'Korea'}
+```
+
 ## 7. Function
 
 call the function after define the function
