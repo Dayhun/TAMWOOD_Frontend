@@ -24,45 +24,41 @@
         </table>
     </body>
     <script>
-        function product(name, price, amount) {
+        const Product = function (name, price, amount) {
             this.name = name;
             this.price = price;
             this.amount = amount;
-            this.productDetails = function () {
-                return [this.name, this.price, this.amount];
-            };
             this.total = function () {
-                return [parseInt(this.price) * parseInt(this.amount)];
+                return parseInt(this.price) * parseInt(this.amount);
             };
-        }
+            this.Display = function () {
+                return `<td>${this.name}</td><td>${this.price}</td><td>${
+                    this.amount
+                }</td><td>${this.total()}</td>`;
+            };
+        };
 
-        let products = [];
-        function addProduct() {
-            let inputs = document.getElementsByTagName("input");
-            let pd = new product(
-                inputs[0].value,
-                inputs[1].value,
-                inputs[2].value
-            );
-            products.push(pd);
-            tablePoper();
-            // RESET THE INPUT BOXES
-            for (let inputEl of inputs) {
-                inputEl.value = "";
-            }
-        }
+        let productsList = [];
 
         function tablePoper() {
             let tbody = document.getElementsByTagName("tbody")[0];
             tbody.innerHTML = "";
-            for (let i of products) {
-                let tr = "<tr>";
-                for (let j of i.productDetails()) {
-                    tr += `<td>${j}</td>`;
-                }
-                tr += `<td>${i.total()}</td>`;
-                tr += "</tr>";
-                tbody.innerHTML += tr;
+            for (let i of productsList) {
+                tbody.innerHTML += `<tr>${i.Display()}</tr>`;
+            }
+        }
+
+        function addProduct() {
+            let inputs = document.getElementsByTagName("input");
+            let pd = new Product(
+                inputs[0].value,
+                inputs[1].value,
+                inputs[2].value
+            );
+            productsList.push(pd);
+            tablePoper();
+            for (let inputEl of inputs) {
+                inputEl.value = "";
             }
         }
     </script>
