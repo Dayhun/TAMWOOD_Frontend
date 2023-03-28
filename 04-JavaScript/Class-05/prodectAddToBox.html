@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .boxStyle {
+                background-color: aquamarine;
+                width: 200px;
+                border: 1px solid black;
+                margin-top: 2%;
+                text-align: center;
+            }
+            .selected {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Product Name" />
+        <input type="text" placeholder="Price" />
+        <input type="text" placeholder="Amount" />
+        <button onclick="addProduct()">Add</button>
+        <button onclick="removeProduct(this)" disabled>Remove</button>
+        <div id="container"></div>
+    </body>
+    <script>
+        const Product = function (name, price, amount) {
+            this.name = name;
+            this.price = price;
+            this.amount = amount;
+            this.total = function () {
+                return parseInt(this.price) * parseInt(this.amount);
+            };
+            this.Display = function () {
+                return `${this.name} | ${this.price} | ${
+                    this.amount
+                } | ${this.total()}`;
+            };
+        };
+
+        // change the code to add the details of the new product to a box and append the box to the body tag
+        let productsList = [];
+        function addProduct() {
+            document.getElementById("container").innerHTML = "";
+            let inputs = document.getElementsByTagName("input");
+            let pd = new Product(
+                inputs[0].value,
+                inputs[1].value,
+                inputs[2].value
+            );
+            productsList.push(pd);
+            for (let product of productsList) {
+                let box = document.createElement("div");
+                box.classList.add("boxStyle");
+                box.innerText = product.Display();
+                document.getElementById("container").append(box);
+                box.addEventListener("click", (e) => {
+                    let boxes = document.getElementsByClassName("boxStyle");
+                    let removeBtn = document.getElementsByTagName("button")[1];
+                    removeBtn.removeAttribute("disabled");
+                    // RESET
+                    for (let box of boxes) {
+                        box.classList.remove("selected");
+                    }
+                    // Select the product
+                    e.target.classList.add("selected");
+                    selectedBox = e.target;
+                    console.log(e.target);
+                });
+            }
+            for (let inputEl of inputs) {
+                inputEl.value = "";
+            }
+        }
+
+        function removeProduct(i) {
+            selectedBox.remove();
+            selectedBox = null;
+            i.setAttribute("disabled", "");
+        }
+    </script>
+</html>

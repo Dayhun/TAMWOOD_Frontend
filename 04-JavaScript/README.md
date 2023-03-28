@@ -434,3 +434,90 @@ function tablePoper() {
     }
 }
 ```
+
+## 8. DOM
+
+: Document Object Model
+
+### How to Create html code by JS
+
+-   createElement
+    : create HTML Tag
+
+    ```js
+    let inputBox = document.createElement("input");
+    ```
+
+-   createTextNode
+    : Create Text
+
+    ```js
+    let pText1 = document.createTextNode("Hi");
+    ```
+
+### How to add to the HTML
+
+-   appendChild
+    : add one node end of the element
+-   append
+    : add more than one node end of the element
+
+```js
+// Way 1.
+p.append(pText1, pText2);
+// Way 2.
+p.appendChild(pText1); // = p.innerText = "Hi";
+p.appendChild(pText2);
+```
+
+### How to add Class Name
+
+-   className
+    : add class name
+-   classList
+    : add class name as array
+    -   toggle
+        : hide, switch on or off of html
+
+```js
+let box = document.createElemet("div");
+// way 1
+box.classList.add("box", "hov");
+// way 2
+box.className.add("box");
+box.className.add(" hov"); // We need to put space.
+```
+
+### How to remove Class Name
+
+```js
+box.classList.remove("box");
+```
+
+#### example
+```js
+// Create HTML Tag Element
+let inputBox = document.createElement("input");
+let p = document.createElement("p");
+
+// Create Text Node
+let pText1 = document.createTextNode("Hi");
+let pText2 = document.createTextNode(", there");
+
+// Way 1.
+// p.append(pText1,pText2);
+// Way 2.
+p.appendChild(pText1); // = p.innerText = "Hi";
+p.appendChild(pText2);
+
+// Add to the Body
+// Way 1.
+// document.getElementsByTagName("body")[0].append(inputBox, p);
+// Way 2.
+document.getElementsByTagName("body")[0].appendChild(inputBox);
+document.getElementsByTagName("body")[0].appendChild(p);
+```
+
+### eventListener
+
+-   target : html element that happened the event

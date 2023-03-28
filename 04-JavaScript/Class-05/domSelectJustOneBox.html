@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                margin-top: 5%;
+                background-color: aquamarine;
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+                text-align: center;
+            }
+            /* we have to write select css under the box css */
+            .select {
+                cursor: pointer;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="boxMaker()">Make a box!</button>
+    </body>
+    <script>
+        let counter = 0;
+        function boxMaker() {
+            let newBox = document.createElement("div");
+            newBox.classList.add("box");
+            newBox.innerText = ++counter;
+            newBox.addEventListener("click", boxClick);
+            document.getElementsByTagName("body")[0].append(newBox);
+        }
+
+        function boxClick(e) {
+            let boxes = document.getElementsByClassName("box");
+            for (let box of boxes) {
+                box.classList.remove("select");
+            }
+            e.target.classList.add("select");
+            console.log(e.target.innerText);
+        }
+    </script>
+</html>

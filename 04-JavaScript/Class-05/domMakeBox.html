@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: red;
+                width: 50px;
+                border: 1px solid black;
+            }
+            .hov {
+                cursor: pointer;
+            }
+            .hov:hover {
+                background-color: blue;
+            }
+            .hide {
+                display: none;
+            }
+            .boxStyle {
+                margin-top: 5%;
+                background-color: aquamarine;
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="shBth()">show / hide</button>
+        <button onclick="boxMaker()">Make a box!</button>
+    </body>
+    <script>
+        let box = document.createElement("div");
+        box.innerText = "hi";
+        box.classList.add("box", "hov");
+        document.getElementsByTagName("body")[0].append(box);
+
+        function shBth() {
+            box.classList.toggle("hide");
+        }
+
+        // using a button, add new boxes to your body tag.
+        // 1. create a new div element
+        // 2. add the box class to the new element using classList
+        // 3. append the new div to the body tag
+        function boxMaker() {
+            let newBox = document.createElement("div");
+            newBox.classList.add("boxStyle");
+            newBox.innerText = "box";
+            newBox.addEventListener("click", boxClick);
+            document.getElementsByTagName("body")[0].append(newBox);
+        }
+
+        function boxClick(e) {
+            console.log(e);
+            e.target.innerText += "clicked";
+            e.target.classList.add("hov");
+        }
+    </script>
+</html>

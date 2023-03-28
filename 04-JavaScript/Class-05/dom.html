@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        // Create HTML Tag Element
+        let inputBox = document.createElement("input");
+        let p = document.createElement("p");
+
+        // Create Text Node
+        let pText1 = document.createTextNode("Hi");
+        let pText2 = document.createTextNode(", there");
+
+        // Way 1.
+        // p.append(pText1,pText2);
+        // Way 2.
+        p.appendChild(pText1);
+        p.appendChild(pText2);
+
+        // Add to the Body
+        // Way 1.
+        // document.getElementsByTagName("body")[0].append(inputBox, p);
+        // Way 2.
+        document.getElementsByTagName("body")[0].appendChild(inputBox);
+        document.getElementsByTagName("body")[0].appendChild(p);
+    </script>
+</html>
