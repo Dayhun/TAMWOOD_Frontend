@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .editbox {
+                width: 25%;
+            }
+        </style>
+    </head>
+    <body>
+        <input />
+        <input type="number" />
+        <input type="number" />
+        <button onclick="add()">Add</button>
+        <hr />
+        <div id="container"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </body>
+    <script>
+        const Product = function (pname, price, amount) {
+            this.pname = pname;
+            this.price = price;
+            this.amount = amount;
+            this.totalCost = function () {
+                return this.price * this.amount;
+            };
+            this.Display = function () {
+                let editBtn = document.createElement("button");
+                editBtn.innerText = "Edit";
+                editBtn.addEventListener("click", edit);
+                let remvBtn = document.createElement("button");
+                remvBtn.innerText = "Remove";
+                let details = [
+                    this.pname,
+                    this.price,
+                    this.amount,
+                    this.totalCost(),
+                    editBtn,
+                    remvBtn,
+                ];
+                let tr = document.createElement("tr");
+                for (let a of details) {
+                    let td = document.createElement("td");
+                    td.append(a);
+                    tr.append(td);
+                }
+                return tr;
+            };
+        };
+        function edit(event) {
+            let selectedTr = event.target.parentElement.parentElement;
+            for (let i = 0; i < 3; i++) {
+                // text node > use data property to get exact text.
+                // we can check from console.log(selectedTr.children[i].childNodes[0])
+                console.log(selectedTr.children[i].childNodes[0].data);
+                let value = selectedTr.children[i].childNodes[0].data;
+                let inputBox = document.createElement("input");
+                inputBox.classList.add("editbox");
+                inputBox.value = value;
+                selectedTr.children[i].replaceChild(
+                    inputBox,
+                    selectedTr.children[i].childNodes[0]
+                );
+            }
+        }
+        let productsList = [];
+        function tablePoper() {
+            let tbody = document.getElementsByTagName("tbody")[0];
+            tbody.innerHTML = "";
+            for (let p of productsList) {
+                tbody.append(p.Display());
+            }
+        }
+        function add() {
+            const inputBoxes = document.getElementsByTagName("input");
+            let newProduct = new Product(
+                inputBoxes[0].value,
+                inputBoxes[1].value,
+                inputBoxes[2].value
+            );
+            productsList.push(newProduct);
+            tablePoper();
+            for (let inputEl of inputBoxes) {
+                inputEl.value = "";
+            }
+        }
+    </script>
+</html>

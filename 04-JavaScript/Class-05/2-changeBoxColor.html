@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: orange;
+                margin-top: 5px;
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                border-radius: 5px;
+                text-align: center;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .box:hover {
+                background-color: orangered;
+            }
+            .select {
+                background-color: orangered;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="addBox()">Add BOXES</button>
+        <input type="color" disabled />
+        <button onclick="chColor()" disabled>Change Color</button>
+        <button onclick="up()">UP</button>
+        <button onclick="down()">DOWN</button>
+        <button onclick="remove(this)" disabled>Delete</button>
+        <div id="container"></div>
+    </body>
+    <script>
+        // global variable
+        let container = document.getElementById("container");
+        let selectedBox = null;
+        let counter = 0;
+        function addBox() {
+            if (container.children.length == 0) {
+                // let colorBtn = document.getElementsByTagName("input")[0];
+                // let chBtn = document.getElementsByTagName("button")[1];
+                // colorBtn.removeAttribute("disabled");
+                // chBtn.removeAttribute("disabled");
+                document
+                    .querySelector("input[type=color]")
+                    .removeAttribute("disabled");
+                document
+                    .querySelectorAll("button")[1]
+                    .removeAttribute("disabled");
+            }
+            let box = document.createElement("div");
+            box.classList.add("box");
+            box.innerText = ++counter;
+            box.addEventListener("click", select);
+            container.append(box);
+        }
+
+        function chColor() {
+            //way 1.
+            // let color = document.getElementsByTagName("input")[0].value;
+            //way 2.
+            let color = document.querySelectorAll("input[type=color]")[0];
+            for (let elem of container.children) {
+                elem.style.backgroundColor = color.value;
+            }
+        }
+
+        function remove(btn) {
+            selectedBox.remove();
+            selectedBox = null; // make it sure
+            btn.setAttribute("disabled", "");
+        }
+
+        function up() {
+            if (selectedBox != null) {
+                let prev = selectedBox.previousElementSibling;
+                // insertBefore : palce selectedbox before previous box
+                container.insertBefore(selectedBox, prev);
+            }
+        }
+
+        function down() {
+            if (selectedBox != null) {
+                if (selectedBox == container.lastElementChild) {
+                    container.insertBefore(
+                        selectedBox,
+                        container.firstElementChild
+                    );
+                } else {
+                    // way 1.
+                    // let next = selectedBox.nextElementSibling;
+                    // container.insertBefore(next,selectedBox);
+
+                    // way 2.
+                    let next =
+                        selectedBox.nextElementSibling.nextElementSibling;
+                    container.insertBefore(selectedBox, next);
+                }
+            }
+        }
+
+        function select(event) {
+            if (selectedBox == event.target) {
+                selectedBox.classList.remove("select");
+                selectedBox = null;
+                document
+                    .querySelectorAll("button")[4]
+                    .setAttribute("disabled", "");
+            } else {
+                for (let elem of container.children) {
+                    elem.classList.remove("select");
+                }
+                selectedBox = event.target;
+                selectedBox.classList.add("select");
+                document
+                    .querySelectorAll("button")[4]
+                    .removeAttribute("disabled");
+            }
+        }
+    </script>
+</html>
