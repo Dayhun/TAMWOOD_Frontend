@@ -26,7 +26,7 @@
     <body>
         <button onclick="boxMaker()">Make a box!</button>
         <button onclick="remove(this)" disabled>Remove a box!</button>
-        <!-- 'this' is the keyword which send the data of current things. -->
+        <!-- 'this' is the keyword which send the data of current things. = just that button -->
     </body>
     <script>
         let counter = 0;
@@ -41,7 +41,7 @@
         }
 
         function remove(btn) {
-            selectedBox.remove();
+            selectedBox.remove(); //method > need ()
             selectedBox = null;
             console.log(btn);
             // <button onclick="remove(this)" disabled="">Remove a box!</button>
