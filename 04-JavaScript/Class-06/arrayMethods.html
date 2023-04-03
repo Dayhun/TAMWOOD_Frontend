@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        // PUSH
+        let testArray = ["a", "b", "c"];
+        testArray[3] = "d"; //Same with //testArray[testArray.length] = "d";
+        console.log(testArray); //['a', 'b', 'c', 'd']
+
+        // LENGTH METHOD
+        function len(srcArray) {
+            let counter = 0;
+            //we can use 'of' instead 'in'. Doesnt matter.
+            for (let i in srcArray) {
+                counter++;
+            }
+            return counter;
+        }
+
+        console.log(len(testArray)); //4
+
+        // PUSH METHOD (+one item)
+        function arrayPushOneItem(srcArray, newItem) {
+            srcArray[len(srcArray)] = newItem;
+        }
+        arrayPushOneItem(testArray, "e");
+        console.log(testArray); //['a', 'b', 'c', 'd', 'e']
+
+        // PUSH METHOD (more than one item)
+        // WRONG CODE
+        // spread operator `...`
+        function arrayPushWrong(srcArray, ...newItem) {
+            srcArray[len(srcArray)] = newItem;
+        }
+        arrayPushWrong(testArray, "f", "g");
+        console.log(testArray); //['a', 'b', 'c', 'd', 'e', Array(2)]
+        // RIGHT CODE
+        function arrayPush(srcArray, ...newItem) {
+            let lastIdx = len(srcArray);
+            for (let item of newItem) {
+                srcArray[lastIdx++] = item;
+            }
+        }
+        arrayPush(testArray, "f", "g");
+        console.log(testArray); //['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+        // UNSHIFT METHOD
+        function arrayUnshift(srcArray, ...newItem) {
+            let shiftIndex = len(srcArray) + len(newItem) - 1;
+            for (let i = len(srcArray) - 1; i >= 0; i++) {
+                srcArray[shiftIndex--] = srcArray[i];
+            }
+            for (let i = 0; i < len(newItem); i++) {
+                srcArray[i] = newItem[i];
+            }
+        }
+        arrayUnshift(testArray, "hi", "hello");
+        console.log(testArray); //['hi', 'hello', 'a', 'b', 'c', 'd', 'e', 'f', 'g']
+    </script>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DaHyunLim_JS_MID</title>
+    </head>
+    <body></body>
+    <script>
+        let body = document.getElementsByTagName("body")[0];
+
+        // # Question 2
+        function Q2_Display_Array() {
+            // create ul tag and array
+            let ul1 = document.createElement("ul");
+            let ul2 = document.createElement("ul");
+            let food = ["pizza", "chicken", "burger", "sandwich"];
+            let car = ["BMW", "HYUNDAI", "Volkswagen", "Mercedes"];
+            // Make FOOD ul & li
+            for (let fd of food) {
+                ul1.innerHTML += `<li>${fd}</li>`;
+            }
+            // Make CAR ul & li
+            for (let cr of car) {
+                ul2.innerHTML += `<li>${cr}</li>`;
+            }
+            // Get the result
+            body.append(ul1, ul2);
+        }
+        // run
+        Q2_Display_Array();
+
+        // # Question 3
+        // ArrayMethod Reference
+        function len(Input_Array) {
+            let counter = 0;
+            //we can use 'of' instead 'in'. Doesnt matter.
+            for (let i in Input_Array) {
+                counter++;
+            }
+            return counter;
+        }
+        function unshiftMethod(Input_Array, ...newItem) {
+            let shiftIndex = len(Input_Array) + len(newItem) - 1;
+            for (let i = len(Input_Array) - 1; i >= 0; i++) {
+                Input_Array[shiftIndex--] = Input_Array[i];
+            }
+            for (let i = 0; i < len(newItem); i++) {
+                Input_Array[i] = newItem[i];
+            }
+        }
+        function Q3_Add_Item(Position, Item, Input_Array) {
+            if (Position == "beginning") {
+                // way 1. use method
+                // Input_Array.unshift(Item);
+                // way 2.
+                unshiftMethod(Input_Array, Item);
+            } else if (Position == "end") {
+                // way 1. use method
+                // Input_Array.push(Item);
+                // way 2.
+                // Input_Array[Input_Array.length] = Item;
+                // way 3.
+                Input_Array[len(Input_Array)] = Item;
+            }
+            // Get the result
+            return console.log(Input_Array);
+        }
+        // run
+        fruitArray = [];
+        Q3_Add_Item("beginning", "apple", fruitArray);
+        // Q3_Add_Item("beginning", "banana", fruitArray);
+        Q3_Add_Item("end", "kiwi", fruitArray);
+
+        // # Question 4
+        function Q4_Array_Cleaner(Input_Array) {
+            // To get index and value > let in
+            for (let idx in Input_Array) {
+                for (i = 0; i < Input_Array.length; i++) {
+                    // if its same and index number is different
+                    if (Input_Array[idx] == Input_Array[i] && idx != i) {
+                        Input_Array.splice(i, 1);
+                    }
+                }
+            }
+            // Get the result
+            console.log(Input_Array);
+        }
+        // run
+        array1 = ["a", "a", "b", "c", "b", "a", "e", "d"];
+        Q4_Array_Cleaner(array1);
+
+        // # Question 5
+        const savingAccount = function (
+            number,
+            fName,
+            lName,
+            amount,
+            rate,
+            period
+        ) {
+            this.number = number;
+            this.fName = fName;
+            this.lName = lName;
+            this.amount = amount;
+            this.rate = rate;
+            this.period = period;
+            // calculate function > 2% have to change to 0.02 > rate/100
+            this.calculate = function () {
+                return (
+                    parseInt(this.amount) *
+                    (parseInt(this.rate) / 100) *
+                    this.period
+                );
+            };
+            this.Display = function () {
+                return [
+                    this.number,
+                    this.fName,
+                    this.lName,
+                    this.amount,
+                    this.rate,
+                    this.period,
+                    this.calculate(),
+                ];
+            };
+        };
+
+        // # Question 6
+        //  Insert a Form and get the information related to the previous question from the user, using Input elements.
+        // Create an array and use this array to save the information.
+        let user = [];
+
+        function formMaker() {
+            // make input and button
+            let numberInput = document.createElement("input");
+            let fNameInput = document.createElement("input");
+            let lNameInput = document.createElement("input");
+            let amountInput = document.createElement("input");
+            let rateInput = document.createElement("input");
+            let periodInput = document.createElement("input");
+            let btn = document.createElement("button");
+            numberInput.setAttribute("placeholder", "Number");
+            fNameInput.setAttribute("placeholder", "First Name");
+            lNameInput.setAttribute("placeholder", "Last Name");
+            amountInput.setAttribute("placeholder", "Principal Amount");
+            rateInput.setAttribute("placeholder", "Interest Rate");
+            periodInput.setAttribute("placeholder", "Period");
+            btn.innerText = "Add New User";
+            body.append(
+                numberInput,
+                fNameInput,
+                lNameInput,
+                amountInput,
+                rateInput,
+                periodInput,
+                btn
+            );
+            btn.addEventListener("click", addUser);
+        }
+        formMaker();
+        // when user click the btn, run
+        function addUser(e) {
+            let inputValue = document.getElementsByTagName("input");
+            let newUser = new savingAccount(
+                inputValue[0].value,
+                inputValue[1].value,
+                inputValue[2].value,
+                inputValue[3].value,
+                inputValue[4].value,
+                inputValue[5].value
+            );
+            user.push(newUser);
+            // Check the result
+            console.log(user);
+            // Reset input texts.
+            for (let input of inputValue) {
+                input.value = "";
+            }
+        }
+
+        // # Question 7.
+        let searchInput = document.createElement("input");
+        let searchBtn = document.createElement("button");
+        searchInput.setAttribute("placeholder", "Search Account Number");
+        searchBtn.innerText = "Search";
+        let resultContainer = document.createElement("div");
+        body.append(searchInput, searchBtn, resultContainer);
+        searchBtn.addEventListener("click", searchUser);
+
+        function searchUser(e) {
+            let searchValue = searchInput.value;
+            resultContainer.innerHTML = ""; // Refresh inside div tag.
+            for (let item of user) {
+                // if user is exist
+                if (item.number == searchValue) {
+                    // Result Title
+                    resultContainer.innerText +=
+                        "Account Number, First Name, Last Name, Amount, Rate, Period, Total";
+                    // Result Value
+                    resultContainer.innerHTML += `<div>${item.Display()}</div>`;
+                } else {
+                    alert("The account number does not exist.");
+                }
+            }
+        }
+    </script>
+</html>

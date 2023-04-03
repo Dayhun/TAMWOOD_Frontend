@@ -495,6 +495,7 @@ box.classList.remove("box");
 ```
 
 #### example
+
 ```js
 // Create HTML Tag Element
 let inputBox = document.createElement("input");
@@ -587,4 +588,132 @@ document.getElementsByTagName("body")[0].appendChild(p);
         }
     </script>
 </html>
+```
+
+### Node? HTML COLLECTION?
+
+-   get child
+
+1. childNodes : returning node collection
+2. children : returning html collection
+
+```js
+console.log(container.childNodes); //returning node collection. also text node // 9
+console.log(container.children); //returning html collection of children tags //4
+```
+
+-   get parent
+
+1. parentNode : node collection
+2. parentElement : html collection
+
+```js
+console.log(box2.parentNode); // node
+console.log(box2.parentElement); //html > container html
+```
+
+-   get previous sibling
+
+1. previousSibling : node collection
+2. previousElementSibling : html collection
+
+```js
+console.log(box2.previousSibling); // node
+console.log(box2.previousElementSibling); // html > box1 html
+```
+
+-   get next sibling
+
+1. nextSibling : node collection
+2. nextElementSibling : html collection
+
+```js
+console.log(box2.nextSibling); // node
+console.log(box2.nextElementSibling); // html > box1 html
+```
+
+-   get child
+
+1. firstChild : node collection
+2. firstElementChild : html collection
+3. lastChild : node collection
+4. lastElementChild : html collection
+
+```js
+console.log(container.firstChild); // node
+console.log(container.firstElementChild); // html > box1
+console.log(container.lastChild); // node
+console.log(container.lastElementChild); // html > box4
+```
+
+-   replaceChild(new,old)
+    replace old to new
+
+```js
+selectedTr.children[i].replaceChild(
+    inputBox,
+    selectedTr.children[i].childNodes[0]
+);
+```
+
+### querySelector
+
+: we can write `css selector`!
+
+example
+
+```js
+document.querySelector(".box");
+document.querySelector("#container");
+document.querySelector("input");
+document.querySelector("input[type=color]");
+```
+
+-   querySelector: find very first item
+
+-   querySelectorAll: find item in an array
+
+```js
+// Same result
+//way 1.
+let color = document.getElementsByTagName("input")[0].value;
+//way 2.
+let color = document.querySelectorAll("input[type=color]")[0];
+```
+
+### insertBefore
+
+insertBefore(a, b) : palce a before previous b
+
+```js
+function up() {
+    let prev = selectedBox.previousElementSibling;
+    // palce selectedbox before previous box
+    container.insertBefore(selectedBox, prev);
+}
+```
+
+#### ArrowFunction
+
+Same meaning!
+
+```js
+function( ){dotClick(i)}
+( ) => dotClick(i)
+```
+
+example
+
+```js
+dotGenerator();
+function dotGenerator() {
+    for (let i = 0; i < container.children.length - 2; i++) {
+        let dot = document.createElement("span");
+        dot.classList.add("dot");
+        // function(){dotClick(i)} = ()=>dotClick(i)
+        // if we write dotClick(i), it will gonna run without click event
+        dot.addEventListener("click", () => dotClick(i));
+        document.querySelector("#dotContainer").appendChild(dot);
+    }
+}
 ```
