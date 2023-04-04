@@ -717,3 +717,161 @@ function dotGenerator() {
     }
 }
 ```
+
+## 9. jQuery
+
+Make Coding more faster.
+
+Use CDN (Content Delivery Network)
+`$()` sign instead of getElementBy...
+
+```js
+/* selecting using regular JavaScript */
+var node = document.getElementById("here");
+var link = document.querySelectorAll("ul li");
+
+/* equivalent selection using jQuery */
+var node = $("#here");
+var link = $("ul li");
+// The $() function always returns a set of results
+```
+
+### Basic Selectors
+
+-   `$("*")` — Universal selector matches all elements (and is slow).
+-   `$("tag")` — Element selector matches all elements with the given element name.
+-   `$(".class")` — Class selector matches all elements with the given CSS class.
+-   `$("#id")` — Id selector matches all elements with a given HTML id attribute.
+
+### Common element Manipulations - HTML attributes
+
+We can both set and get an attribute value by using the attr() method.
+
+-   attr()
+
+    ```js
+    // link is assigned the href attribute of the first <a> tag
+    var link = $("a").attr("href");
+    // change all links in the page to http://funwebdev.com
+    $("a").attr("href", "http://funwebdev.com");
+    // change the class for all images on the page to fancy
+    $("img").attr("class", "fancy");
+    ```
+
+    ```js
+    // attr
+    $("#showBtn").attr("disabled", true); // first button is changed
+    $("#pass").attr("type", "password");
+    $("h3").css("display", "none");
+    ```
+
+The prop() method is the preferred way to retrieve and set the value of a property.
+
+```html
+<input class="meh" type="checkbox" checked="checked" />
+```
+
+```js
+var theBox = $(".meh");
+theBox.prop("checked"); // evaluates to TRUE
+```
+
+### How to put New HTML Tag & Change it
+
+-   html
+    `$().html('<h1>h1</h1>')` - add new html
+    ```js
+    $("p").html("<h2>Hi</h2>");
+    $("p").html(`<h2>${$("h1").text()}</h2>`);
+    console.log($("p").html());
+    ```
+-   text
+    `$().text()` - get the text
+    `$().text('change to this text')` - change the text
+    we dont have change method to button tag.
+    ```js
+    $("h1").text("JS Class"); //using text method as a setter
+    console.log($("h1").text()); //using text method as a getter
+    ```
+
+### addClass
+
+```js
+$("div").addClass("box");
+```
+
+### method
+
+-   change
+
+    ```js
+    // change : after typing all, when I click other place
+    // way 1.
+    $("input[type=text]").change(() => {
+        $("h1").text($("input").val());
+    });
+    // way 2.
+    $("input[type=text]").change((e) => {
+        $("h1").text(e.target.val());
+        console.log(e);
+    });
+    ```
+
+    ```js
+    $("#testChk").change((e) => {
+        $("h3").toggle(1000);
+        // $("h3").hide();
+        // $("h3").show();
+        // $("h3").fadeIn();
+        // $("h3").fadeOut();
+        // $("h3").fadeToggle();
+        // $("h3").fadeTo("slow", 0.6); // opacity 0.6
+    });
+    ```
+
+-   keyup / keydown / keypress
+
+    ```js
+    // keyup : at the same time
+    $("input[type=text]").keyup((e) => {
+        $("h1").text($(e.target).val());
+    });
+    ```
+
+-   click
+    ```js
+    $("div").click(() => {
+        $("div").eq(1).slideToggle("fast"); // eq = index
+    });
+    ```
+
+### Traversing
+
+-   next() = nextElementSlibling
+
+```js
+$("button").click((e) => {
+    // index() method will return back the index number of the elemenet considering the other child
+    // let idx = $(e.target).index();
+    // console.log(idx); // 0 2 4
+    $(".panel").slideUp(); // To Close all other toggles
+    $(e.target).next().slideToggle();
+});
+```
+
+### Event / on & off
+
+```js
+$("div")
+    .eq(1)
+    .on("mouseover", (e) => {
+        $(e.target).text("Mouse Over");
+    })
+    .on("mouseleave", (e) => {
+        $(e.target).text("Mouse Left the box");
+    })
+    .on("click", (e) => {
+        $(e.target).text("Stop");
+        $(e.target).off("mouseover mouseleave");
+    });
+```

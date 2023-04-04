@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="showBtn">show</button>
+        <button id="showBtn">show</button>
+        <button id="showBtn">show</button>
+        <h1>Test</h1>
+        <p></p>
+        <input type="text" />
+        <input type="number" id="pass" />
+        <input type="checkbox" id="testChk" /> Check me!
+        <h3>Hi</h3>
+        <div>Click me</div>
+        <div>Info</div>
+    </body>
+    <script>
+        // using text method as a getter
+        console.log($(showBtn).text()); //showshowshow
+        $("p").html("<h2>Hi</h2>");
+        $("p").html(`<h2>${$("h1").text()}</h2>`);
+        // using text method as a getter
+        $(showBtn).text("changed"); //changed the text inside the button
+        // keyup : at the same time
+        // keydown
+        // keypress
+        // change : after typing all, when I click other place
+        // way 1.
+        $("input[type=text]").change(() => {
+            $("h1").text($("input").val());
+        });
+        // way 2.
+        $("input[type=text]").change((e) => {
+            $("h1").text(e.target.val());
+            console.log(e);
+        });
+        // attr
+        $("#showBtn").attr("disabled", true); // first button is changed
+        $("#pass").attr("type", "password");
+        $("h3").css("display", "none");
+        $("#testChk").change((e) => {
+            $("h3").toggle(1000);
+            // $("h3").hide();
+            // $("h3").show();
+            // $("h3").fadeIn();
+            // $("h3").fadeOut();
+            // $("h3").fadeToggle();
+            // $("h3").fadeTo("slow", 0.6); // opacity 0.6
+        });
+        // $('div').prop('class','box');
+        $("div").addClass("box");
+        $("div")
+            .eq(0)
+            .click(() => {
+                $("div").eq(1).slideToggle("fast"); // eq = index
+            });
+        // Event
+        $("div")
+            .eq(1)
+            .on("mouseover", (e) => {
+                $(e.target).text("Mouse Over");
+            })
+            .on("mouseleave", (e) => {
+                $(e.target).text("Mouse Left the box");
+            })
+            .on("click", (e) => {
+                $(e.target).text("Stop");
+                $(e.target).off("mouseover mouseleave");
+            });
+    </script>
+</html>
