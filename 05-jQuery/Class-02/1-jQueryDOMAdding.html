@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: orange;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                padding: 10px;
+                color: white;
+                text-align: center;
+                margin-top: 5px;
+            }
+            .box:hover {
+                background-color: orangered;
+                cursor: pointer;
+            }
+            .selected {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Add</button>
+        <div id="container"></div>
+    </body>
+    <script>
+        let counter = 0;
+        let selectedBox = null;
+        $("button")
+            .eq(0)
+            .click(() => {
+                let box = $("<div></div>");
+                box.text(++counter);
+                box.addClass("box");
+                // append : put inside the tag
+                // appendTO : same result with append but write different position
+                box.click(boxClickHandler);
+                $("#container").append(box);
+                // box.appendTo($('#container')); // same result with line 37.
+            });
+        // cant use, because '.box'is not exist at first.
+        // so we have to make it in a function.
+        // $(".box").click((e) => {
+        //     selectedBox = $(e.target);
+        //     selectedBox.addClass("selected");
+        // });
+        let boxClickHandler = (e) => {
+            selectedBox = $(e.target);
+            console.log(selectedBox);
+            selectedBox.addClass("selected");
+        };
+    </script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: orange;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                padding: 10px;
+                color: white;
+                text-align: center;
+                margin-top: 5px;
+            }
+            .box:hover {
+                background-color: orangered;
+                cursor: pointer;
+            }
+            .selected {
+                background-color: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Add</button>
+        <span>
+            <button disabled>Add After</button>
+            <button disabled>Add Before</button>
+            <button disabled>Remove Box</button>
+            <button disabled>Up</button>
+            <button disabled>Down</button>
+        </span>
+        <button disabled id="empty">Empty the Box</button>
+        <div id="container"></div>
+    </body>
+    <script>
+        let counter = 0;
+        let selectedBox = null;
+        $("button").click((e) => {
+            switch ($(e.target).text()) {
+                case "Add":
+                    $("#container").append(boxCreator());
+                    $("#empty").prop("disabled", false);
+                    break;
+                case "Add After":
+                    if (selectedBox != null) selectedBox.after(boxCreator());
+                    break;
+                case "Add Before":
+                    if (selectedBox != null) selectedBox.before(boxCreator());
+                    break;
+                case "Empty the Box":
+                    $("#container").empty();
+                    counter = 0;
+                    $("#empty").prop("disabled", true);
+                    $("span button").prop("disabled", true);
+                    break;
+                case "Remove Box":
+                    if (selectedBox != null) {
+                        selectedBox.remove();
+                        selectedBox = null;
+                        $("span button").prop("disabled", true);
+                    }
+                case "Up":
+                    upHandler();
+                    break;
+                case "Down":
+                    downHandler();
+                    break;
+            }
+        });
+        let boxCreator = () => {
+            let box = $("<div></div>");
+            box.text(++counter);
+            box.addClass("box");
+            box.click(boxClickHandler);
+            return box;
+        };
+        let boxClickHandler = (e) => {
+            if ($(e.target).hasClass("selected")) {
+                selectedBox.removeClass("selected");
+                selectedBox = null;
+                $("span button").prop("disabled", true);
+            } else {
+                $(".box").removeClass("selected");
+                selectedBox = $(e.target);
+                selectedBox.addClass("selected");
+                $("span button").prop("disabled", false);
+            }
+        };
+        let upHandler = () => {
+            if (selectedBox.index() == 0) {
+                selectedBox.parent().children().last().after(selectedBox);
+            } else {
+                selectedBox.prev().before(selectedBox);
+            }
+        };
+        let downHandler = () => {
+            if (
+                selectedBox.index() + 1 ==
+                selectedBox.parent().children().length
+            ) {
+                selectedBox.parent().children().first().before(selectedBox);
+            } else {
+                selectedBox.next().after(selectedBox);
+            }
+        };
+    </script>
+</html>

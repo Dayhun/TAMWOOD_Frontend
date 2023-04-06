@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+        <style>
+            .box {
+                background-color: orange;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                padding: 10px;
+                color: white;
+                text-align: center;
+                margin-top: 5px;
+            }
+            .box:hover {
+                background-color: orangered;
+                cursor: pointer;
+            }
+            .selected {
+                background-color: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Add</button>
+        <span>
+            <button disabled>Add After</button>
+            <button disabled>Add Before</button>
+        </span>
+        <div id="container"></div>
+    </body>
+    <script>
+        let counter = 0;
+        let selectedBox = null;
+        $("button")
+            .eq(0)
+            .click(() => {
+                let box = $("<div></div>");
+                box.text(++counter);
+                box.addClass("box");
+                box.click(boxClickHandler);
+                $("#container").append(box);
+            });
+        let boxClickHandler = (e) => {
+            // we have to use jQuery to jQuery
+            // Dont forget $()
+            if ($(e.target).hasClass("selected")) {
+                selectedBox.removeClass("selected");
+                selectedBox = null;
+                $("span button").prop("disabled", true);
+            } else {
+                $(".box").removeClass("selected");
+                selectedBox = $(e.target);
+                selectedBox.addClass("selected");
+                $("span button").prop("disabled", false);
+            }
+        };
+    </script>
+</html>
