@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        let myPromise = new Promise((res, rej) => {
+            let weather = "sunny";
+            if (weather == "sunny") {
+                res("I am coming to the weekend plan");
+            } else {
+                rej("Im not coming");
+            }
+        }).then(
+            // first function always connected to res.
+            (msg) => {
+                alert(msg);
+            },
+            // second function always connected to reject.
+            (rejMsg) => {
+                console.log(rejMsg);
+            }
+        );
+    </script>
+</html>

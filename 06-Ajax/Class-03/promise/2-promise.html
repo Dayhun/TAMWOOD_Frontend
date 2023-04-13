@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tbody></tbody>
+        </table>
+    </body>
+    <script>
+        let data = null;
+        let tablePoper = () => {
+            data.forEach((obj) => {
+                let tr = $("<tr></tr>");
+                for (let key in obj) {
+                    let td = $("<td></td>");
+                    td.append(obj[key]);
+                    tr.append(td);
+                }
+                $("tbody").append(tr);
+            });
+        };
+        let loadData = new Promise((res, rej) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onload = () => {
+                if (xhttp.status == 200) {
+                    res(JSON.parse(xhttp.responseText));
+                } else {
+                    rej(xhttp.statusText);
+                }
+            };
+            xhttp.open("GET", "./data/products.json");
+            xhttp.send();
+        }).then(
+            (values) => {
+                data = values;
+                tablePoper();
+            },
+            (reason) => {
+                console.log(reason);
+            }
+        );
+    </script>
+</html>

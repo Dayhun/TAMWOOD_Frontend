@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button>Click me!</button>
+    </body>
+    <script>
+        let display = (data, idx) => {
+            console.log(`${idx}=>${data}`);
+        };
+        let grades = [85, 97, 80, 57];
+        grades.forEach(display);
+        // 0=>85
+        // 1=>97
+        // 2=>80
+        // 3=>57
+        // first do FOREACH to get data and index, and then call the display function.
+        // if you use display(), it will have a error.
+    </script>
+</html>

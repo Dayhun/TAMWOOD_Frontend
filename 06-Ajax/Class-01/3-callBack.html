@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <button>Click me!</button>
+        <button>GET JSON</button>
+    </body>
+    <script>
+        // WAY 1 (Basic of Ajax)
+        let loadText = () => {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = () => {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    console.log(JSON.parse(xhttp.responseText));
+                }
+            };
+            xhttp.open(
+                "GET",
+                "http://127.0.0.1:5500/06-Ajax/Class-01/data/products.json"
+            );
+            xhttp.send();
+        };
+
+        // WAY 2 (using with library)
+        let loadJson = () => {
+            $.getJSON(
+                "http://127.0.0.1:5500/06-Ajax/Class-01/data/products.json",
+                (data, txtSt, jqxhr) => {
+                    console.log(data); // get all data from json file
+                    console.log(txtSt); // success
+                    console.log(jqxhr); // {readyState: 4, getResponseHeader: ƒ, getAllResponseHeaders: ƒ, setRequestHeader: ƒ, overrideMimeType: ƒ, …}
+                }
+            );
+        };
+        $("button").eq(0).click(loadText);
+        $("button").eq(1).click(loadJson);
+    </script>
+</html>
