@@ -1,0 +1,10 @@
+[{"dep_id":1,"dep_name":"Tools","base_salary":6020,"dep_number":"553-138-4210"},
+{"dep_id":2,"dep_name":"Books","base_salary":6785,"dep_number":"620-513-9947"},
+{"dep_id":3,"dep_name":"Beauty","base_salary":6142,"dep_number":"353-250-4680"},
+{"dep_id":4,"dep_name":"Music","base_salary":5848,"dep_number":"542-993-2279"},
+{"dep_id":5,"dep_name":"Shoes","base_salary":6582,"dep_number":"990-313-9552"},
+{"dep_id":6,"dep_name":"Movies","base_salary":5056,"dep_number":"789-124-6943"},
+{"dep_id":7,"dep_name":"Toys","base_salary":6448,"dep_number":"331-159-0915"},
+{"dep_id":8,"dep_name":"Beauty","base_salary":4072,"dep_number":"737-186-5706"},
+{"dep_id":9,"dep_name":"Jewelry","base_salary":5081,"dep_number":"728-258-3941"},
+{"dep_id":10,"dep_name":"Jewelry","base_salary":6464,"dep_number":"738-597-2728"}]
