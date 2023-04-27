@@ -1,5 +1,43 @@
-.galleryPic {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#root {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.5%;
+    border: 1px solid black;
+}
+
+form {
+    /* display: none !important; */
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    width: 50%;
+}
+
+form input {
+    width: 30%;
+    padding: 1%;
+}
+
+.hidden {
+    display: none;
 }

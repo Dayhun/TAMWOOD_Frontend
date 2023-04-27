@@ -34,14 +34,14 @@ function StudentTable() {
                     <th>MidTerm</th>
                     <th>Final Exam</th>
                     <th>Final Project</th>
-                    <th>Total</th>
+                    <th colSpan="2">Total</th>
                 </tr>
             </thead>
             <tbody>
-            {studentsList.map((student) => (
+                {studentsList.map((student) => (
                     <StudentTableRow
                         id={student.id}
-                        fullName={student.fullName} 
+                        fullName={student.fullName}
                         coursework={student.coursework}
                         midTerm={student.midTerm}
                         finalExam={student.finalExam}
@@ -70,13 +70,88 @@ function StudentTableRow(props) {
             <td>{props.finalExam}</td>
             <td>{props.finalProject}</td>
             <td>{total}</td>
+            <td>
+                <button name={props.id}>Edit Student</button>
+            </td>
         </tr>
     );
 }
 
+function FormEditStudent(props) {
+    // const submit = function (event) {
+    //     event.preventDefault();
+    // };
+    return (
+        <form className="hidden">
+            <input
+                type="text"
+                name="studentName"
+                id="studentName"
+                placeholder="Student Name"
+            />
+            <input
+                type="number"
+                name="coursework"
+                id="coursework"
+                placeholder="CourseWork"
+            />
+            <input
+                type="number"
+                name="midTerm"
+                id="midTerm"
+                placeholder="MidTerm"
+            />
+            <input
+                type="number"
+                name="finalExam"
+                id="finalExam"
+                placeholder="Final Exam"
+            />
+            <input
+                type="number"
+                name="finalProject"
+                id="finalProject"
+                placeholder="Final Project"
+            />
+            <input type="submit" value="Update Student" />
+        </form>
+    );
+}
+
 function App() {
+    let studentId = -1;
+    $("table").ready(function () {
+        $("button").click(function () {
+            $("form").show();
+            // console.log(studentsList[this.name-1])
+            $("#studentName").val(studentsList[this.name - 1].fullName);
+            $("#coursework").val(studentsList[this.name - 1].coursework);
+            $("#midTerm").val(studentsList[this.name - 1].midTerm);
+            $("#finalExam").val(studentsList[this.name - 1].finalExam);
+            $("#finalProject").val(studentsList[this.name - 1].finalProject);
+            studentId = this.name - 1;
+        });
+    });
+
+    $("form").ready(function () {
+        $('[type = "submit"]').click(function (event) {
+            event.preventDefault();
+            let name = $("#studentName").val();
+            let coursework = $("#coursework").val();
+            let midTerm = $("midTerm").val();
+            let finalExam = $("finalExam").val();
+            let finalProject = $("finalProject").val();
+            studentsList[studentId].fullName = name;
+            studentsList[studentId].coursework = coursework;
+            studentsList[studentId].midTerm = midTerm;
+            studentsList[studentId].finalExam = finalExam;
+            studentsList[studentId].finalProject = finalProject;
+        });
+    });
+
     return (
         <React.Fragment>
+            <FormEditStudent />
             <StudentTable />
         </React.Fragment>
     );
