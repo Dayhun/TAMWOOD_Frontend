@@ -15,7 +15,7 @@ jQuery.extend({
                 );
             },
         });
-        return result;
+        return result; 
     },
 });
 
